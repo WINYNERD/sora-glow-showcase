@@ -74,12 +74,21 @@ const AppSidebar = () => {
           <div className="mb-12">
             <div className="flex items-center space-x-3 mb-2">
               <div className="w-10 h-10 gradient-primary rounded-2xl flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">L</span>
+                <span className="text-primary-foreground font-bold text-lg">A</span>
               </div>
-              <div>
-                <h2 className="text-lg font-semibold text-foreground">Luna</h2>
-                <p className="text-xs text-muted-foreground">Product Designer</p>
+              <div className="min-w-0">
+                <h2 className="text-lg font-semibold text-foreground truncate">Anna Machado</h2>
+                <p className="text-xs text-muted-foreground truncate">Product Designer</p>
               </div>
+            </div>
+          </div>
+        )}
+        
+        {/* Collapsed logo */}
+        {isCollapsed && (
+          <div className="mb-8 flex justify-center">
+            <div className="w-10 h-10 gradient-primary rounded-2xl flex items-center justify-center">
+              <span className="text-primary-foreground font-bold text-lg">A</span>
             </div>
           </div>
         )}
@@ -105,7 +114,7 @@ const AppSidebar = () => {
                   className={`${active ? "text-primary" : "group-hover:scale-110"} transition-smooth`}
                 />
                 {!isCollapsed && (
-                  <span className="font-medium">{item.label}</span>
+                  <span className="font-medium truncate">{item.label}</span>
                 )}
                 
                 {/* Active indicator */}

@@ -5,12 +5,12 @@ const ModernContact = () => {
   return (
     <section id="contact" className="fluid-section">
       <div className="fluid-container">
-        <div className="text-center mb-16">
+        <div className="mb-16">
           <h2 className="text-fluid-4xl font-bold text-gradient mb-6">
-            Bora Conversar?
+            Vamos Conversar?
           </h2>
-          <p className="text-fluid-xl text-muted-foreground max-w-2xl mx-auto">
-            Estou sempre aberta para discutir novos projetos e oportunidades incríveis
+          <p className="text-fluid-xl text-muted-foreground max-w-2xl">
+            Pronta para criar algo incrível juntos
           </p>
         </div>
 
@@ -20,15 +20,15 @@ const ModernContact = () => {
               {
                 icon: Mail,
                 label: "Email",
-                value: "luna@designstudio.com",
-                link: "mailto:luna@designstudio.com",
+                value: "anna@designstudio.com",
+                link: "mailto:anna@designstudio.com",
                 description: "Respondo em até 6h"
               },
               {
                 icon: Linkedin,
                 label: "LinkedIn", 
-                value: "/in/luna-designer",
-                link: "https://linkedin.com/in/luna-designer",
+                value: "/in/anna-machado-designer",
+                link: "https://linkedin.com/in/anna-machado-designer",
                 description: "Vamos nos conectar"
               },
               {
@@ -63,7 +63,7 @@ const ModernContact = () => {
             </p>
             
             <Button size="lg" className="gradient-primary hover-lift transition-bounce group" asChild>
-              <a href="mailto:luna@designstudio.com">
+              <a href="mailto:anna@designstudio.com">
                 <Mail className="h-5 w-5 mr-2" />
                 Vamos conversar!
                 <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-smooth" />

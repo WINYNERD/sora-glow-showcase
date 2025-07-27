@@ -5,11 +5,11 @@ const ModernAbout = () => {
     <section id="about" className="fluid-section">
       <div className="fluid-container">
         {/* Section header */}
-        <div className="text-center mb-20">
+        <div className="mb-20">
           <h2 className="text-fluid-4xl font-bold text-gradient mb-6">
             Sobre Mim
           </h2>
-          <p className="text-fluid-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-fluid-xl text-muted-foreground max-w-2xl">
             Uma mistura de método, criatividade e muito café ☕
           </p>
         </div>
@@ -127,7 +127,7 @@ const ModernAbout = () => {
               "Design é sobre fazer escolhas conscientes que tornam a vida das pessoas 
               um pouquinho melhor. É sobre empatar primeiro, questionar depois e criar sempre."
             </blockquote>
-            <cite className="text-muted-foreground mt-4 block">— Luna, em um domingo qualquer pensando sobre design</cite>
+            <cite className="text-muted-foreground mt-4 block">— Anna, em um domingo qualquer pensando sobre design</cite>
           </div>
         </div>
       </div>

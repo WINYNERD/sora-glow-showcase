@@ -28,10 +28,10 @@ const ModernHero = () => {
 
             {/* Main heading */}
             <div className="mb-8 animate-slide-up" style={{animationDelay: '0.2s'}}>
-              <h1 className="text-fluid-5xl font-bold leading-tight mb-6">
-                Oi! Eu sou uma{" "}
+              <h1 className="text-fluid-2xl font-bold leading-tight mb-6">
+                Oi! Eu sou{" "}
                 <span className="text-gradient relative">
-                  Product Designer
+                  Anna Machado, Product Designer
                   <div className="absolute -bottom-2 left-0 right-0 h-1 gradient-primary rounded-full opacity-60"></div>
                 </span>{" "}
                 que une design, dados e tecnologia para resolver problemas reais.

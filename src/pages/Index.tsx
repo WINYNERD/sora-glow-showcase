@@ -1,9 +1,9 @@
 import AppSidebar from "@/components/AppSidebar";
 import ModernHero from "@/components/ModernHero";
 import ModernAbout from "@/components/ModernAbout";
-import ModernExperience from "@/components/ModernExperience";
+import ModernEducation from "@/components/ModernEducation";
 import ModernProjects from "@/components/ModernProjects";
-import ModernSkills from "@/components/ModernSkills";
+import ModernSkillsBadges from "@/components/ModernSkillsBadges";
 import ModernContact from "@/components/ModernContact";
 
 const Index = () => {
@@ -13,9 +13,9 @@ const Index = () => {
       <main className="ml-0 lg:ml-72 transition-smooth">
         <ModernHero />
         <ModernAbout />
-        <ModernExperience />
+        <ModernEducation />
         <ModernProjects />
-        <ModernSkills />
+        <ModernSkillsBadges />
         <ModernContact />
       </main>
     </div>
