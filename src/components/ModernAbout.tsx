@@ -14,9 +14,9 @@ const ModernAbout = () => {
           </p>
         </div>
 
-        <div className="space-y-8 lg:space-y-12">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
           {/* Professional Side */}
-          <div className="glass-card p-6 lg:p-8 hover-glow transition-smooth">
+          <div className="glass-card p-6 lg:p-8 hover-glow transition-smooth h-full">
             <div className="flex flex-col sm:flex-row sm:items-start gap-4 mb-6">
               <div className="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center flex-shrink-0">
                 <Briefcase className="h-6 w-6 text-primary-foreground" />
@@ -52,7 +52,7 @@ const ModernAbout = () => {
           </div>
 
           {/* Personal Side */}
-          <div className="glass-card p-6 lg:p-8 hover-glow transition-smooth">
+          <div className="glass-card p-6 lg:p-8 hover-glow transition-smooth h-full">
             <div className="flex flex-col sm:flex-row sm:items-start gap-4 mb-6">
               <div className="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center flex-shrink-0">
                 <Heart className="h-6 w-6 text-primary-foreground" />
