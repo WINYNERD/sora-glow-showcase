@@ -1,4 +1,4 @@
-import { Building, Calendar, TrendingUp, Users, Target, Zap } from "lucide-react";
+import { Building, Calendar, Target } from "lucide-react";
 
 const ModernExperience = () => {
   const experiences = [
@@ -12,11 +12,9 @@ const ModernExperience = () => {
         "Redesign completo da plataforma principal (+65% engagement)",
         "Criação de design system para 4 squads de produto",
         "Liderança de research com +2000 usuários B2B",
-        "Mentoria de 3 designers e 1 UX researcher",
-        "Implementação de metodologia data-driven design"
+        "Mentoria de 3 designers e 1 UX researcher"
       ],
-      highlights: ["65% ↑ engagement", "40% ↓ churn rate", "4 squads impactadas"],
-      color: "from-purple-500 to-pink-500"
+      highlights: ["65% ↑ engagement", "40% ↓ churn rate"]
     },
     {
       role: "Product Designer",
@@ -27,139 +25,108 @@ const ModernExperience = () => {
       responsibilities: [
         "Design 0 to 1 de dashboard analytics complexo",
         "Research e validação com 50+ empresas do mercado",
-        "Criação de linguagem visual e componentes reutilizáveis",
-        "Colaboração direta com founders e equipe de growth",
-        "Otimização de onboarding (redução de 70% no abandono)"
+        "Criação de linguagem visual e componentes reutilizáveis"
       ],
-      highlights: ["70% ↓ drop-off", "85% satisfação NPS", "50+ empresas validadas"],
-      color: "from-blue-500 to-cyan-500"
+      highlights: ["70% ↓ drop-off", "50+ empresas validadas"]
     },
     {
-      role: "UX/UI Designer",
-      company: "Creative Studio Lab",
+      role: "UX Designer",
+      company: "Digital Agency",
       period: "2019 - 2020",
       type: "Full-time",
-      description: "Design de produtos digitais para clientes de diversos segmentos",
+      description: "Design de interfaces e experiências para produtos digitais diversos",
       responsibilities: [
-        "Design de 20+ produtos digitais (web e mobile)",
-        "Workshops de UX para times de produto",
-        "Prototipagem e testes de usabilidade",
-        "Criação de identidades visuais integradas",
-        "Metodologia ágil e sprint design"
+        "Design de landing pages e e-commerces",
+        "Prototipagem de alta fidelidade",
+        "Testes de usabilidade com usuários"
       ],
-      highlights: ["20+ produtos", "15 clientes", "metodologia ágil"],
-      color: "from-green-500 to-emerald-500"
+      highlights: ["20+ projetos", "95% satisfação"]
     }
   ];
 
   return (
-    <section id="experience" className="fluid-section bg-gradient-to-b from-transparent to-primary-deeper/5">
-      <div className="fluid-container">
-        {/* Header */}
-        <div className="text-center mb-20">
-          <h2 className="text-fluid-4xl font-bold text-gradient mb-6">
-            Experiência Profissional
-          </h2>
-          <p className="text-fluid-xl text-muted-foreground max-w-2xl mx-auto">
-            Minha jornada criando produtos que importam
-          </p>
-        </div>
+    <div>
+      {/* Header */}
+      <div className="mb-8">
+        <h2 className="text-fluid-3xl font-bold text-foreground mb-4">
+          Experiência Profissional
+        </h2>
+        <p className="text-fluid-base text-muted-foreground">
+          Minha trajetória no design de produtos
+        </p>
+      </div>
 
-        {/* Timeline */}
-        <div className="max-w-4xl mx-auto">
-          {experiences.map((exp, index) => (
-            <div key={index} className="relative mb-16 last:mb-0">
-              {/* Timeline line */}
-              <div className="absolute left-8 top-20 bottom-0 w-px bg-gradient-to-b from-primary/50 to-transparent"></div>
-              
-              {/* Timeline dot */}
-              <div className="absolute left-6 top-12 w-4 h-4 gradient-primary rounded-full shadow-glow"></div>
-              
-              {/* Content */}
-              <div className="ml-20">
-                <div className="glass-card p-8 hover-float transition-slow">
-                  {/* Header */}
-                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
-                    <div className="flex-1">
-                      <h3 className="text-fluid-2xl font-bold text-foreground mb-2">
-                        {exp.role}
-                      </h3>
-                      <div className="flex items-center text-muted-foreground mb-2">
-                        <Building className="h-4 w-4 mr-2" />
-                        <span className="font-medium mr-4">{exp.company}</span>
-                        <span className="text-sm bg-primary/10 text-primary px-2 py-1 rounded-lg">
-                          {exp.type}
-                        </span>
-                      </div>
-                      <p className="text-muted-foreground leading-relaxed">
-                        {exp.description}
-                      </p>
+      {/* Timeline */}
+      <div className="space-y-8">
+        {experiences.map((exp, index) => (
+          <div key={index} className="relative">
+            {/* Timeline line */}
+            {index < experiences.length - 1 && (
+              <div className="absolute left-6 top-16 bottom-0 w-px bg-border"></div>
+            )}
+            
+            {/* Timeline dot */}
+            <div className="absolute left-4 top-8 w-4 h-4 gradient-primary rounded-full"></div>
+            
+            {/* Content */}
+            <div className="ml-16">
+              <div className="glass-card p-6 hover-glow transition-smooth">
+                {/* Header */}
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4">
+                  <div className="flex-1">
+                    <div className="flex items-center mb-2">
+                      <Building className="h-4 w-4 text-primary mr-2" />
+                      <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-lg">
+                        {exp.type}
+                      </span>
                     </div>
-                    
-                    <div className="mt-4 lg:mt-0 lg:ml-6">
-                      <div className="flex items-center text-sm text-muted-foreground bg-white/5 px-4 py-2 rounded-xl">
-                        <Calendar className="h-4 w-4 mr-2" />
-                        {exp.period}
-                      </div>
+                    <h3 className="text-fluid-lg font-bold text-foreground mb-1">
+                      {exp.role}
+                    </h3>
+                    <p className="text-muted-foreground font-medium mb-2">{exp.company}</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {exp.description}
+                    </p>
+                  </div>
+                  
+                  <div className="mt-3 sm:mt-0 sm:ml-6">
+                    <div className="flex items-center text-xs text-muted-foreground bg-card/50 px-3 py-2 rounded-xl">
+                      <Calendar className="h-3 w-3 mr-2" />
+                      {exp.period}
                     </div>
                   </div>
+                </div>
 
-                  {/* Highlights */}
-                  <div className="flex flex-wrap gap-3 mb-6">
-                    {exp.highlights.map((highlight, i) => (
-                      <div key={i} className="flex items-center space-x-2 bg-primary/10 text-primary px-3 py-1 rounded-lg text-sm font-medium">
-                        <TrendingUp className="h-3 w-3" />
-                        <span>{highlight}</span>
+                {/* Highlights */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {exp.highlights.map((highlight, i) => (
+                    <div key={i} className="bg-primary/10 text-primary px-2 py-1 rounded-lg text-xs font-medium">
+                      {highlight}
+                    </div>
+                  ))}
+                </div>
+
+                {/* Responsibilities */}
+                <div>
+                  <h4 className="text-sm font-semibold text-foreground mb-3 flex items-center">
+                    <Target className="h-4 w-4 text-primary mr-2" />
+                    Principais Responsabilidades
+                  </h4>
+                  <div className="space-y-2">
+                    {exp.responsibilities.map((item, itemIndex) => (
+                      <div key={itemIndex} className="flex items-start">
+                        <div className="w-1.5 h-1.5 gradient-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <span className="text-muted-foreground text-sm leading-relaxed">{item}</span>
                       </div>
                     ))}
-                  </div>
-
-                  {/* Responsibilities */}
-                  <div>
-                    <h4 className="text-lg font-semibold text-foreground mb-4 flex items-center">
-                      <Target className="h-5 w-5 text-primary mr-2" />
-                      Principais Responsabilidades
-                    </h4>
-                    <div className="grid gap-3">
-                      {exp.responsibilities.map((item, itemIndex) => (
-                        <div key={itemIndex} className="flex items-start">
-                          <div className="w-2 h-2 gradient-primary rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                          <span className="text-muted-foreground leading-relaxed">{item}</span>
-                        </div>
-                      ))}
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          ))}
-        </div>
-
-        {/* Skills developed */}
-        <div className="mt-20 text-center">
-          <div className="glass-card p-8 max-w-4xl mx-auto">
-            <h3 className="text-fluid-2xl font-bold text-foreground mb-6 flex items-center justify-center">
-              <Zap className="h-6 w-6 text-primary mr-3" />
-              Skills Desenvolvidas ao Longo da Jornada
-            </h3>
-            <div className="flex flex-wrap justify-center gap-3">
-              {[
-                "Design Systems", "UX Research", "Product Strategy", "Data Analysis",
-                "Team Leadership", "Stakeholder Management", "Agile Methodology", 
-                "User Testing", "Prototyping", "Design Ops", "Growth Design", "AI/ML Design"
-              ].map((skill, index) => (
-                <span 
-                  key={index}
-                  className="px-4 py-2 bg-white/5 text-muted-foreground rounded-xl text-sm font-medium hover:bg-primary/10 hover:text-primary transition-smooth cursor-default"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
           </div>
-        </div>
+        ))}
       </div>
-    </section>
+    </div>
   );
 };
 
