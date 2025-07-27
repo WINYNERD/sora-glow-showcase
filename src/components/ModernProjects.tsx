@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 const ModernProjects = () => {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
+  const [visibleProjects, setVisibleProjects] = useState(4);
 
   const projects = [
     {
@@ -42,8 +43,48 @@ const ModernProjects = () => {
       users: "50k+ downloads",
       tags: ["Mobile Design", "Banking", "Security", "User Journey"],
       featured: true
+    },
+    {
+      id: "ecommerce-platform",
+      title: "E-commerce Platform",
+      description: "Plataforma completa de e-commerce com foco em conversão e experiência do usuário, incluindo checkout otimizado e personalização.",
+      image: "/placeholder.svg",
+      category: "E-commerce • Web",
+      duration: "5 meses",
+      impact: "+45% conversão",
+      users: "10k+ usuários",
+      tags: ["E-commerce", "Conversion", "Personalization"],
+      featured: true
+    },
+    {
+      id: "healthcare-app",
+      title: "Healthcare Mobile App",
+      description: "App de saúde para agendamento de consultas e acompanhamento médico, priorizando acessibilidade e facilidade de uso.",
+      image: "/placeholder.svg",
+      category: "Healthcare • Mobile",
+      duration: "7 meses",
+      impact: "85% satisfação",
+      users: "5k+ downloads",
+      tags: ["Healthcare", "Accessibility", "Mobile"],
+      featured: true
+    },
+    {
+      id: "travel-booking",
+      title: "Travel Booking Platform",
+      description: "Plataforma de reservas de viagem com sistema de busca avançado e interface intuitiva para planejamento de viagens.",
+      image: "/placeholder.svg",
+      category: "Travel • Web",
+      duration: "6 meses",
+      impact: "+30% bookings",
+      users: "8k+ usuários",
+      tags: ["Travel", "Search", "Booking"],
+      featured: true
     }
   ];
+
+  const loadMoreProjects = () => {
+    setVisibleProjects(prev => Math.min(prev + 4, projects.length));
+  };
 
 
   return (
@@ -60,8 +101,8 @@ const ModernProjects = () => {
         </div>
 
         {/* Featured Projects Grid */}
-        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8 mb-16">
-          {projects.filter(p => p.featured).slice(0, 3).map((project, index) => (
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 mb-16">
+          {projects.filter(p => p.featured).slice(0, visibleProjects).map((project, index) => (
             <div
               key={project.id}
               className="group glass-card overflow-hidden hover-float transition-slow"
@@ -145,6 +186,21 @@ const ModernProjects = () => {
           ))}
         </div>
 
+
+        {/* Load More Button */}
+        {visibleProjects < projects.length && (
+          <div className="text-center mb-16">
+            <Button 
+              onClick={loadMoreProjects}
+              variant="outline"
+              size="lg"
+              className="hover-lift transition-bounce group"
+            >
+              Carregar mais projetos
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-smooth" />
+            </Button>
+          </div>
+        )}
 
         {/* CTA */}
         <div className="text-center mt-16">
