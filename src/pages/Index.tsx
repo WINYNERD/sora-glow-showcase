@@ -1,23 +1,23 @@
-import Navigation from "@/components/Navigation";
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Experience from "@/components/Experience";
-import Education from "@/components/Education";
-import Projects from "@/components/Projects";
-import Skills from "@/components/Skills";
-import Contact from "@/components/Contact";
+import AppSidebar from "@/components/AppSidebar";
+import ModernHero from "@/components/ModernHero";
+import ModernAbout from "@/components/ModernAbout";
+import ModernExperience from "@/components/ModernExperience";
+import ModernProjects from "@/components/ModernProjects";
+import ModernSkills from "@/components/ModernSkills";
+import ModernContact from "@/components/ModernContact";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <Navigation />
-      <Hero />
-      <About />
-      <Experience />
-      <Education />
-      <Projects />
-      <Skills />
-      <Contact />
+    <div className="min-h-screen bg-background relative">
+      <AppSidebar />
+      <main className="ml-0 lg:ml-72 transition-smooth">
+        <ModernHero />
+        <ModernAbout />
+        <ModernExperience />
+        <ModernProjects />
+        <ModernSkills />
+        <ModernContact />
+      </main>
     </div>
   );
 };
