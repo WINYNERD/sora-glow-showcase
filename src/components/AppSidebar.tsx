@@ -8,7 +8,9 @@ import {
   Brain, 
   Mail,
   Menu,
-  X
+  X,
+  BookOpen,
+  PenTool
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -20,8 +22,10 @@ const AppSidebar = () => {
     { label: "Início", id: "hero", icon: Home, path: "/" },
     { label: "Sobre mim", id: "about", icon: User, path: "#about" },
     { label: "Experiências", id: "experience", icon: Briefcase, path: "#experience" },
+    { label: "Educação", id: "education", icon: BookOpen, path: "#education" },
     { label: "Projetos", id: "projects", icon: FolderOpen, path: "#projects" },
     { label: "Skills", id: "skills", icon: Brain, path: "#skills" },
+    { label: "Devaneios", id: "blog", icon: PenTool, path: "#blog" },
     { label: "Contato", id: "contact", icon: Mail, path: "#contact" },
   ];
 
@@ -60,9 +64,12 @@ const AppSidebar = () => {
         />
       )}
       
-      <div className={`fixed top-0 left-0 h-full z-50 transition-smooth ${
-        isCollapsed ? "w-16 -translate-x-full lg:translate-x-0" : "w-72"
-      }`}>
+      <div 
+        className={`fixed top-0 left-0 h-full z-50 transition-smooth ${
+          isCollapsed ? "w-16 -translate-x-full lg:translate-x-0" : "w-72"
+        }`}
+        style={{ '--sidebar-width': isCollapsed ? '64px' : '288px' } as React.CSSProperties}
+      >
         {/* Background */}
         <div className="absolute inset-0 glass-sidebar"></div>
         

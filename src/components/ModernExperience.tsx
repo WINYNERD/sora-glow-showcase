@@ -45,16 +45,17 @@ const ModernExperience = () => {
   ];
 
   return (
-    <div>
-      {/* Header */}
-      <div className="mb-8">
-        <h2 className="text-fluid-3xl font-bold text-foreground mb-4">
-          Experiência Profissional
-        </h2>
-        <p className="text-fluid-base text-muted-foreground">
-          Minha trajetória no design de produtos
-        </p>
-      </div>
+    <section id="experience" className="fluid-section">
+      <div className="fluid-container">
+        {/* Header */}
+        <div className="mb-16">
+          <h2 className="text-fluid-4xl font-bold text-foreground mb-6">
+            Experiência Profissional
+          </h2>
+          <p className="text-fluid-xl text-muted-foreground max-w-2xl">
+            Minha trajetória no design de produtos
+          </p>
+        </div>
 
       {/* Timeline */}
       <div className="space-y-8">
@@ -126,7 +127,8 @@ const ModernExperience = () => {
           </div>
         ))}
       </div>
-    </div>
+      </div>
+    </section>
   );
 };
 

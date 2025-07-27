@@ -129,7 +129,7 @@ const ModernSkillsBadges = () => {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
             {[
               {
                 step: "01",
@@ -139,18 +139,24 @@ const ModernSkillsBadges = () => {
               },
               {
                 step: "02", 
+                title: "IA",
+                description: "Aplicação de inteligência artificial para otimizar insights e soluções",
+                icon: Brain
+              },
+              {
+                step: "03", 
                 title: "Define",
                 description: "Síntese de insights e definição clara do problema a ser resolvido",
                 icon: Target
               },
               {
-                step: "03",
+                step: "04",
                 title: "Design",
                 description: "Ideação, prototipagem e iteração baseada em feedback contínuo",
                 icon: Palette
               },
               {
-                step: "04",
+                step: "05",
                 title: "Deliver",
                 description: "Implementação, teste com usuários e otimização baseada em métricas",
                 icon: Zap
