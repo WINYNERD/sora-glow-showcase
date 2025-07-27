@@ -50,31 +50,31 @@ const ModernBlog = () => {
         </div>
 
         {/* Articles Layout */}
-        <div className="grid lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid lg:grid-cols-2 gap-8 mb-12">
           {/* Featured Article */}
-          <div className="lg:col-span-2">
+          <div>
             <article className="glass-card overflow-hidden hover-glow transition-smooth group cursor-pointer">
               {/* Featured Image */}
-              <div className="w-full h-64 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-                <BookOpen className="h-16 w-16 text-primary/70" />
+              <div className="w-full h-48 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
+                <BookOpen className="h-12 w-12 text-primary/70" />
               </div>
               
               {/* Featured Content */}
-              <div className="p-8">
+              <div className="p-6">
                 {/* Category */}
-                <div className="mb-4">
+                <div className="mb-3">
                   <span className="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-lg">
                     {articles[0].category}
                   </span>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-fluid-2xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors">
+                <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
                   {articles[0].title}
                 </h3>
 
                 {/* Excerpt */}
-                <p className="text-muted-foreground leading-relaxed mb-6">
+                <p className="text-muted-foreground leading-relaxed mb-4 text-sm">
                   {articles[0].excerpt}
                 </p>
 
@@ -95,59 +95,42 @@ const ModernBlog = () => {
           </div>
 
           {/* Articles List */}
-          <div className="space-y-6">
-            <h3 className="text-fluid-xl font-bold text-foreground mb-6">
-              Outros artigos
-            </h3>
-            
+          <div className="space-y-4">
             {articles.slice(1, 4).map((article, index) => (
-              <article key={index} className="glass-card p-4 hover-glow transition-smooth group cursor-pointer">
-                <div className="flex gap-4">
-                  {/* Small Image */}
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <BookOpen className="h-6 w-6 text-primary/70" />
-                  </div>
-                  
-                  {/* Content */}
-                  <div className="flex-1 min-w-0">
-                    {/* Category */}
-                    <div className="mb-2">
-                      <span className="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-lg">
-                        {article.category}
-                      </span>
-                    </div>
-
-                    {/* Title */}
-                    <h4 className="text-sm font-bold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">
-                      {article.title}
-                    </h4>
-
-                    {/* Meta */}
-                    <div className="flex items-center justify-between text-xs text-muted-foreground">
-                      <div className="flex items-center">
-                        <Calendar className="h-3 w-3 mr-1" />
-                        {article.date}
-                      </div>
-                      
-                      <div className="flex items-center text-primary group-hover:translate-x-1 transition-transform">
-                        <ArrowRight className="h-3 w-3" />
-                      </div>
-                    </div>
+              <div key={index} className="border-b border-border/50 pb-4 last:border-b-0 hover:bg-accent/30 p-3 rounded-lg transition-smooth cursor-pointer group">
+                <div className="flex justify-between items-start mb-2">
+                  <span className="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-lg">
+                    {article.category}
+                  </span>
+                  <div className="flex items-center text-xs text-muted-foreground">
+                    <Calendar className="h-3 w-3 mr-1" />
+                    {article.date}
                   </div>
                 </div>
-              </article>
-            ))}
-          </div>
-        </div>
 
-        {/* Read More Button */}
-        <div className="text-center">
-          <button className="glass-card px-8 py-4 hover-glow transition-smooth group">
-            <span className="text-foreground font-medium group-hover:text-primary transition-colors">
-              Ver todos os artigos
-            </span>
-            <ArrowRight className="h-4 w-4 ml-2 text-primary group-hover:translate-x-1 transition-transform inline" />
-          </button>
+                <h4 className="text-sm font-bold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                  {article.title}
+                </h4>
+
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-muted-foreground">{article.readTime}</span>
+                  <ArrowRight className="h-3 w-3 text-primary group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            ))}
+            
+            {/* Read More Button */}
+            <div className="pt-4">
+              <button className="w-full text-left p-3 hover:bg-accent/30 rounded-lg transition-smooth group">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
+                    Ver todos os artigos
+                  </span>
+                  <ArrowRight className="h-4 w-4 text-primary group-hover:translate-x-1 transition-transform" />
+                </div>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
