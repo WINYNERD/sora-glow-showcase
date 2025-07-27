@@ -50,45 +50,50 @@ const ModernBlog = () => {
         </div>
 
         {/* Articles Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 mb-12">
+        <div className="grid gap-4 lg:gap-6 mb-12">
           {articles.slice(0, 3).map((article, index) => (
-            <article key={index} className="glass-card overflow-hidden hover-glow transition-smooth group cursor-pointer">
-              {/* Image */}
-              <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-primary/5 overflow-hidden">
-                <div className="w-full h-full bg-muted/20 flex items-center justify-center">
-                  <BookOpen className="h-8 w-8 text-primary/50" />
+            <article key={index} className="glass-card p-4 lg:p-6 hover-glow transition-smooth group cursor-pointer">
+              <div className="flex items-start gap-4">
+                {/* Image/Icon */}
+                <div className="w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-primary/20 to-primary/5 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <BookOpen className="h-6 w-6 lg:h-8 lg:w-8 text-primary/70" />
                 </div>
-              </div>
-              
-              {/* Content */}
-              <div className="p-4">
-                {/* Category */}
-                <div className="mb-2">
-                  <span className="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-lg">
-                    {article.category}
-                  </span>
+                
+                {/* Content */}
+                <div className="flex-1 min-w-0">
+                  {/* Category */}
+                  <div className="mb-2">
+                    <span className="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-lg">
+                      {article.category}
+                    </span>
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="text-base lg:text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                    {article.title}
+                  </h3>
+
+                  {/* Excerpt */}
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-3 line-clamp-2">
+                    {article.excerpt}
+                  </p>
+
+                  {/* Meta */}
+                  <div className="flex items-center justify-between text-xs text-muted-foreground">
+                    <div className="flex items-center space-x-3">
+                      <div className="flex items-center">
+                        <Calendar className="h-3 w-3 mr-1" />
+                        {article.date}
+                      </div>
+                      <span>•</span>
+                      <span>{article.readTime} leitura</span>
+                    </div>
+                  </div>
                 </div>
 
-                {/* Title */}
-                <h3 className="text-sm lg:text-base font-bold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">
-                  {article.title}
-                </h3>
-
-                {/* Excerpt */}
-                <p className="text-muted-foreground text-xs leading-relaxed mb-3 line-clamp-2">
-                  {article.excerpt}
-                </p>
-
-                {/* Meta */}
-                <div className="flex items-center justify-between text-xs text-muted-foreground">
-                  <div className="flex items-center">
-                    <Calendar className="h-3 w-3 mr-1" />
-                    {article.date}
-                  </div>
-                  
-                  <div className="flex items-center text-primary group-hover:translate-x-1 transition-transform">
-                    <ArrowRight className="h-3 w-3" />
-                  </div>
+                {/* Arrow */}
+                <div className="flex items-center text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-smooth flex-shrink-0">
+                  <ArrowRight className="h-4 w-4" />
                 </div>
               </div>
             </article>
