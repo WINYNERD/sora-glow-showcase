@@ -12,7 +12,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <AppSidebar />
-      <main className="transition-smooth" style={{ marginLeft: 'calc(var(--sidebar-width, 288px))' }}>
+      <main className="transition-smooth lg:ml-72 ml-0">
         <ModernHero />
         <ModernAbout />
         

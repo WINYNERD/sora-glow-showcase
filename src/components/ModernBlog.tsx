@@ -50,47 +50,43 @@ const ModernBlog = () => {
         </div>
 
         {/* Articles Grid */}
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 mb-12">
-          {articles.map((article, index) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 mb-12">
+          {articles.slice(0, 3).map((article, index) => (
             <article key={index} className="glass-card overflow-hidden hover-glow transition-smooth group cursor-pointer">
               {/* Image */}
-              <div className="aspect-[16/10] bg-gradient-to-br from-primary/20 to-primary/5 overflow-hidden">
+              <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-primary/5 overflow-hidden">
                 <div className="w-full h-full bg-muted/20 flex items-center justify-center">
-                  <BookOpen className="h-12 w-12 text-primary/50" />
+                  <BookOpen className="h-8 w-8 text-primary/50" />
                 </div>
               </div>
               
               {/* Content */}
-              <div className="p-6">
+              <div className="p-4">
                 {/* Category */}
-                <div className="mb-3">
+                <div className="mb-2">
                   <span className="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-lg">
                     {article.category}
                   </span>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                <h3 className="text-sm lg:text-base font-bold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">
                   {article.title}
                 </h3>
 
                 {/* Excerpt */}
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                <p className="text-muted-foreground text-xs leading-relaxed mb-3 line-clamp-2">
                   {article.excerpt}
                 </p>
 
                 {/* Meta */}
                 <div className="flex items-center justify-between text-xs text-muted-foreground">
-                  <div className="flex items-center space-x-4">
-                    <div className="flex items-center">
-                      <Calendar className="h-3 w-3 mr-1" />
-                      {article.date}
-                    </div>
-                    <span>{article.readTime} leitura</span>
+                  <div className="flex items-center">
+                    <Calendar className="h-3 w-3 mr-1" />
+                    {article.date}
                   </div>
                   
                   <div className="flex items-center text-primary group-hover:translate-x-1 transition-transform">
-                    <span className="mr-1">Ler</span>
                     <ArrowRight className="h-3 w-3" />
                   </div>
                 </div>

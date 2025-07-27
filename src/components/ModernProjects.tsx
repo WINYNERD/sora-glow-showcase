@@ -41,7 +41,7 @@ const ModernProjects = () => {
       impact: "90% adoção",
       users: "50k+ downloads",
       tags: ["Mobile Design", "Banking", "Security", "User Journey"],
-      featured: false
+      featured: true
     }
   ];
 
@@ -60,8 +60,8 @@ const ModernProjects = () => {
         </div>
 
         {/* Featured Projects Grid */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-16">
-          {projects.filter(p => p.featured).map((project, index) => (
+        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8 mb-16">
+          {projects.filter(p => p.featured).slice(0, 3).map((project, index) => (
             <div
               key={project.id}
               className="group glass-card overflow-hidden hover-float transition-slow"
@@ -145,43 +145,6 @@ const ModernProjects = () => {
           ))}
         </div>
 
-        {/* Other Projects */}
-        <div className="grid md:grid-cols-2 gap-6">
-          {projects.filter(p => !p.featured).map((project, index) => (
-            <Link key={project.id} to={`/projeto/${project.id}`}>
-              <div className="group glass-card p-6 hover-glow transition-smooth cursor-pointer">
-                <div className="flex items-start space-x-4">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-20 h-20 object-cover rounded-xl flex-shrink-0 group-hover:scale-105 transition-smooth"
-                  />
-                  
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-xs text-primary font-medium">{project.category}</span>
-                      <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-smooth" />
-                    </div>
-                    
-                    <h4 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-smooth">
-                      {project.title}
-                    </h4>
-                    
-                    <p className="text-sm text-muted-foreground mb-3 line-clamp-2">
-                      {project.description}
-                    </p>
-                    
-                    <div className="flex items-center space-x-4 text-xs text-muted-foreground">
-                      <span>{project.impact}</span>
-                      <span>•</span>
-                      <span>{project.users}</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
 
         {/* CTA */}
         <div className="text-center mt-16">
