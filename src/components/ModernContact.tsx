@@ -20,15 +20,15 @@ const ModernContact = () => {
         </div>
 
         <div className="max-w-5xl mx-auto">
-          <div className="glass-card p-12 lg:p-16 gradient-glow">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="glass-card p-6 sm:p-8 lg:p-16 gradient-glow">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Left side - CTA */}
               <div className="text-center lg:text-left">
-                <h3 className="text-fluid-3xl font-bold text-foreground mb-4">
+                <h3 className="text-2xl sm:text-3xl lg:text-fluid-3xl font-bold text-foreground mb-4">
                   Vamos criar algo incrível juntos?
                 </h3>
                 
-                <p className="text-muted-foreground mb-8 text-lg">
+                <p className="text-muted-foreground mb-6 lg:mb-8 text-base lg:text-lg">
                   Às vezes tudo começa com uma boa conversa — e isso já é um ótimo começo.
                 </p>
               </div>
