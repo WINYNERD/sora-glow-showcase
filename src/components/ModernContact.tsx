@@ -10,6 +10,15 @@ const ModernContact = () => {
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-deeper/10 rounded-full blur-3xl animate-float" style={{animationDelay: '4s'}}></div>
       
       <div className="fluid-container relative z-10">
+        <div className="mb-12">
+          <h2 className="text-fluid-4xl font-bold text-gradient mb-3">
+            Contato
+          </h2>
+          <p className="text-fluid-lg text-muted-foreground max-w-2xl">
+            fala comigo, bb 💜!
+          </p>
+        </div>
+
         <div className="max-w-5xl mx-auto">
           <div className="glass-card p-12 lg:p-16 gradient-glow">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
