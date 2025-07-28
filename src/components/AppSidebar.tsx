@@ -11,7 +11,9 @@ import {
   X,
   BookOpen,
   PenTool,
-  GraduationCap
+  GraduationCap,
+  Linkedin,
+  MessageCircle
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -129,8 +131,27 @@ const AppSidebar = () => {
             })}
           </nav>
 
-          {/* Footer */}
-          <div className="mt-8 pt-6 border-t border-sidebar-border">
+          {/* Social Links */}
+          <div className="mt-8 pt-6 border-t border-sidebar-border space-y-4">
+            <div className="flex justify-center gap-4">
+              <a 
+                href="https://linkedin.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-xl bg-[#0077B5]/10 flex items-center justify-center hover:bg-[#0077B5]/20 transition-smooth hover-glow group"
+              >
+                <Linkedin size={18} className="text-[#0077B5] group-hover:scale-110 transition-transform" />
+              </a>
+              <a 
+                href="https://wa.me/5511999999999" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-xl bg-[#25D366]/10 flex items-center justify-center hover:bg-[#25D366]/20 transition-smooth hover-glow group"
+              >
+                <MessageCircle size={18} className="text-[#25D366] group-hover:scale-110 transition-transform" />
+              </a>
+            </div>
+            
             <p className="text-xs text-muted-foreground text-center">
               Crafted with ❤️<br />
               & lots of coffee
