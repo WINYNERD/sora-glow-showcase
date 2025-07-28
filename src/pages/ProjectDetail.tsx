@@ -37,6 +37,7 @@ const ProjectDetail = () => {
         "/placeholder.svg",
         "/placeholder.svg"
       ],
+      figmaUrl: "https://www.figma.com/proto/6ys2zLG6RES11a6Cipp2Bp/P%C3%A1gina-de-Concurso---Qconcursos?node-id=1-22684&p=f&t=Gqs5LvCatZOD6dX3-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&embed_host=share",
       tags: ["UX Research", "Data Visualization", "B2B", "SaaS"]
     },
     "ai-assistant": {
@@ -67,6 +68,7 @@ const ProjectDetail = () => {
         "/placeholder.svg",
         "/placeholder.svg"
       ],
+      figmaUrl: "https://www.figma.com/proto/6ys2zLG6RES11a6Cipp2Bp/P%C3%A1gina-de-Concurso---Qconcursos?node-id=1-22684&p=f&t=Gqs5LvCatZOD6dX3-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&embed_host=share",
       tags: ["Conversational Design", "AI/ML", "Customer Support", "E-commerce"]
     },
     "mobile-banking": {
@@ -100,6 +102,7 @@ const ProjectDetail = () => {
         "/placeholder.svg",
         "/placeholder.svg"
       ],
+      figmaUrl: "https://www.figma.com/proto/6ys2zLG6RES11a6Cipp2Bp/P%C3%A1gina-de-Concurso---Qconcursos?node-id=1-22684&p=f&t=Gqs5LvCatZOD6dX3-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&embed_host=share",
       tags: ["Mobile Design", "Banking", "Security", "User Journey"]
     }
   };
@@ -224,6 +227,24 @@ const ProjectDetail = () => {
                 ))}
               </div>
             </section>
+
+            {/* Figma Preview */}
+            {project.figmaUrl && (
+              <section className="mb-10">
+                <h2 className="text-fluid-2xl font-bold text-foreground mb-6">
+                  Preview do Figma
+                </h2>
+                <div className="w-full h-96 rounded-xl overflow-hidden shadow-elegant">
+                  <iframe 
+                    src={project.figmaUrl}
+                    width="100%" 
+                    height="100%" 
+                    allowFullScreen
+                    className="border-0"
+                  />
+                </div>
+              </section>
+            )}
 
             {/* Gallery */}
             <section className="mb-10">
