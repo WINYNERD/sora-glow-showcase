@@ -6,7 +6,7 @@ const ModernContact = () => {
     <section id="contact" className="fluid-section">
       <div className="fluid-container">
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-gradient mb-3">
+          <h2 className="text-fluid-4xl font-bold text-gradient mb-3">
             Vamos Conversar?
           </h2>
           <p className="text-fluid-lg text-muted-foreground max-w-2xl">

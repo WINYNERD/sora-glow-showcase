@@ -41,7 +41,7 @@ const ModernBlog = () => {
       <div className="fluid-container">
         {/* Header */}
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-gradient mb-3">
+          <h2 className="text-fluid-4xl font-bold text-gradient mb-3">
             Devaneios
           </h2>
           <p className="text-fluid-lg text-muted-foreground max-w-2xl">
