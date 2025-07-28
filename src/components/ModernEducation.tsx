@@ -1,53 +1,64 @@
-import { GraduationCap, Calendar, Award } from "lucide-react";
+import { GraduationCap, Calendar, Award, BookOpen, Star, ChevronRight } from "lucide-react";
 
 const ModernEducation = () => {
-  const academicEducation = [
+  const educationJourney = [
     {
-      degree: "MBA em Product Management",
+      id: 1,
+      year: "2023 - 2024",
+      type: "academic",
+      title: "MBA em Product Management",
       institution: "FIAP",
-      period: "2023 - 2024",
-      type: "Pós-graduação",
+      level: "Pós-graduação",
       description: "Estratégia de produto, growth, analytics e liderança técnica",
-      highlights: ["Product Leadership", "Data Analytics", "Growth Strategy"]
+      highlights: ["Product Leadership", "Data Analytics", "Growth Strategy"],
+      featured: true
     },
     {
-      degree: "Design Gráfico",
-      institution: "Universidade Mackenzie", 
-      period: "2017 - 2020",
-      type: "Graduação",
-      description: "Fundamentos em design, tipografia, teoria das cores e comunicação visual",
-      highlights: ["Design Fundamentals", "Visual Identity", "Typography"]
-    }
-  ];
-
-  const courses = [
-    {
-      title: "UX Design Professional Certificate",
-      institution: "Google",
-      period: "2021",
-      description: "Design centrado no usuário, pesquisa e prototipagem",
-      highlights: ["User Research", "Prototyping", "Design Thinking"]
+      id: 2,
+      year: "2023",
+      type: "course",
+      title: "Data-Driven Design",
+      institution: "Nielsen Norman Group",
+      description: "Analytics, métricas e otimização baseada em dados",
+      highlights: ["Analytics", "A/B Testing", "Conversion Optimization"]
     },
     {
-      title: "Design Systems Masterclass",
-      institution: "Design+Code",
-      period: "2022", 
-      description: "Criação e manutenção de design systems escaláveis",
-      highlights: ["Component Libraries", "Design Tokens", "Atomic Design"]
-    },
-    {
+      id: 3,
+      year: "2023",
+      type: "course",
       title: "AI for Designers",
       institution: "MIT OpenCourseWare",
-      period: "2023",
       description: "Aplicação de IA em processos de design e tomada de decisão",
       highlights: ["AI Tools", "Machine Learning", "Design Automation"]
     },
     {
-      title: "Data-Driven Design",
-      institution: "Nielsen Norman Group",
-      period: "2023",
-      description: "Analytics, métricas e otimização baseada em dados",
-      highlights: ["Analytics", "A/B Testing", "Conversion Optimization"]
+      id: 4,
+      year: "2022",
+      type: "course",
+      title: "Design Systems Masterclass",
+      institution: "Design+Code",
+      description: "Criação e manutenção de design systems escaláveis",
+      highlights: ["Component Libraries", "Design Tokens", "Atomic Design"]
+    },
+    {
+      id: 5,
+      year: "2021",
+      type: "course",
+      title: "UX Design Professional Certificate",
+      institution: "Google",
+      description: "Design centrado no usuário, pesquisa e prototipagem",
+      highlights: ["User Research", "Prototyping", "Design Thinking"]
+    },
+    {
+      id: 6,
+      year: "2017 - 2020",
+      type: "academic",
+      title: "Design Gráfico",
+      institution: "Universidade Mackenzie",
+      level: "Graduação",
+      description: "Fundamentos em design, tipografia, teoria das cores e comunicação visual",
+      highlights: ["Design Fundamentals", "Visual Identity", "Typography"],
+      featured: true
     }
   ];
 
@@ -55,99 +66,98 @@ const ModernEducation = () => {
     <section id="education" className="fluid-section">
       <div className="fluid-container">
         {/* Header */}
-        <div className="mb-16">
+        <div className="mb-16 text-center">
           <h2 className="text-fluid-4xl font-bold text-foreground mb-6">
-            Formação & Educação
+            Jornada Educacional
           </h2>
-          <p className="text-fluid-xl text-muted-foreground max-w-2xl">
-            Minha base educacional e jornada de aprendizado contínuo
+          <p className="text-fluid-xl text-muted-foreground max-w-3xl mx-auto">
+            Uma trajetória contínua de aprendizado e evolução profissional
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
-          {/* Academic Education */}
-          <div>
-            <h3 className="text-fluid-2xl font-bold text-foreground mb-8 flex items-center">
-              <GraduationCap className="h-6 w-6 text-primary mr-3" />
-              Formação Acadêmica
-            </h3>
-            
-            <div className="space-y-6">
-              {academicEducation.map((edu, index) => (
-                <div key={index} className="glass-card p-6 hover-glow transition-smooth">
-                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4">
-                    <div className="flex-1">
-                      <div className="flex items-center mb-2">
-                        <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-lg">
-                          {edu.type}
-                        </span>
-                      </div>
-                      <h4 className="text-lg font-bold text-foreground mb-1">
-                        {edu.degree}
-                      </h4>
-                      <p className="text-muted-foreground font-medium mb-2">{edu.institution}</p>
-                      <p className="text-muted-foreground text-sm leading-relaxed">
-                        {edu.description}
-                      </p>
-                    </div>
-                    
-                    <div className="mt-3 sm:mt-0 sm:ml-6">
-                      <div className="flex items-center text-xs text-muted-foreground bg-card/50 px-3 py-2 rounded-xl">
-                        <Calendar className="h-3 w-3 mr-2" />
-                        {edu.period}
-                      </div>
-                    </div>
-                  </div>
+        {/* Timeline Container */}
+        <div className="relative">
+          {/* Timeline Line */}
+          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary/50 via-primary/30 to-transparent md:transform md:-translate-x-0.5"></div>
 
-                  <div className="flex flex-wrap gap-2">
-                    {edu.highlights.map((highlight, i) => (
-                      <div key={i} className="bg-primary/10 text-primary px-2 py-1 rounded-lg text-xs font-medium">
-                        {highlight}
+          {/* Education Items */}
+          <div className="space-y-12">
+            {educationJourney.map((item, index) => (
+              <div key={item.id} className={`relative flex ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} flex-col md:items-center`}>
+                {/* Timeline Dot */}
+                <div className="absolute left-6 md:left-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background shadow-lg md:transform md:-translate-x-2 z-10">
+                  {item.type === 'academic' ? (
+                    <GraduationCap className="absolute -top-1 -left-1 w-6 h-6 text-primary-foreground" />
+                  ) : (
+                    <BookOpen className="absolute -top-0.5 -left-0.5 w-5 h-5 text-primary-foreground" />
+                  )}
+                </div>
+
+                {/* Content Card */}
+                <div className={`ml-16 md:ml-0 ${index % 2 === 0 ? 'md:mr-8 md:ml-0' : 'md:ml-8 md:mr-0'} md:w-5/12 w-full`}>
+                  <div className={`glass-card p-6 hover-glow transition-smooth group ${item.featured ? 'border-primary/30 bg-primary/5' : ''}`}>
+                    {/* Year Badge */}
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center gap-2">
+                        <Calendar className="h-4 w-4 text-primary" />
+                        <span className="text-sm font-bold text-primary">{item.year}</span>
                       </div>
-                    ))}
+                      {item.featured && (
+                        <Star className="h-4 w-4 text-primary fill-primary/20" />
+                      )}
+                    </div>
+
+                    {/* Type Badge */}
+                    <div className="mb-3">
+                      <span className={`text-xs px-3 py-1 rounded-full font-medium ${
+                        item.type === 'academic' 
+                          ? 'bg-primary/20 text-primary' 
+                          : 'bg-secondary/80 text-secondary-foreground'
+                      }`}>
+                        {item.type === 'academic' ? item.level : 'Certificação'}
+                      </span>
+                    </div>
+
+                    {/* Title and Institution */}
+                    <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                      {item.title}
+                    </h3>
+                    <p className="text-muted-foreground font-medium mb-3 flex items-center">
+                      {item.institution}
+                      <ChevronRight className="h-3 w-3 ml-1 opacity-50" />
+                    </p>
+
+                    {/* Description */}
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                      {item.description}
+                    </p>
+
+                    {/* Highlights */}
+                    <div className="flex flex-wrap gap-2">
+                      {item.highlights.map((highlight, i) => (
+                        <span key={i} className="bg-primary/10 text-primary px-2 py-1 rounded-lg text-xs font-medium hover:bg-primary/20 transition-colors">
+                          {highlight}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              ))}
-            </div>
+
+                {/* Empty Space for Alternating Layout */}
+                <div className="hidden md:block md:w-5/12"></div>
+              </div>
+            ))}
           </div>
 
-          {/* Courses & Certifications */}
-          <div>
-            <h3 className="text-fluid-2xl font-bold text-foreground mb-8 flex items-center">
-              <Award className="h-6 w-6 text-primary mr-3" />
-              Cursos & Certificações
-            </h3>
-            
-            <div className="space-y-4">
-              {courses.map((course, index) => (
-                <div key={index} className="glass-card p-5 hover-glow transition-smooth">
-                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-3">
-                    <div className="flex-1">
-                      <h4 className="font-bold text-foreground mb-1">
-                        {course.title}
-                      </h4>
-                      <p className="text-muted-foreground text-sm font-medium mb-2">{course.institution}</p>
-                      <p className="text-muted-foreground text-xs leading-relaxed">
-                        {course.description}
-                      </p>
-                    </div>
-                    
-                    <div className="mt-2 sm:mt-0 sm:ml-4">
-                      <span className="text-xs text-muted-foreground bg-card/50 px-2 py-1 rounded-lg">
-                        {course.period}
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="flex flex-wrap gap-1.5">
-                    {course.highlights.map((highlight, i) => (
-                      <span key={i} className="bg-primary/10 text-primary px-2 py-0.5 rounded text-xs font-medium">
-                        {highlight}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              ))}
+          {/* Timeline End */}
+          <div className="relative mt-12">
+            <div className="absolute left-6 md:left-1/2 w-6 h-6 bg-gradient-to-r from-primary to-primary-glow rounded-full border-4 border-background shadow-lg md:transform md:-translate-x-3 animate-pulse">
+              <div className="absolute inset-0 bg-primary/30 rounded-full animate-ping"></div>
+            </div>
+            <div className="ml-16 md:ml-0 md:text-center">
+              <p className="text-muted-foreground text-sm italic">
+                Sempre em busca de novos conhecimentos...
+              </p>
             </div>
           </div>
         </div>
