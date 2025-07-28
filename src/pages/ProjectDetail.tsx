@@ -6,10 +6,11 @@ import { useState } from "react";
 
 const ProjectDetail = () => {
   const { id } = useParams();
+  // ...existing code...
 
   // Mock project data - in real app, this would come from an API or database
   const projects = {
-    "fintech-dashboard": {
+    "Página de Concurso Público – Qconcursos": {
       title: "Página de Concurso Público – Qconcursos",
       subtitle: "Redesign da principal página informativa da plataforma, voltada para tráfego e ativação de usuários",
       role: ["UX end-to-end", "Arquitetura de Informação", "Design System"],
@@ -110,7 +111,9 @@ const ProjectDetail = () => {
     }
   };
 
-  const project = projects[id as keyof typeof projects];
+  // ...existing code...
+  // Lookup project after projects declaration
+  const project = projects[decodeURIComponent(id ?? "") as keyof typeof projects];
 
   if (!project) {
     return (
@@ -195,22 +198,11 @@ const ProjectDetail = () => {
       <main className="fluid-container py-12">
         {/* Hero Image */}
         <div className="mb-12">
-          <Dialog>
-            <DialogTrigger asChild>
-              <img 
-                src={project.images[0]} 
-                alt={project.title}
-                className="w-full h-96 object-cover rounded-2xl shadow-elegant cursor-pointer hover-float transition-smooth"
-              />
-            </DialogTrigger>
-            <DialogContent className="max-w-4xl max-h-[90vh] p-0">
-              <img 
-                src={project.images[0]} 
-                alt={project.title}
-                className="w-full h-full object-contain"
-              />
-            </DialogContent>
-          </Dialog>
+          <img 
+            src={project.images[0]} 
+            alt={project.title}
+            className="w-full h-96 object-cover rounded-2xl shadow-elegant"
+          />
         </div>
 
         <div className="grid lg:grid-cols-3 gap-12">
