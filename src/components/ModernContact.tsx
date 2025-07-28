@@ -14,53 +14,48 @@ const ModernContact = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Título principal */}
-          <div className="glass-card p-8 gradient-glow mb-12">
+        <div className="max-w-4xl mx-auto">
+          <div className="glass-card p-12 gradient-glow text-center">
             <Sparkles className="w-12 h-12 text-primary mb-6 animate-pulse mx-auto" />
-            <h3 className="text-fluid-2xl font-bold text-foreground mb-4">
+            <h3 className="text-fluid-2xl font-bold text-foreground mb-8">
               Vamos criar algo incrível juntos?
             </h3>
-            <p className="text-muted-foreground leading-relaxed">
-              Seja para um projeto freelance, consultoria ou posição full-time, 
-              adoraria ouvir sobre seus desafios e como posso ajudar.
-            </p>
-          </div>
 
-          {/* Cards de contato */}
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                icon: MessageCircle,
-                label: "WhatsApp",
-                value: "+55 (11) 99999-9999", 
-                link: "https://wa.me/5511999999999"
-              },
-              {
-                icon: Linkedin,
-                label: "LinkedIn", 
-                value: "/in/anna-machado-designer",
-                link: "https://linkedin.com/in/anna-machado-designer"
-              },
-              {
-                icon: Mail,
-                label: "Email",
-                value: "anna@designstudio.com",
-                link: "mailto:anna@designstudio.com"
-              }
-            ].map((contact, index) => (
-              <a key={index} href={contact.link} className="glass-card p-6 hover-glow transition-smooth group block">
-                <div className="text-center">
-                  <div className="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center group-hover:scale-110 transition-smooth mx-auto mb-4">
-                    <contact.icon className="h-5 w-5 text-primary-foreground" />
+            {/* Cards de contato */}
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                {
+                  icon: MessageCircle,
+                  label: "WhatsApp",
+                  value: "+55 (11) 99999-9999", 
+                  link: "https://wa.me/5511999999999"
+                },
+                {
+                  icon: Linkedin,
+                  label: "LinkedIn", 
+                  value: "/in/anna-machado-designer",
+                  link: "https://linkedin.com/in/anna-machado-designer"
+                },
+                {
+                  icon: Mail,
+                  label: "Email",
+                  value: "anna@designstudio.com",
+                  link: "mailto:anna@designstudio.com"
+                }
+              ].map((contact, index) => (
+                <a key={index} href={contact.link} className="bg-background/50 backdrop-blur-sm border border-border/50 rounded-lg p-6 hover-glow transition-smooth group block">
+                  <div className="text-center">
+                    <div className="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center group-hover:scale-110 transition-smooth mx-auto mb-4">
+                      <contact.icon className="h-5 w-5 text-primary-foreground" />
+                    </div>
+                    <h4 className="font-semibold text-foreground mb-2">{contact.label}</h4>
+                    <p className="text-primary hover:text-primary-glow transition-smooth font-medium text-sm">
+                      {contact.value}
+                    </p>
                   </div>
-                  <h4 className="font-semibold text-foreground mb-2">{contact.label}</h4>
-                  <p className="text-primary hover:text-primary-glow transition-smooth font-medium text-sm">
-                    {contact.value}
-                  </p>
-                </div>
-              </a>
-            ))}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
