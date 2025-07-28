@@ -4,8 +4,11 @@ Este projeto é um portfólio moderno desenvolvido em React + Vite, com design r
 
 ## Preview
 
-Acesse o portfólio online:
+Acesse o portfólio Netlify:
 https://annamahcado.netlify.app/
+
+Acesse o portfólio Lovable:
+https://lovable.dev/projects/b76e8005-34d8-435b-86d0-8e456a45ce36
 
 ## Recursos
 
