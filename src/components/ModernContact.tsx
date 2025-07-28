@@ -34,7 +34,7 @@ const ModernContact = () => {
               </div>
 
               {/* Right side - Contact buttons */}
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 {[
                   {
                     icon: MessageCircle,
@@ -63,7 +63,7 @@ const ModernContact = () => {
                     size="lg"
                     variant={contact.primary ? "default" : "outline"}
                     className={`
-                      group w-full h-16 justify-start text-left p-6
+                      group w-full h-12 sm:h-16 justify-start text-left p-3 sm:p-6
                       ${contact.primary 
                         ? "gradient-primary hover-lift transition-bounce" 
                         : "hover-lift transition-bounce"
@@ -71,13 +71,13 @@ const ModernContact = () => {
                     `}
                     asChild
                   >
-                    <a href={contact.link} className="flex items-center space-x-4">
-                      <contact.icon className="h-6 w-6 flex-shrink-0" />
-                      <div className="flex-1">
-                        <div className="font-semibold">{contact.label}</div>
-                        <div className="text-sm opacity-70">{contact.subtitle}</div>
+                    <a href={contact.link} className="flex items-center space-x-3 sm:space-x-4 min-w-0">
+                      <contact.icon className="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0" />
+                      <div className="flex-1 min-w-0">
+                        <div className="font-semibold text-sm sm:text-base truncate">{contact.label}</div>
+                        <div className="text-xs sm:text-sm opacity-70 truncate">{contact.subtitle}</div>
                       </div>
-                      <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-smooth flex-shrink-0" />
+                      <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-smooth flex-shrink-0" />
                     </a>
                   </Button>
                 ))}
