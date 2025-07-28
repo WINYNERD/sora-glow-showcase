@@ -117,7 +117,7 @@ const ModernBlog = () => {
                     </h4>
 
                     <div className="flex items-center justify-end">
-                      <ArrowRight className="h-3 w-3 text-primary group-hover:translate-x-1 transition-transform" />
+                      <ArrowRight className="h-4 w-4 text-primary group-hover:translate-x-1 transition-transform" />
                     </div>
                   </div>
                 </div>
