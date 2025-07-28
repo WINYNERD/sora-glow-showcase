@@ -1,4 +1,4 @@
-import { Briefcase, Heart, Coffee, Camera, Gamepad2, Zap, User } from "lucide-react";
+import { Briefcase, Coffee, Camera, Gamepad2, Zap, Building } from "lucide-react";
 
 const ModernAbout = () => {
   return (
@@ -7,106 +7,102 @@ const ModernAbout = () => {
         {/* Section header */}
         <div className="mb-20">
           <h2 className="text-fluid-4xl font-bold text-gradient mb-6">
-            Sobre Mim
+            Perfil
           </h2>
           <p className="text-fluid-xl text-muted-foreground max-w-2xl">
             Uma mistura de método, criatividade e muito café ☕
           </p>
         </div>
 
-        {/* Single unified card */}
+        {/* Main layout with photo and content */}
         <div className="glass-card p-8 lg:p-12 hover-glow transition-smooth">
-          {/* Main content */}
-          <div className="space-y-8">
-            {/* Who I am section */}
-            <div>
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-8 h-8 gradient-primary rounded-lg flex items-center justify-center">
-                  <User className="h-4 w-4 text-primary-foreground" />
-                </div>
-                <h3 className="text-xl lg:text-2xl font-bold text-gradient">Quem eu sou</h3>
-              </div>
-              
-              <div className="grid md:grid-cols-2 gap-6 text-muted-foreground leading-relaxed">
-                <div>
-                  <div className="flex items-start gap-3 mb-4">
-                    <Zap className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="text-base font-semibold text-foreground mb-2">Experiência & Expertise</h4>
-                      <p className="text-sm lg:text-base">
-                        5+ anos transformando ideias complexas em produtos digitais que realmente funcionam. 
-                        Especializada em UX Research, Design Systems e Product Strategy.
-                      </p>
-                    </div>
+          <div className="grid lg:grid-cols-12 gap-8">
+            {/* Photo section */}
+            <div className="lg:col-span-4">
+              <div className="aspect-square gradient-primary rounded-2xl flex items-center justify-center text-white">
+                <div className="text-center">
+                  <div className="w-16 h-16 mx-auto mb-4 bg-white/20 rounded-full flex items-center justify-center">
+                    <Camera className="w-8 h-8" />
                   </div>
+                  <span className="text-lg font-medium">Foto</span>
                 </div>
-                
-                <div>
-                  <div className="flex items-start gap-3 mb-4">
-                    <Briefcase className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="text-base font-semibold text-foreground mb-2">Abordagem</h4>
-                      <p className="text-sm lg:text-base">
-                        Trabalho com Discovery, Design Thinking, IA e Lean UX. Acredito que dados + 
-                        intuição = decisões melhores. Sempre validando com usuários reais.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Values tags */}
-              <div className="mt-6 flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">Empatia</span>
-                <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">Transparência</span>
-                <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">Colaboração</span>
-                <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">Aprendizado contínuo</span>
-                <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">Data-driven</span>
               </div>
             </div>
 
-            {/* Divider */}
-            <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
-
-            {/* Hobbies and interests section */}
-            <div>
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-8 h-8 gradient-primary rounded-lg flex items-center justify-center">
-                  <Heart className="h-4 w-4 text-primary-foreground" />
+            {/* Content section */}
+            <div className="lg:col-span-8 space-y-8">
+              {/* Experience and expertise */}
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <Zap className="w-5 h-5 text-primary" />
+                  <h3 className="text-xl font-bold text-gradient">Experiência e expertise</h3>
                 </div>
-                <h3 className="text-xl lg:text-2xl font-bold text-gradient">Meus hobbies & gostos</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  5+ anos transformando ideias complexas em produtos digitais que realmente funcionam. 
+                  Especializada em UX Research, Design Systems e Product Strategy.
+                </p>
               </div>
 
-              <p className="text-muted-foreground leading-relaxed mb-6 text-sm lg:text-base">
-                Quando não estou designando, você pode me encontrar explorando o mundo através de diferentes lentes 
-                e experiências. Cada hobby alimenta minha criatividade de formas únicas.
-              </p>
+              {/* Approach */}
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <Building className="w-5 h-5 text-primary" />
+                  <h3 className="text-xl font-bold text-gradient">Abordagem</h3>
+                </div>
+                <p className="text-muted-foreground leading-relaxed">
+                  Trabalho com Discovery, Design Thinking, IA e Lean UX. Acredito que dados + 
+                  intuição = decisões melhores. Sempre validando com usuários reais.
+                </p>
+              </div>
+
+              {/* Values */}
+              <div>
+                <h3 className="text-xl font-bold text-gradient mb-4">Meus valores</h3>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-full">Prototipagem</span>
+                  <span className="px-3 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-full">Prototipagem</span>
+                  <span className="px-3 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-full">Prototipagem</span>
+                  <span className="px-3 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-full">Prototipagem</span>
+                  <span className="px-3 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-full">Prototipagem</span>
+                  <span className="px-3 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-full">Prototipagem</span>
+                  <span className="px-3 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-full">Prototipagem</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Hobbies section */}
+          <div className="mt-12 pt-8 border-t border-border/50">
+            <h3 className="text-xl font-bold text-gradient mb-6">Meus hobbies & gostos</h3>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              Quando não estou designando, você pode me encontrar explorando o mundo através de diferentes lentes 
+              e experiências. Cada hobby alimenta minha criatividade de formas únicas.
+            </p>
+            
+            {/* Hobby grid */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="flex flex-col items-center p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-smooth group">
+                <Camera className="w-8 h-8 text-primary mb-3 group-hover:scale-110 transition-transform" />
+                <span className="text-sm font-medium text-foreground text-center">Fotografia</span>
+                <span className="text-xs text-muted-foreground text-center mt-1">Capturando momentos</span>
+              </div>
               
-              {/* Hobby grid */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div className="flex flex-col items-center p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-smooth group">
-                  <Camera className="w-8 h-8 text-primary mb-3 group-hover:scale-110 transition-transform" />
-                  <span className="text-sm font-medium text-foreground text-center">Fotografia</span>
-                  <span className="text-xs text-muted-foreground text-center mt-1">Capturando momentos</span>
-                </div>
-                
-                <div className="flex flex-col items-center p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-smooth group">
-                  <Coffee className="w-8 h-8 text-primary mb-3 group-hover:scale-110 transition-transform" />
-                  <span className="text-sm font-medium text-foreground text-center">Cafés especiais</span>
-                  <span className="text-xs text-muted-foreground text-center mt-1">Rituais matinais</span>
-                </div>
-                
-                <div className="flex flex-col items-center p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-smooth group">
-                  <Gamepad2 className="w-8 h-8 text-primary mb-3 group-hover:scale-110 transition-transform" />
-                  <span className="text-sm font-medium text-foreground text-center">Indie games</span>
-                  <span className="text-xs text-muted-foreground text-center mt-1">Narrativas únicas</span>
-                </div>
-                
-                <div className="flex flex-col items-center p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-smooth group">
-                  <span className="w-8 h-8 text-2xl mb-3 group-hover:scale-110 transition-transform">🧩</span>
-                  <span className="text-sm font-medium text-foreground text-center">Quebra-cabeças</span>
-                  <span className="text-xs text-muted-foreground text-center mt-1">Desafios mentais</span>
-                </div>
+              <div className="flex flex-col items-center p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-smooth group">
+                <Coffee className="w-8 h-8 text-primary mb-3 group-hover:scale-110 transition-transform" />
+                <span className="text-sm font-medium text-foreground text-center">Cafés especiais</span>
+                <span className="text-xs text-muted-foreground text-center mt-1">Rituais matinais</span>
+              </div>
+              
+              <div className="flex flex-col items-center p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-smooth group">
+                <Gamepad2 className="w-8 h-8 text-primary mb-3 group-hover:scale-110 transition-transform" />
+                <span className="text-sm font-medium text-foreground text-center">Indie games</span>
+                <span className="text-xs text-muted-foreground text-center mt-1">Narrativas únicas</span>
+              </div>
+              
+              <div className="flex flex-col items-center p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-smooth group">
+                <span className="w-8 h-8 text-2xl mb-3 group-hover:scale-110 transition-transform">🧩</span>
+                <span className="text-sm font-medium text-foreground text-center">Quebra-cabeças</span>
+                <span className="text-xs text-muted-foreground text-center mt-1">Desafios mentais</span>
               </div>
             </div>
           </div>
