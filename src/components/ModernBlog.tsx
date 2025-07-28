@@ -98,23 +98,28 @@ const ModernBlog = () => {
           <div className="space-y-4">
             {articles.slice(1, 4).map((article, index) => (
               <div key={index} className="border-b border-border/50 pb-4 last:border-b-0 hover:bg-accent/30 p-3 rounded-lg transition-smooth cursor-pointer group">
-                <div className="flex justify-between items-start mb-2">
-                  <span className="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-lg">
-                    {article.category}
-                  </span>
-                  <div className="flex items-center text-xs text-muted-foreground">
-                    <Calendar className="h-3 w-3 mr-1" />
-                    {article.date}
+                <div className="flex gap-3">
+                  {/* Article Image */}
+                  <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0">
+                    <BookOpen className="h-6 w-6 text-primary/70" />
                   </div>
-                </div>
+                  
+                  {/* Article Content */}
+                  <div className="flex-1 min-w-0">
+                    <div className="mb-2">
+                      <span className="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-lg">
+                        {article.category}
+                      </span>
+                    </div>
 
-                <h4 className="text-sm font-bold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">
-                  {article.title}
-                </h4>
+                    <h4 className="text-sm font-bold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                      {article.title}
+                    </h4>
 
-                <div className="flex items-center justify-between">
-                  <span className="text-xs text-muted-foreground">{article.readTime}</span>
-                  <ArrowRight className="h-3 w-3 text-primary group-hover:translate-x-1 transition-transform" />
+                    <div className="flex items-center justify-end">
+                      <ArrowRight className="h-3 w-3 text-primary group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
