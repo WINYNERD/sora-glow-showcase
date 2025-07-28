@@ -56,11 +56,19 @@ const AppSidebar = () => {
         return;
       }
       
+      // Check if we're near the bottom of the page
+      const isNearBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 100;
+      if (isNearBottom) {
+        setActiveSection("contact");
+        return;
+      }
+      
       for (const sectionId of sections) {
         const element = document.getElementById(sectionId);
         if (element) {
           const rect = element.getBoundingClientRect();
-          if (rect.top <= 150 && rect.bottom >= 150) {
+          // More lenient detection for better section switching
+          if (rect.top <= 200 && rect.bottom >= 100) {
             setActiveSection(sectionId);
             break;
           }
