@@ -15,7 +15,7 @@ const ModernContact = () => {
             Contato
           </h2>
           <p className="text-fluid-lg text-muted-foreground max-w-2xl">
-            fala comigo, bb 💜!
+            fala comigo, bb 💜! Localizada em Niterói/RJ
           </p>
         </div>
 

@@ -15,11 +15,8 @@ const Index = () => {
       <main className="transition-smooth lg:ml-72 ml-0">
         <ModernHero />
         <ModernAbout />
-        
-        <ModernExperience />
-        <ModernEducation />
-        
         <ModernProjects />
+        <ModernEducation />
         <ModernSkillsBadges />
         <ModernBlog />
         <ModernContact />

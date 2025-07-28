@@ -24,9 +24,8 @@ const AppSidebar = () => {
   const menuItems = [
     { label: "Início", id: "hero", icon: Home, path: "/" },
     { label: "Sobre mim", id: "about", icon: User, path: "#about" },
-    { label: "Experiências", id: "experience", icon: Briefcase, path: "#experience" },
-    { label: "Educação", id: "education", icon: GraduationCap, path: "#education" },
     { label: "Projetos", id: "projects", icon: FolderOpen, path: "#projects" },
+    { label: "Educação", id: "education", icon: GraduationCap, path: "#education" },
     { label: "Skills", id: "skills", icon: Brain, path: "#skills" },
     { label: "Devaneios", id: "blog", icon: PenTool, path: "#blog" },
     { label: "Contato", id: "contact", icon: Mail, path: "#contact" },
