@@ -14,62 +14,60 @@ const ModernContact = () => {
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto">
-          {/* CTA Principal */}
-          <div className="text-center mb-16">
-            <div className="glass-card p-12 gradient-glow max-w-3xl mx-auto">
-              <Sparkles className="w-16 h-16 text-primary mb-6 animate-pulse mx-auto" />
-              <h3 className="text-fluid-3xl font-bold text-foreground mb-6">
-                Vamos criar algo incrível juntos?
-              </h3>
-              <p className="text-fluid-lg text-muted-foreground leading-relaxed">
-                Escolha a melhor forma de entrar em contato
-              </p>
-            </div>
-          </div>
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="glass-card p-12 lg:p-16 gradient-glow">
+            <Sparkles className="w-12 h-12 text-primary mb-6 animate-pulse mx-auto" />
+            
+            <h3 className="text-fluid-3xl font-bold text-foreground mb-4">
+              Vamos criar algo incrível juntos?
+            </h3>
+            
+            <p className="text-fluid-lg text-muted-foreground mb-12 max-w-xl mx-auto">
+              Escolha sua forma preferida de contato
+            </p>
 
-          {/* Cards de Contato */}
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: MessageCircle,
-                label: "WhatsApp",
-                value: "+55 (11) 99999-9999", 
-                link: "https://wa.me/5511999999999",
-                description: "Resposta rápida"
-              },
-              {
-                icon: Linkedin,
-                label: "LinkedIn", 
-                value: "/in/anna-machado-designer",
-                link: "https://linkedin.com/in/anna-machado-designer",
-                description: "Vamos nos conectar"
-              },
-              {
-                icon: Mail,
-                label: "Email",
-                value: "anna@designstudio.com",
-                link: "mailto:anna@designstudio.com",
-                description: "Contato profissional"
-              }
-            ].map((contact, index) => (
-              <a 
-                key={index} 
-                href={contact.link} 
-                className="glass-card p-8 hover-float transition-slow group text-center"
-              >
-                <div className="w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center group-hover:scale-110 transition-smooth mx-auto mb-6">
-                  <contact.icon className="h-8 w-8 text-primary-foreground" />
-                </div>
-                <h4 className="text-fluid-xl font-bold text-foreground mb-2 group-hover:text-primary transition-smooth">
-                  {contact.label}
-                </h4>
-                <p className="text-sm text-muted-foreground mb-4">{contact.description}</p>
-                <p className="text-primary font-medium group-hover:text-primary-glow transition-smooth">
-                  {contact.value}
-                </p>
-              </a>
-            ))}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 max-w-2xl mx-auto">
+              {[
+                {
+                  icon: MessageCircle,
+                  label: "WhatsApp",
+                  link: "https://wa.me/5511999999999",
+                  primary: true
+                },
+                {
+                  icon: Linkedin,
+                  label: "LinkedIn", 
+                  link: "https://linkedin.com/in/anna-machado-designer",
+                  primary: false
+                },
+                {
+                  icon: Mail,
+                  label: "Email",
+                  link: "mailto:anna@designstudio.com",
+                  primary: false
+                }
+              ].map((contact, index) => (
+                <Button
+                  key={index}
+                  size="lg"
+                  variant={contact.primary ? "default" : "outline"}
+                  className={`
+                    group min-w-[140px] h-14
+                    ${contact.primary 
+                      ? "gradient-primary hover-lift transition-bounce" 
+                      : "hover-lift transition-bounce"
+                    }
+                  `}
+                  asChild
+                >
+                  <a href={contact.link} className="flex items-center space-x-3">
+                    <contact.icon className="h-5 w-5" />
+                    <span className="font-medium">{contact.label}</span>
+                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-smooth" />
+                  </a>
+                </Button>
+              ))}
+            </div>
           </div>
         </div>
       </div>
