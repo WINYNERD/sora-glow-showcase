@@ -40,17 +40,17 @@ const ModernBlog = () => {
     <section id="blog" className="fluid-section">
       <div className="fluid-container">
         {/* Header */}
-        <div className="mb-16">
-          <h2 className="text-fluid-4xl font-bold text-foreground mb-6">
+        <div className="mb-12">
+          <h2 className="text-fluid-4xl font-bold text-gradient mb-3">
             Devaneios
           </h2>
-          <p className="text-fluid-xl text-muted-foreground max-w-2xl">
+          <p className="text-fluid-lg text-muted-foreground max-w-2xl">
             Reflexões sobre design, tecnologia e comportamento humano
           </p>
         </div>
 
         {/* Articles Layout */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-12">
+        <div className="grid lg:grid-cols-2 gap-8 mb-8">
           {/* Featured Article */}
           <div>
             <article className="glass-card overflow-hidden hover-glow transition-smooth group cursor-pointer">

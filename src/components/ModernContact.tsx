@@ -5,17 +5,17 @@ const ModernContact = () => {
   return (
     <section id="contact" className="fluid-section">
       <div className="fluid-container">
-        <div className="mb-16">
-          <h2 className="text-fluid-4xl font-bold text-gradient mb-6">
+        <div className="mb-12">
+          <h2 className="text-fluid-4xl font-bold text-gradient mb-3">
             Vamos Conversar?
           </h2>
-          <p className="text-fluid-xl text-muted-foreground max-w-2xl">
+          <p className="text-fluid-lg text-muted-foreground max-w-2xl">
             Pronta para criar algo incrível juntos
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
             {[
               {
                 icon: Mail,

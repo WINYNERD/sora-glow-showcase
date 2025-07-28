@@ -48,11 +48,11 @@ const ModernExperience = () => {
     <section id="experience" className="fluid-section">
       <div className="fluid-container">
         {/* Header */}
-        <div className="mb-16">
-          <h2 className="text-fluid-4xl font-bold text-foreground mb-6">
+        <div className="mb-12">
+          <h2 className="text-fluid-4xl font-bold text-gradient mb-3">
             Experiência Profissional
           </h2>
-          <p className="text-fluid-xl text-muted-foreground max-w-2xl">
+          <p className="text-fluid-lg text-muted-foreground max-w-2xl">
             Minha trajetória no design de produtos
           </p>
         </div>
@@ -81,7 +81,7 @@ const ModernExperience = () => {
                         {exp.type}
                       </span>
                     </div>
-                    <h3 className="text-fluid-lg font-bold text-foreground mb-1">
+                    <h3 className="text-fluid-xl font-bold text-foreground mb-1">
                       {exp.role}
                     </h3>
                     <p className="text-muted-foreground font-medium mb-2">{exp.company}</p>

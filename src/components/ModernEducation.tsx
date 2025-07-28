@@ -55,11 +55,11 @@ const ModernEducation = () => {
     <section id="education" className="fluid-section">
       <div className="fluid-container">
         {/* Header */}
-        <div className="mb-16">
-          <h2 className="text-fluid-4xl font-bold text-foreground mb-6">
+        <div className="mb-12">
+          <h2 className="text-fluid-4xl font-bold text-gradient mb-3">
             Formação & Educação
           </h2>
-          <p className="text-fluid-xl text-muted-foreground max-w-2xl">
+          <p className="text-fluid-lg text-muted-foreground max-w-2xl">
             Minha base educacional e jornada de aprendizado contínuo
           </p>
         </div>

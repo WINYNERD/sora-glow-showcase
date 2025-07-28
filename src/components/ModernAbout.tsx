@@ -5,11 +5,11 @@ const ModernAbout = () => {
     <section id="about" className="fluid-section">
       <div className="fluid-container">
         {/* Section header */}
-        <div className="mb-20">
-          <h2 className="text-fluid-4xl font-bold text-gradient mb-6">
+        <div className="mb-12">
+          <h2 className="text-fluid-4xl font-bold text-gradient mb-3">
             Sobre Mim
           </h2>
-          <p className="text-fluid-xl text-muted-foreground max-w-2xl">
+          <p className="text-fluid-lg text-muted-foreground max-w-2xl">
             Uma mistura de método, criatividade e muito café ☕
           </p>
         </div>
@@ -20,11 +20,11 @@ const ModernAbout = () => {
           <div className="space-y-8">
             {/* Who I am section */}
             <div>
-              <div className="flex items-center gap-3 mb-6">
+              <div className="flex items-center gap-3 mb-4">
                 <div className="w-8 h-8 gradient-primary rounded-lg flex items-center justify-center">
                   <User className="h-4 w-4 text-primary-foreground" />
                 </div>
-                <h3 className="text-xl lg:text-2xl font-bold text-gradient">Quem eu sou</h3>
+                <h3 className="text-fluid-2xl font-bold text-gradient">Quem eu sou</h3>
               </div>
               
               <div className="grid md:grid-cols-2 gap-6 text-muted-foreground leading-relaxed">
@@ -32,8 +32,8 @@ const ModernAbout = () => {
                   <div className="flex items-start gap-3 mb-4">
                     <Zap className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="text-base font-semibold text-foreground mb-2">Experiência & Expertise</h4>
-                      <p className="text-sm lg:text-base">
+                      <h4 className="text-fluid-base font-semibold text-foreground mb-2">Experiência & Expertise</h4>
+                      <p className="text-fluid-base">
                         5+ anos transformando ideias complexas em produtos digitais que realmente funcionam. 
                         Especializada em UX Research, Design Systems e Product Strategy.
                       </p>
@@ -45,8 +45,8 @@ const ModernAbout = () => {
                   <div className="flex items-start gap-3 mb-4">
                     <Briefcase className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="text-base font-semibold text-foreground mb-2">Abordagem</h4>
-                      <p className="text-sm lg:text-base">
+                      <h4 className="text-fluid-base font-semibold text-foreground mb-2">Abordagem</h4>
+                      <p className="text-fluid-base">
                         Trabalho com Discovery, Design Thinking, IA e Lean UX. Acredito que dados + 
                         intuição = decisões melhores. Sempre validando com usuários reais.
                       </p>
@@ -70,14 +70,14 @@ const ModernAbout = () => {
 
             {/* Hobbies and interests section */}
             <div>
-              <div className="flex items-center gap-3 mb-6">
+              <div className="flex items-center gap-3 mb-4">
                 <div className="w-8 h-8 gradient-primary rounded-lg flex items-center justify-center">
                   <Heart className="h-4 w-4 text-primary-foreground" />
                 </div>
-                <h3 className="text-xl lg:text-2xl font-bold text-gradient">Meus hobbies & gostos</h3>
+                <h3 className="text-fluid-2xl font-bold text-gradient">Meus hobbies & gostos</h3>
               </div>
 
-              <p className="text-muted-foreground leading-relaxed mb-6 text-sm lg:text-base">
+              <p className="text-muted-foreground leading-relaxed mb-4 text-fluid-base">
                 Quando não estou designando, você pode me encontrar explorando o mundo através de diferentes lentes 
                 e experiências. Cada hobby alimenta minha criatividade de formas únicas.
               </p>

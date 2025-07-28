@@ -27,8 +27,8 @@ const ModernHero = () => {
             </div>
 
             {/* Main heading */}
-            <div className="mb-8 animate-slide-up" style={{animationDelay: '0.2s'}}>
-              <h1 className="text-fluid-2xl font-bold leading-tight mb-6">
+            <div className="mb-6 animate-slide-up" style={{animationDelay: '0.2s'}}>
+              <h1 className="text-fluid-5xl font-bold leading-tight mb-4">
                 Oi! Eu sou{" "}
                 <span className="text-gradient relative">
                   Anna Machado, Product Designer
@@ -39,7 +39,7 @@ const ModernHero = () => {
             </div>
 
             {/* Description */}
-            <p className="text-fluid-xl text-muted-foreground leading-relaxed mb-12 max-w-2xl animate-slide-up" style={{animationDelay: '0.4s'}}>
+            <p className="text-fluid-lg text-muted-foreground leading-relaxed mb-8 max-w-2xl animate-slide-up" style={{animationDelay: '0.4s'}}>
               Especializada em transformar ideias complexas em experiências digitais 
               que impactam pessoas e geram resultados mensuráveis para o negócio.
             </p>

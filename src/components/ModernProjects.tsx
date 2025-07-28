@@ -91,17 +91,17 @@ const ModernProjects = () => {
     <section id="projects" className="fluid-section">
       <div className="fluid-container">
         {/* Header */}
-        <div className="mb-20">
-          <h2 className="text-fluid-4xl font-bold text-gradient mb-6">
+        <div className="mb-12">
+          <h2 className="text-fluid-4xl font-bold text-gradient mb-3">
             Projetos em Destaque
           </h2>
-          <p className="text-fluid-xl text-muted-foreground max-w-2xl">
+          <p className="text-fluid-lg text-muted-foreground max-w-2xl">
             Casos de sucesso que demonstram minha abordagem estratégica
           </p>
         </div>
 
         {/* Featured Projects Grid */}
-        <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 mb-16">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 mb-12">
           {projects.filter(p => p.featured).slice(0, visibleProjects).map((project, index) => (
             <div
               key={project.id}
@@ -189,7 +189,7 @@ const ModernProjects = () => {
 
         {/* Load More Button */}
         {visibleProjects < projects.length && (
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <Button 
               onClick={loadMoreProjects}
               variant="outline"

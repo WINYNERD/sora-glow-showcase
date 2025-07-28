@@ -59,17 +59,17 @@ const ModernSkillsBadges = () => {
     <section id="skills" className="fluid-section bg-gradient-to-b from-transparent to-primary/5">
       <div className="fluid-container">
         {/* Header */}
-        <div className="mb-20">
-          <h2 className="text-fluid-4xl font-bold text-gradient mb-6">
+        <div className="mb-12">
+          <h2 className="text-fluid-4xl font-bold text-gradient mb-3">
             Skills & Competências
           </h2>
-          <p className="text-fluid-xl text-muted-foreground max-w-2xl">
+          <p className="text-fluid-lg text-muted-foreground max-w-2xl">
             Arsenal completo para criar produtos digitais excepcionais
           </p>
         </div>
 
         {/* Skills Categories */}
-        <div className="grid lg:grid-cols-3 gap-6 mb-16">
+        <div className="grid lg:grid-cols-3 gap-6 mb-12">
           {skillCategories.map((category, index) => (
             <div key={index} className="glass-card p-6 hover-glow transition-smooth">
               {/* Header */}
@@ -99,7 +99,7 @@ const ModernSkillsBadges = () => {
         </div>
 
         {/* Specialties */}
-        <div className="mb-16">
+        <div className="mb-12">
           <h3 className="text-fluid-2xl font-bold text-foreground mb-8">
             Especialidades em Destaque
           </h3>
