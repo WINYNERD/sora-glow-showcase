@@ -14,48 +14,62 @@ const ModernContact = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="glass-card p-12 gradient-glow text-center">
-            <Sparkles className="w-12 h-12 text-primary mb-6 animate-pulse mx-auto" />
-            <h3 className="text-fluid-2xl font-bold text-foreground mb-8">
-              Vamos criar algo incrível juntos?
-            </h3>
-
-            {/* Cards de contato */}
-            <div className="grid md:grid-cols-3 gap-6">
-              {[
-                {
-                  icon: MessageCircle,
-                  label: "WhatsApp",
-                  value: "+55 (11) 99999-9999", 
-                  link: "https://wa.me/5511999999999"
-                },
-                {
-                  icon: Linkedin,
-                  label: "LinkedIn", 
-                  value: "/in/anna-machado-designer",
-                  link: "https://linkedin.com/in/anna-machado-designer"
-                },
-                {
-                  icon: Mail,
-                  label: "Email",
-                  value: "anna@designstudio.com",
-                  link: "mailto:anna@designstudio.com"
-                }
-              ].map((contact, index) => (
-                <a key={index} href={contact.link} className="bg-background/50 backdrop-blur-sm border border-border/50 rounded-lg p-6 hover-glow transition-smooth group block">
-                  <div className="text-center">
-                    <div className="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center group-hover:scale-110 transition-smooth mx-auto mb-4">
-                      <contact.icon className="h-5 w-5 text-primary-foreground" />
-                    </div>
-                    <h4 className="font-semibold text-foreground mb-2">{contact.label}</h4>
-                    <p className="text-primary hover:text-primary-glow transition-smooth font-medium text-sm">
-                      {contact.value}
-                    </p>
-                  </div>
-                </a>
-              ))}
+        <div className="max-w-6xl mx-auto">
+          {/* CTA Principal */}
+          <div className="text-center mb-16">
+            <div className="glass-card p-12 gradient-glow max-w-3xl mx-auto">
+              <Sparkles className="w-16 h-16 text-primary mb-6 animate-pulse mx-auto" />
+              <h3 className="text-fluid-3xl font-bold text-foreground mb-6">
+                Vamos criar algo incrível juntos?
+              </h3>
+              <p className="text-fluid-lg text-muted-foreground leading-relaxed">
+                Escolha a melhor forma de entrar em contato
+              </p>
             </div>
+          </div>
+
+          {/* Cards de Contato */}
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                icon: MessageCircle,
+                label: "WhatsApp",
+                value: "+55 (11) 99999-9999", 
+                link: "https://wa.me/5511999999999",
+                description: "Resposta rápida"
+              },
+              {
+                icon: Linkedin,
+                label: "LinkedIn", 
+                value: "/in/anna-machado-designer",
+                link: "https://linkedin.com/in/anna-machado-designer",
+                description: "Vamos nos conectar"
+              },
+              {
+                icon: Mail,
+                label: "Email",
+                value: "anna@designstudio.com",
+                link: "mailto:anna@designstudio.com",
+                description: "Contato profissional"
+              }
+            ].map((contact, index) => (
+              <a 
+                key={index} 
+                href={contact.link} 
+                className="glass-card p-8 hover-float transition-slow group text-center"
+              >
+                <div className="w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center group-hover:scale-110 transition-smooth mx-auto mb-6">
+                  <contact.icon className="h-8 w-8 text-primary-foreground" />
+                </div>
+                <h4 className="text-fluid-xl font-bold text-foreground mb-2 group-hover:text-primary transition-smooth">
+                  {contact.label}
+                </h4>
+                <p className="text-sm text-muted-foreground mb-4">{contact.description}</p>
+                <p className="text-primary font-medium group-hover:text-primary-glow transition-smooth">
+                  {contact.value}
+                </p>
+              </a>
+            ))}
           </div>
         </div>
       </div>
