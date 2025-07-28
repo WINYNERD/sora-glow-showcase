@@ -24,11 +24,11 @@ const ModernContact = () => {
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Left side - CTA */}
               <div className="text-center lg:text-left">
-                <h3 className="text-2xl sm:text-3xl lg:text-fluid-3xl font-bold text-foreground mb-4">
+                <h3 className="text-xl sm:text-2xl lg:text-3xl xl:text-fluid-3xl font-bold text-foreground mb-4 break-words hyphens-auto">
                   Vamos criar algo incrível juntos?
                 </h3>
                 
-                <p className="text-muted-foreground mb-6 lg:mb-8 text-base lg:text-lg">
+                <p className="text-muted-foreground mb-6 lg:mb-8 text-sm sm:text-base lg:text-lg break-words">
                   Às vezes tudo começa com uma boa conversa — e isso já é um ótimo começo.
                 </p>
               </div>
@@ -63,7 +63,7 @@ const ModernContact = () => {
                     size="lg"
                     variant={contact.primary ? "default" : "outline"}
                     className={`
-                      group w-full h-16 justify-start text-left p-6
+                      group w-full h-auto min-h-[64px] justify-start text-left p-4 sm:p-6
                       ${contact.primary 
                         ? "gradient-primary hover-lift transition-bounce" 
                         : "hover-lift transition-bounce"
@@ -71,13 +71,13 @@ const ModernContact = () => {
                     `}
                     asChild
                   >
-                    <a href={contact.link} className="flex items-center space-x-4">
-                      <contact.icon className="h-6 w-6 flex-shrink-0" />
-                      <div className="flex-1">
-                        <div className="font-semibold">{contact.label}</div>
-                        <div className="text-sm opacity-70">{contact.subtitle}</div>
+                    <a href={contact.link} className="flex items-center space-x-3 sm:space-x-4 w-full min-w-0">
+                      <contact.icon className="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0" />
+                      <div className="flex-1 min-w-0">
+                        <div className="font-semibold text-sm sm:text-base truncate">{contact.label}</div>
+                        <div className="text-xs sm:text-sm opacity-70 truncate">{contact.subtitle}</div>
                       </div>
-                      <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-smooth flex-shrink-0" />
+                      <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-smooth flex-shrink-0" />
                     </a>
                   </Button>
                 ))}
