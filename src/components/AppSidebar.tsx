@@ -173,8 +173,8 @@ const AppSidebar = () => {
             </div>
             
             <p className="text-xs text-muted-foreground text-center">
-              Crafted with ❤️<br />
-              & lots of coffee
+              Feito com ❤️<br />
+              e muitos gatinhos
             </p>
           </div>
         </div>
