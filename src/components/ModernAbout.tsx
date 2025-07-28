@@ -1,4 +1,4 @@
-import { Briefcase, Heart, Coffee, Camera, Gamepad2, Zap, User } from "lucide-react";
+import { Briefcase, Heart, Coffee, Camera, Gamepad2, Zap, User, Star } from "lucide-react";
 
 const ModernAbout = () => {
   return (
@@ -43,25 +43,25 @@ const ModernAbout = () => {
                 
                 <div>
                   <div className="flex items-start gap-3 mb-4">
-                    <Briefcase className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <Star className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="text-fluid-base font-semibold text-foreground mb-2">Abordagem</h4>
+                      <h4 className="text-fluid-base font-semibold text-foreground mb-2">Valores</h4>
                       <p className="text-fluid-base">
-                        Trabalho com Discovery, Design Thinking, IA e Lean UX. Acredito que dados + 
-                        intuição = decisões melhores. Sempre validando com usuários reais.
+                        Acredito que design é sobre pessoas, conexões e impacto positivo. 
+                        Meus valores guiam cada decisão e cada projeto que toco.
                       </p>
                     </div>
                   </div>
+                  
+                  {/* Values badges moved here */}
+                  <div className="flex flex-wrap gap-2 mt-3">
+                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">Empatia</span>
+                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">Transparência</span>
+                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">Colaboração</span>
+                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">Aprendizado contínuo</span>
+                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">Data-driven</span>
+                  </div>
                 </div>
-              </div>
-              
-              {/* Values tags */}
-              <div className="mt-6 flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">Empatia</span>
-                <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">Transparência</span>
-                <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">Colaboração</span>
-                <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">Aprendizado contínuo</span>
-                <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">Data-driven</span>
               </div>
             </div>
 
