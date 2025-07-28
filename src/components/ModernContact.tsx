@@ -14,59 +14,85 @@ const ModernContact = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto">
           <div className="glass-card p-12 lg:p-16 gradient-glow">
-            <Sparkles className="w-12 h-12 text-primary mb-6 animate-pulse mx-auto" />
-            
-            <h3 className="text-fluid-3xl font-bold text-foreground mb-4">
-              Vamos criar algo incrível juntos?
-            </h3>
-            
-            <p className="text-fluid-lg text-muted-foreground mb-12 max-w-xl mx-auto">
-              Escolha sua forma preferida de contato
-            </p>
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* Left side - CTA */}
+              <div className="text-center lg:text-left">
+                <div className="flex items-center space-x-3 mb-6">
+                  <Sparkles className="w-8 h-8 text-primary animate-pulse" />
+                  <span className="text-primary font-medium">Disponível para novos projetos</span>
+                </div>
+                
+                <h3 className="text-fluid-3xl font-bold text-foreground mb-4">
+                  Vamos criar algo incrível juntos?
+                </h3>
+                
+                <div className="flex flex-col space-y-3 text-muted-foreground mb-8">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span>Resposta em até 24h</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span>Consulta gratuita de 30min</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span>Orçamento sem compromisso</span>
+                  </div>
+                </div>
+              </div>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 max-w-2xl mx-auto">
-              {[
-                {
-                  icon: MessageCircle,
-                  label: "WhatsApp",
-                  link: "https://wa.me/5511999999999",
-                  primary: true
-                },
-                {
-                  icon: Linkedin,
-                  label: "LinkedIn", 
-                  link: "https://linkedin.com/in/anna-machado-designer",
-                  primary: false
-                },
-                {
-                  icon: Mail,
-                  label: "Email",
-                  link: "mailto:anna@designstudio.com",
-                  primary: false
-                }
-              ].map((contact, index) => (
-                <Button
-                  key={index}
-                  size="lg"
-                  variant={contact.primary ? "default" : "outline"}
-                  className={`
-                    group min-w-[140px] h-14
-                    ${contact.primary 
-                      ? "gradient-primary hover-lift transition-bounce" 
-                      : "hover-lift transition-bounce"
-                    }
-                  `}
-                  asChild
-                >
-                  <a href={contact.link} className="flex items-center space-x-3">
-                    <contact.icon className="h-5 w-5" />
-                    <span className="font-medium">{contact.label}</span>
-                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-smooth" />
-                  </a>
-                </Button>
-              ))}
+              {/* Right side - Contact buttons */}
+              <div className="space-y-4">
+                {[
+                  {
+                    icon: MessageCircle,
+                    label: "WhatsApp",
+                    subtitle: "Chat direto",
+                    link: "https://wa.me/5511999999999",
+                    primary: true
+                  },
+                  {
+                    icon: Mail,
+                    label: "Email",
+                    subtitle: "anna@designstudio.com",
+                    link: "mailto:anna@designstudio.com",
+                    primary: false
+                  },
+                  {
+                    icon: Linkedin,
+                    label: "LinkedIn", 
+                    subtitle: "Vamos nos conectar",
+                    link: "https://linkedin.com/in/anna-machado-designer",
+                    primary: false
+                  }
+                ].map((contact, index) => (
+                  <Button
+                    key={index}
+                    size="lg"
+                    variant={contact.primary ? "default" : "outline"}
+                    className={`
+                      group w-full h-16 justify-start text-left p-6
+                      ${contact.primary 
+                        ? "gradient-primary hover-lift transition-bounce" 
+                        : "hover-lift transition-bounce"
+                      }
+                    `}
+                    asChild
+                  >
+                    <a href={contact.link} className="flex items-center space-x-4">
+                      <contact.icon className="h-6 w-6 flex-shrink-0" />
+                      <div className="flex-1">
+                        <div className="font-semibold">{contact.label}</div>
+                        <div className="text-sm opacity-70">{contact.subtitle}</div>
+                      </div>
+                      <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-smooth flex-shrink-0" />
+                    </a>
+                  </Button>
+                ))}
+              </div>
             </div>
           </div>
         </div>
