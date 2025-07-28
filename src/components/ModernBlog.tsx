@@ -1,40 +1,31 @@
+import { useEffect, useState } from "react";
 import { Calendar, ArrowRight, BookOpen } from "lucide-react";
 
+const MEDIUM_RSS = "https://medium.com/feed/@anmaxdo";
+
 const ModernBlog = () => {
-  const articles = [
-    {
-      title: "O Futuro do Design está na IA Colaborativa",
-      excerpt: "Como a inteligência artificial está redefinindo processos criativos e a importância de manter a humanidade no centro do design.",
-      date: "15 Jan 2024",
-      readTime: "8 min",
-      category: "AI & Design",
-      image: "/api/placeholder/400/240"
-    },
-    {
-      title: "Design Systems que Escalam",
-      excerpt: "Lições aprendidas construindo design systems para equipes distribuídas e produtos complexos em constante evolução.",
-      date: "02 Jan 2024", 
-      readTime: "12 min",
-      category: "Design Systems",
-      image: "/api/placeholder/400/240"
-    },
-    {
-      title: "Pesquisa de Usuário em Tempos de Dados",
-      excerpt: "Como equilibrar insights qualitativos e quantitativos para tomar decisões de design mais assertivas e centradas no usuário.",
-      date: "18 Dez 2023",
-      readTime: "6 min",
-      category: "UX Research",
-      image: "/api/placeholder/400/240"
-    },
-    {
-      title: "A Psicologia das Micro-interações",
-      excerpt: "Como pequenos detalhes de interface podem criar experiências memoráveis e influenciar comportamentos de forma sutil mas poderosa.",
-      date: "05 Dez 2023",
-      readTime: "10 min", 
-      category: "Psychology",
-      image: "/api/placeholder/400/240"
+  const [mediumPosts, setMediumPosts] = useState([]);
+  // Removido: artigos locais
+
+  useEffect(() => {
+    async function fetchMedium() {
+      try {
+        const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${MEDIUM_RSS}`);
+        const data = await res.json();
+        if (data.items) {
+          setMediumPosts(data.items);
+        }
+      } catch (err) {
+        // Falha silenciosa
+      }
     }
-  ];
+    fetchMedium();
+  }, []);
+
+  // Função para remover a primeira <img> do HTML do description
+  function removeFirstImg(html) {
+    return html ? html.replace(/<img[^>]*>/i, '') : html;
+  }
 
   return (
     <section id="blog" className="fluid-section">
@@ -49,91 +40,134 @@ const ModernBlog = () => {
           </p>
         </div>
 
-        {/* Articles Layout */}
+        {/* Articles Layout restaurado, agora usando dados do Medium */}
         <div className="grid lg:grid-cols-2 gap-8 mb-8">
           {/* Featured Article */}
           <div>
-            <article className="glass-card overflow-hidden hover-glow transition-smooth group cursor-pointer">
-              {/* Featured Image */}
-              <div className="w-full h-48 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-                <BookOpen className="h-12 w-12 text-primary/70" />
-              </div>
-              
-              {/* Featured Content */}
-              <div className="p-6">
-                {/* Category */}
-                <div className="mb-3">
-                  <span className="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-lg">
-                    {articles[0].category}
-                  </span>
+            {mediumPosts.length > 0 ? (
+              <a
+                href={mediumPosts[0].link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass-card overflow-hidden hover-glow transition-smooth group cursor-pointer block"
+              >
+                <div className="w-full h-48 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center overflow-hidden">
+                  {/* Busca imagem do thumbnail, enclosure ou do conteúdo do post */}
+                  {(() => {
+                    const post = mediumPosts[0];
+                    let imgSrc = post.thumbnail || (post.enclosure && post.enclosure.link);
+                    if (!imgSrc && post.description) {
+                      const match = post.description.match(/<img[^>]+src=["']([^"'>]+)["']/);
+                      if (match) imgSrc = match[1];
+                    }
+                    return imgSrc ? (
+                      <img
+                        src={imgSrc}
+                        alt={post.title}
+                        className="object-cover w-full h-full rounded-lg"
+                      />
+                    ) : (
+                      <BookOpen className="h-12 w-12 text-primary/70" />
+                    );
+                  })()}
                 </div>
-
-                {/* Title */}
-                <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
-                  {articles[0].title}
-                </h3>
-
-                {/* Excerpt */}
-                <p className="text-muted-foreground leading-relaxed mb-4 text-sm">
-                  {articles[0].excerpt}
-                </p>
-
-                {/* Meta */}
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center text-sm text-muted-foreground">
-                    <Calendar className="h-4 w-4 mr-2" />
-                    {articles[0].date} • {articles[0].readTime}
+                <div className="p-6">
+                  <div className="mb-3">
+                    <span className="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-lg">
+                      {mediumPosts[0].categories && mediumPosts[0].categories.length > 0 ? mediumPosts[0].categories[0] : "Medium"}
+                    </span>
                   </div>
-                  
-                  <div className="flex items-center text-primary group-hover:translate-x-2 transition-transform">
-                    <span className="text-sm font-medium mr-2">Ler mais</span>
-                    <ArrowRight className="h-4 w-4" />
+                  <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                    {mediumPosts[0].title}
+                  </h3>
+                  {/* Mostra só as 3 primeiras linhas do resumo, se houver */}
+                  <p className="text-muted-foreground leading-relaxed mb-4 text-sm line-clamp-3" dangerouslySetInnerHTML={{ __html: removeFirstImg(mediumPosts[0].description) }} />
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center text-sm text-muted-foreground">
+                      <Calendar className="h-4 w-4 mr-2" />
+                      {new Date(mediumPosts[0].pubDate).toLocaleDateString('pt-BR')}
+                    </div>
+                    <div className="flex items-center text-primary group-hover:translate-x-2 transition-transform">
+                      <span className="text-sm font-medium mr-2">Ler mais</span>
+                      <ArrowRight className="h-4 w-4" />
+                    </div>
                   </div>
                 </div>
-              </div>
-            </article>
+              </a>
+            ) : (
+              <div className="glass-card p-12 text-center text-muted-foreground">Carregando post em destaque...</div>
+            )}
           </div>
-
           {/* Articles List */}
           <div className="space-y-4">
-            {articles.slice(1, 4).map((article, index) => (
-              <div key={index} className="border-b border-border/50 pb-4 last:border-b-0 hover:bg-accent/30 p-3 rounded-lg transition-smooth cursor-pointer group">
-                <div className="flex gap-3">
-                  {/* Article Image */}
-                  <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0">
-                    <BookOpen className="h-6 w-6 text-primary/70" />
-                  </div>
-                  
-                  {/* Article Content */}
-                  <div className="flex-1 min-w-0">
-                    <div className="mb-2">
-                      <span className="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-lg">
-                        {article.category}
-                      </span>
+            {mediumPosts.length > 1 ? (
+              mediumPosts.slice(1, 2).map((post) => (
+                <a
+                  key={post.guid}
+                  href={post.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border-b border-border/50 pb-4 last:border-b-0 hover:bg-accent/30 p-3 rounded-lg transition-smooth cursor-pointer group block"
+                >
+                  <div className="flex gap-3">
+                    <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0">
+                      <BookOpen className="h-6 w-6 text-primary/70" />
                     </div>
-
-                    <h4 className="font-bold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2" style={{fontSize: '18px'}}>
-                      {article.title}
-                    </h4>
-
-                    <div className="flex items-center justify-end">
-                      <ArrowRight className="h-4 w-4 text-primary group-hover:translate-x-1 transition-transform" />
+                    <div className="flex-1 min-w-0">
+                      <div className="mb-2">
+                        <span className="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-lg">
+                          {post.categories && post.categories.length > 0 ? post.categories[0] : "Medium"}
+                        </span>
+                      </div>
+                      <h4 className="font-bold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2" style={{ fontSize: '18px' }}>
+                        {post.title}
+                      </h4>
+                      {/* Imagem abaixo do título, se houver */}
+                      {(() => {
+                        let imgSrc = post.thumbnail || (post.enclosure && post.enclosure.link);
+                        if (!imgSrc && post.description) {
+                          const match = post.description.match(/<img[^>]+src=["']([^"'>]+)["']/);
+                          if (match) imgSrc = match[1];
+                        }
+                        return imgSrc ? (
+                          <img
+                            src={imgSrc}
+                            alt={post.title}
+                            className="object-cover w-full h-32 rounded-lg mb-2"
+                          />
+                        ) : null;
+                      })()}
+                      {/* Mostra só as 3 primeiras linhas do resumo, se houver */}
+                      <p className="text-muted-foreground leading-relaxed mb-2 text-sm line-clamp-3" dangerouslySetInnerHTML={{ __html: removeFirstImg(post.description) }} />
+                      <div className="flex items-center text-sm text-muted-foreground">
+                        <Calendar className="h-4 w-4 mr-2" />
+                        {new Date(post.pubDate).toLocaleDateString('pt-BR')}
+                      </div>
+                      <div className="flex items-center justify-end">
+                        <ArrowRight className="h-4 w-4 text-primary group-hover:translate-x-1 transition-transform" />
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            ))}
-            
+                </a>
+              ))
+            ) : (
+              <div className="text-center text-muted-foreground py-12">Carregando posts do Medium...</div>
+            )}
             {/* Read More Button */}
             <div className="pt-4">
-              <button className="w-full text-left p-3 hover:bg-accent/30 rounded-lg transition-smooth group">
+              <a
+                href="https://medium.com/@anmaxdo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full block text-left p-3 hover:bg-accent/30 rounded-lg transition-smooth group"
+              >
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
-                    Ver todos os artigos
+                    Ver todos os artigos no Medium
                   </span>
                   <ArrowRight className="h-4 w-4 text-primary group-hover:translate-x-1 transition-transform" />
                 </div>
-              </button>
+              </a>
             </div>
           </div>
         </div>

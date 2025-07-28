@@ -23,7 +23,7 @@ const ModernContact = () => {
 
         <div className="max-w-5xl mx-auto">
           <div className="glass-card p-12 lg:p-16 gradient-glow">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-12 items-center justify-center">
               {/* Left side - CTA */}
               <div className="text-center lg:text-left">
                 <h3 className="text-fluid-3xl font-bold text-foreground mb-4">
