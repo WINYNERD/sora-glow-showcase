@@ -29,19 +29,18 @@ const ModernHero = () => {
             {/* Main heading */}
             <div className="mb-6 animate-slide-up" style={{animationDelay: '0.2s'}}>
               <h1 className="font-bold leading-tight mb-4" style={{fontSize: 'var(--text-3xl)'}}>
-                Oi! Eu sou{" "}
+                Oi! Eu sou a{" "}
                 <span className="text-gradient relative">
-                  Anna Machado, Product Designer
+                  Anna, PD movida por UX, dados, pessoas e tecnologia.
                   <div className="absolute -bottom-2 left-0 right-0 h-1 gradient-primary rounded-full opacity-60"></div>
                 </span>{" "}
-                que une design, dados e tecnologia para resolver problemas reais.
+                Sou apaixonada por produtos digitais e resolver problemas
               </h1>
             </div>
 
             {/* Description */}
             <p className="text-fluid-lg text-muted-foreground leading-relaxed mb-8 max-w-2xl animate-slide-up" style={{animationDelay: '0.4s'}}>
-              Especializada em transformar ideias complexas em experiências digitais 
-              que impactam pessoas e geram resultados mensuráveis para o negócio.
+              Com 8 anos de experiência, transformo ideias complexas em experiências digitais que fazem sentido para as pessoas — e geram resultados reais para o negócio.
             </p>
 
             {/* CTA Buttons */}
@@ -66,21 +65,6 @@ const ModernHero = () => {
               </Button>
             </div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-8 mt-16 animate-slide-up" style={{animationDelay: '0.8s'}}>
-              <div className="text-center">
-                <div className="text-fluid-3xl font-bold text-gradient mb-2">5+</div>
-                <div className="text-sm text-muted-foreground">Anos de experiência</div>
-              </div>
-              <div className="text-center">
-                <div className="text-fluid-3xl font-bold text-gradient mb-2">50+</div>
-                <div className="text-sm text-muted-foreground">Projetos entregues</div>
-              </div>
-              <div className="text-center">
-                <div className="text-fluid-3xl font-bold text-gradient mb-2">15+</div>
-                <div className="text-sm text-muted-foreground">Empresas impactadas</div>
-              </div>
-            </div>
           </div>
 
           {/* Decorative side content */}
