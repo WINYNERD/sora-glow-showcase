@@ -19,29 +19,13 @@ const ModernContact = () => {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Left side - CTA */}
               <div className="text-center lg:text-left">
-                <div className="flex items-center space-x-3 mb-6">
-                  <Sparkles className="w-8 h-8 text-primary animate-pulse" />
-                  <span className="text-primary font-medium">Disponível para novos projetos</span>
-                </div>
-                
                 <h3 className="text-fluid-3xl font-bold text-foreground mb-4">
                   Vamos criar algo incrível juntos?
                 </h3>
                 
-                <div className="flex flex-col space-y-3 text-muted-foreground mb-8">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span>Resposta em até 24h</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span>Consulta gratuita de 30min</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span>Orçamento sem compromisso</span>
-                  </div>
-                </div>
+                <p className="text-muted-foreground mb-8 text-lg">
+                  Às vezes tudo começa com uma boa conversa — e isso já é um ótimo começo.
+                </p>
               </div>
 
               {/* Right side - Contact buttons */}
