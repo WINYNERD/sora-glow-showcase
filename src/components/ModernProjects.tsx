@@ -175,7 +175,7 @@ const ModernProjects = () => {
                   {project.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
-                      className="px-3 py-1 text-xs font-medium bg-white/5 text-muted-foreground rounded-lg group-hover:bg-primary/10 group-hover:text-primary transition-smooth"
+                      className="px-3 py-1 text-xs font-medium bg-muted/30 text-muted-foreground rounded-lg group-hover:bg-primary/10 group-hover:text-primary transition-smooth"
                     >
                       {tag}
                     </span>

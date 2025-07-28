@@ -84,25 +84,25 @@ const ModernAbout = () => {
               
               {/* Hobby grid */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div className="flex flex-col items-center p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-smooth group">
+                <div className="flex flex-col items-center p-4 bg-muted/30 rounded-xl hover:bg-muted/50 transition-smooth group">
                   <Camera className="w-8 h-8 text-primary mb-3 group-hover:scale-110 transition-transform" />
                   <span className="text-sm font-medium text-foreground text-center">Fotografia</span>
                   <span className="text-xs text-muted-foreground text-center mt-1">Capturando momentos</span>
                 </div>
                 
-                <div className="flex flex-col items-center p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-smooth group">
+                <div className="flex flex-col items-center p-4 bg-muted/30 rounded-xl hover:bg-muted/50 transition-smooth group">
                   <Coffee className="w-8 h-8 text-primary mb-3 group-hover:scale-110 transition-transform" />
                   <span className="text-sm font-medium text-foreground text-center">Cafés especiais</span>
                   <span className="text-xs text-muted-foreground text-center mt-1">Rituais matinais</span>
                 </div>
                 
-                <div className="flex flex-col items-center p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-smooth group">
+                <div className="flex flex-col items-center p-4 bg-muted/30 rounded-xl hover:bg-muted/50 transition-smooth group">
                   <Gamepad2 className="w-8 h-8 text-primary mb-3 group-hover:scale-110 transition-transform" />
                   <span className="text-sm font-medium text-foreground text-center">Indie games</span>
                   <span className="text-xs text-muted-foreground text-center mt-1">Narrativas únicas</span>
                 </div>
                 
-                <div className="flex flex-col items-center p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-smooth group">
+                <div className="flex flex-col items-center p-4 bg-muted/30 rounded-xl hover:bg-muted/50 transition-smooth group">
                   <span className="w-8 h-8 text-2xl mb-3 group-hover:scale-110 transition-transform">🧩</span>
                   <span className="text-sm font-medium text-foreground text-center">Quebra-cabeças</span>
                   <span className="text-xs text-muted-foreground text-center mt-1">Desafios mentais</span>

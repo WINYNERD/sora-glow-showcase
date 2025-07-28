@@ -9,13 +9,11 @@ import {
   Mail,
   Menu,
   X,
-  BookOpen,
   PenTool,
   GraduationCap,
   Linkedin,
   MessageCircle
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const AppSidebar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -69,12 +67,12 @@ const AppSidebar = () => {
       </button>
 
       {/* Mobile overlay */}
-      {isMobileMenuOpen && (
-        <div 
-          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
-          onClick={() => setIsMobileMenuOpen(false)}
-        />
-      )}
+       {isMobileMenuOpen && (
+         <div 
+           className="fixed inset-0 bg-background/80 z-40 lg:hidden"
+           onClick={() => setIsMobileMenuOpen(false)}
+         />
+       )}
       
       <div 
         className={`fixed top-0 left-0 h-full z-50 transition-smooth lg:w-72 w-72 ${
@@ -138,17 +136,17 @@ const AppSidebar = () => {
                 href="https://linkedin.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-xl bg-[#0077B5]/10 flex items-center justify-center hover:bg-[#0077B5]/20 transition-smooth hover-glow group"
+                className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center hover:bg-accent/20 transition-smooth hover-glow group"
               >
-                <Linkedin size={18} className="text-[#0077B5] group-hover:scale-110 transition-transform" />
+                <Linkedin size={18} className="text-accent group-hover:scale-110 transition-transform" />
               </a>
               <a 
                 href="https://wa.me/5511999999999" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-xl bg-[#25D366]/10 flex items-center justify-center hover:bg-[#25D366]/20 transition-smooth hover-glow group"
+                className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-smooth hover-glow group"
               >
-                <MessageCircle size={18} className="text-[#25D366] group-hover:scale-110 transition-transform" />
+                <MessageCircle size={18} className="text-primary group-hover:scale-110 transition-transform" />
               </a>
             </div>
             

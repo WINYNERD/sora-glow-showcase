@@ -116,7 +116,7 @@ const ModernSkills = () => {
                       </div>
                       
                       {/* Progress bar */}
-                      <div className="w-full bg-white/10 rounded-full h-1.5 overflow-hidden">
+                      <div className="w-full bg-muted/30 rounded-full h-1.5 overflow-hidden">
                         <div 
                           className="h-full gradient-primary rounded-full transition-all duration-1000 ease-out group-hover:animate-pulse"
                           style={{ width: `${skill.level}%` }}
