@@ -101,55 +101,51 @@ const ModernBlog = () => {
           {/* Articles List */}
           <div className="space-y-4">
             {mediumPosts.length > 1 ? (
-              mediumPosts.slice(1, 2).map((post) => (
-                <a
-                  key={post.guid}
-                  href={post.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="border-b border-border/50 pb-4 last:border-b-0 hover:bg-accent/30 p-3 rounded-lg transition-smooth cursor-pointer group block"
-                >
-                  <div className="flex gap-3">
-                    <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0">
-                      <BookOpen className="h-6 w-6 text-primary/70" />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="mb-2">
-                        <span className="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-lg">
-                          {post.categories && post.categories.length > 0 ? post.categories[0] : "Medium"}
-                        </span>
+              mediumPosts.slice(1, 4).map((post) => {
+                let imgSrc = post.thumbnail || (post.enclosure && post.enclosure.link);
+                if (!imgSrc && post.description) {
+                  const match = post.description.match(/<img[^>]+src=["']([^"'>]+)["']/);
+                  if (match) imgSrc = match[1];
+                }
+                return (
+                  <a
+                    key={post.guid}
+                    href={post.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="border-b border-border/50 pb-4 last:border-b-0 hover:bg-accent/30 p-3 rounded-lg transition-smooth cursor-pointer group block"
+                  >
+                    <div className="flex gap-3">
+                      <div
+                        className="w-16 h-16 rounded-lg bg-gradient-to-br from-primary/20 to-primary/5 flex-shrink-0 relative overflow-hidden"
+                        style={imgSrc ? { backgroundImage: `url(${imgSrc})`, backgroundSize: 'cover', backgroundPosition: 'center' } : {}}
+                      >
+                        <div style={imgSrc ? { background: 'rgba(255, 255, 255, 0)', borderRadius: '8px', position: 'absolute', inset: 0 } : {}}></div>
+                        {/* Ícone removido, só imagem de fundo */}
                       </div>
-                      <h4 className="font-bold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2" style={{ fontSize: '18px' }}>
-                        {post.title}
-                      </h4>
-                      {/* Imagem abaixo do título, se houver */}
-                      {(() => {
-                        let imgSrc = post.thumbnail || (post.enclosure && post.enclosure.link);
-                        if (!imgSrc && post.description) {
-                          const match = post.description.match(/<img[^>]+src=["']([^"'>]+)["']/);
-                          if (match) imgSrc = match[1];
-                        }
-                        return imgSrc ? (
-                          <img
-                            src={imgSrc}
-                            alt={post.title}
-                            className="object-cover w-full h-32 rounded-lg mb-2"
-                          />
-                        ) : null;
-                      })()}
-                      {/* Mostra só as 3 primeiras linhas do resumo, se houver */}
-                      <p className="text-muted-foreground leading-relaxed mb-2 text-sm line-clamp-3" dangerouslySetInnerHTML={{ __html: removeFirstImg(post.description) }} />
-                      <div className="flex items-center text-sm text-muted-foreground">
-                        <Calendar className="h-4 w-4 mr-2" />
-                        {new Date(post.pubDate).toLocaleDateString('pt-BR')}
-                      </div>
-                      <div className="flex items-center justify-end">
-                        <ArrowRight className="h-4 w-4 text-primary group-hover:translate-x-1 transition-transform" />
+                      <div className="flex-1 min-w-0">
+                        <div className="mb-2">
+                          <span className="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-lg">
+                            {post.categories && post.categories.length > 0 ? post.categories[0] : "Medium"}
+                          </span>
+                        </div>
+                        <h4 className="font-bold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2" style={{ fontSize: '18px' }}>
+                          {post.title}
+                        </h4>
+                        {/* Mostra só as 3 primeiras linhas do resumo, se houver */}
+                        <p className="text-muted-foreground leading-relaxed mb-2 text-sm line-clamp-3" dangerouslySetInnerHTML={{ __html: removeFirstImg(post.description) }} />
+                        <div className="flex items-center text-sm text-muted-foreground">
+                          <Calendar className="h-4 w-4 mr-2" />
+                          {new Date(post.pubDate).toLocaleDateString('pt-BR')}
+                        </div>
+                        <div className="flex items-center justify-end">
+                          <ArrowRight className="h-4 w-4 text-primary group-hover:translate-x-1 transition-transform" />
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </a>
-              ))
+                  </a>
+                );
+              })
             ) : (
               <div className="text-center text-muted-foreground py-12">Carregando posts do Medium...</div>
             )}
