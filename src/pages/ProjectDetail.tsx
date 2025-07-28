@@ -1,6 +1,8 @@
 import { useParams, Link } from "react-router-dom";
-import { ArrowLeft, ExternalLink, Calendar, Users, Target, TrendingUp } from "lucide-react";
+import { ArrowLeft, ExternalLink, Calendar, Users, Target, TrendingUp, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { useState } from "react";
 
 const ProjectDetail = () => {
   const { id } = useParams();
@@ -193,11 +195,22 @@ const ProjectDetail = () => {
       <main className="fluid-container py-12">
         {/* Hero Image */}
         <div className="mb-12">
-          <img 
-            src={project.images[0]} 
-            alt={project.title}
-            className="w-full h-96 object-cover rounded-2xl shadow-elegant"
-          />
+          <Dialog>
+            <DialogTrigger asChild>
+              <img 
+                src={project.images[0]} 
+                alt={project.title}
+                className="w-full h-96 object-cover rounded-2xl shadow-elegant cursor-pointer hover-float transition-smooth"
+              />
+            </DialogTrigger>
+            <DialogContent className="max-w-4xl max-h-[90vh] p-0">
+              <img 
+                src={project.images[0]} 
+                alt={project.title}
+                className="w-full h-full object-contain"
+              />
+            </DialogContent>
+          </Dialog>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-12">
@@ -266,12 +279,22 @@ const ProjectDetail = () => {
               </h2>
               <div className="grid sm:grid-cols-2 gap-4">
                 {project.images.slice(1).map((image, index) => (
-                  <img 
-                    key={index}
-                    src={image} 
-                    alt={`${project.title} - Imagem ${index + 2}`}
-                    className="w-full h-64 object-cover rounded-xl hover-float transition-smooth cursor-pointer"
-                  />
+                  <Dialog key={index}>
+                    <DialogTrigger asChild>
+                      <img 
+                        src={image} 
+                        alt={`${project.title} - Imagem ${index + 2}`}
+                        className="w-full h-64 object-cover rounded-xl hover-float transition-smooth cursor-pointer"
+                      />
+                    </DialogTrigger>
+                    <DialogContent className="max-w-4xl max-h-[90vh] p-0">
+                      <img 
+                        src={image} 
+                        alt={`${project.title} - Imagem ${index + 2}`}
+                        className="w-full h-full object-contain"
+                      />
+                    </DialogContent>
+                  </Dialog>
                 ))}
               </div>
             </section>
