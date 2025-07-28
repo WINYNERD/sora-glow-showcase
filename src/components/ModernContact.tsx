@@ -1,4 +1,4 @@
-import { Mail, Linkedin, MessageCircle, ArrowRight, Sparkles } from "lucide-react";
+import { Mail, Linkedin, MessageCircle, ArrowRight, Sparkles, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const ModernContact = () => {
@@ -15,7 +15,7 @@ const ModernContact = () => {
             Contato
           </h2>
           <p className="text-fluid-lg text-muted-foreground max-w-2xl">
-            fala comigo, bb 💜! Localizada em Niterói/RJ
+            fala comigo, bb 💜!
           </p>
         </div>
 
@@ -55,6 +55,13 @@ const ModernContact = () => {
                     label: "LinkedIn", 
                     subtitle: "Vamos nos conectar",
                     link: "https://linkedin.com/in/anna-machado-designer",
+                    primary: false
+                  },
+                  {
+                    icon: MapPin,
+                    label: "Localização",
+                    subtitle: "Niterói/RJ",
+                    link: "#",
                     primary: false
                   }
                 ].map((contact, index) => (
