@@ -92,7 +92,7 @@ const ModernEducation = () => {
                     </div>
                     
                     <div className="mt-3 sm:mt-0 sm:ml-6">
-                      <div className="flex items-center text-xs text-muted-foreground bg-card/50 px-3 py-2 rounded-xl">
+                      <div className="flex items-center text-xs text-muted-foreground">
                         <Calendar className="h-3 w-3 mr-2" />
                         {edu.period}
                       </div>
@@ -130,7 +130,7 @@ const ModernEducation = () => {
                     </div>
                     
                     <div className="mt-2 sm:mt-0 sm:ml-4">
-                      <span className="text-xs text-muted-foreground bg-card/50 px-2 py-1 rounded-lg">
+                      <span className="text-xs text-muted-foreground">
                         {course.period}
                       </span>
                     </div>
