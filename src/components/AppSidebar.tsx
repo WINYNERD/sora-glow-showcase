@@ -34,6 +34,7 @@ const AppSidebar = () => {
 
   const scrollToSection = (sectionId: string) => {
     setIsMobileMenuOpen(false);
+    setActiveSection(sectionId); // Set active section immediately when clicked
     if (sectionId === "hero") {
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
