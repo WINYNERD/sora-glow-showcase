@@ -22,19 +22,21 @@ const ModernContact = () => {
         </div>
 
         <div className="max-w-5xl mx-auto">
-          <div className="glass-card p-6 sm:p-10 lg:p-16 gradient-glow">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+          <div className="glass-card p-12 lg:p-16 gradient-glow">
+            <div className="grid lg:grid-cols-2 gap-12 items-center justify-center">
               {/* Left side - CTA */}
-              <div className="text-center lg:text-left flex flex-col items-center lg:items-start">
+              <div className="text-center lg:text-left">
                 <h3 className="text-fluid-3xl font-bold text-foreground mb-4">
                   Vamos criar algo incrível juntos?
                 </h3>
+
                 <p className="text-muted-foreground mb-8 text-lg">
                   Às vezes tudo começa com uma boa conversa — e isso já é um ótimo começo.
                 </p>
               </div>
+
               {/* Right side - Contact buttons */}
-              <div className="space-y-4 relative flex flex-col items-end lg:items-start w-full pr-2 sm:pr-8 lg:pr-0">
+              <div className="space-y-4 relative">
                 {/* Botões de contato */}
                 {[
                   {
@@ -64,7 +66,7 @@ const ModernContact = () => {
                     size="lg"
                     variant={contact.primary ? "default" : "outline"}
                     className={`
-                      group w-full max-w-xs h-16 justify-start text-left p-6
+                      group w-full h-16 justify-start text-left p-6
                       ${contact.primary
                         ? "gradient-primary hover-lift transition-bounce"
                         : "hover-lift transition-bounce"
