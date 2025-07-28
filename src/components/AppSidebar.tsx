@@ -1,19 +1,18 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { 
-  Home, 
-  User, 
-  Briefcase, 
-  FolderOpen, 
-  Brain, 
+import {
+  Home,
+  User,
+  Briefcase,
+  FolderOpen,
+  Brain,
   Mail,
   Menu,
   X,
   PenTool,
   GraduationCap,
   Linkedin,
-  MessageCircle,
-  Bot
+  MessageCircle
 } from "lucide-react";
 
 const AppSidebar = () => {
@@ -119,7 +118,14 @@ const AppSidebar = () => {
           <div className="mb-12 mt-4 lg:mt-0">
             <div className="flex items-center space-x-3 mb-2">
               <div className="w-10 h-10 gradient-primary rounded-2xl flex items-center justify-center">
-                <Bot className="text-primary-foreground w-5 h-5" />
+                <svg width={24} height={24} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6">
+                  <path d="M17 7.20999C19.989 7.93299 22 9.28099 22 10.826C22 13.131 17.523 15 12 15C6.477 15 2 13.13 2 10.826C2 9.28099 4.011 7.93299 7 7.21099" stroke="white" strokeWidth="1.5"/>
+                  <path d="M7 7.729C7.00027 6.47487 7.49858 5.27219 8.38538 4.38539C9.27219 3.49858 10.4749 3.00027 11.729 3H12.271C13.5251 3.00027 14.7278 3.49858 15.6146 4.38539C16.5014 5.27219 16.9997 6.47487 17 7.729C17 7.906 16.946 8.079 16.8 8.18C16.386 8.468 15.19 9 12 9C8.81 9 7.614 8.468 7.2 8.18C7.054 8.08 7 7.906 7 7.729Z" stroke="white" strokeWidth="1.5"/>
+                  <circle cx="12" cy="12" r="1" fill="white"/>
+                  <circle cx="7" cy="11" r="1" fill="white"/>
+                  <circle cx="17" cy="11" r="1" fill="white"/>
+                  <path d="M12 21V18M18 20V17M6 20V17" stroke="white" strokeWidth="1.5" strokeLinecap="round"/>
+                </svg>
               </div>
               <div className="min-w-0">
                 <h2 className="text-lg font-semibold text-sidebar-foreground truncate">Anna Machado</h2>
@@ -163,7 +169,7 @@ const AppSidebar = () => {
           <div className="mt-8 pt-6 border-t border-sidebar-border space-y-4">
             <div className="flex justify-center gap-4">
               <a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/in/machadoanna/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center hover:bg-accent/20 transition-smooth hover-glow group"
@@ -171,7 +177,7 @@ const AppSidebar = () => {
                 <Linkedin size={18} className="text-accent group-hover:scale-110 transition-transform" />
               </a>
               <a 
-                href="https://wa.me/5511999999999" 
+                href="https://wa.me/552197356953" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-smooth hover-glow group"
