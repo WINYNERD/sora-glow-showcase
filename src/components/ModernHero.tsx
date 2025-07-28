@@ -22,17 +22,16 @@ const ModernHero = () => {
             <div className="inline-flex items-center space-x-2 glass-card px-4 py-2 mb-8 animate-slide-up">
               <Sparkles className="w-4 h-4 text-primary" />
               <span className="text-sm font-medium text-muted-foreground">
-                Disponível para novos projetos
+                Seja bem-vindo 💜
               </span>
             </div>
 
             {/* Main heading */}
             <div className="mb-6 animate-slide-up" style={{animationDelay: '0.2s'}}>
               <h1 className="font-bold leading-tight mb-4" style={{fontSize: 'var(--text-3xl)'}}>
-                Oi! Eu sou a{" "}
-                <span className="text-gradient relative">
-                  Anna, PD movida por UX, dados, pessoas e tecnologia.
-                  <div className="absolute -bottom-2 left-0 right-0 h-1 gradient-primary rounded-full opacity-60"></div>
+                Oi! Eu sou a Anna, PD movida por{" "}
+                <span className="text-gradient">
+                  UX, dados, pessoas e tecnologia.
                 </span>{" "}
                 Sou apaixonada por produtos digitais e resolver problemas
               </h1>

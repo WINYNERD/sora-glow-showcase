@@ -123,7 +123,12 @@ const ProjectDetail = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background" style={{ scrollBehavior: 'auto' }}>
+      {/* Scroll to top on component mount */}
+      {(() => {
+        window.scrollTo(0, 0);
+        return null;
+      })()}
       {/* Header */}
       <header className="border-b border-border/50 p-6">
         <div className="fluid-container">
