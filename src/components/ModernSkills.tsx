@@ -78,7 +78,7 @@ const ModernSkills = () => {
       <div className="fluid-container">
         {/* Header */}
         <div className="text-center mb-20">
-          <h2 className="text-fluid-4xl font-bold text-gradient mb-6">
+          <h2 className="text-3xl font-bold text-gradient mb-6">
             Skills & Competências
           </h2>
           <p className="text-fluid-xl text-muted-foreground max-w-2xl mx-auto">

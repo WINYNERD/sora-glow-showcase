@@ -12,7 +12,8 @@ import {
   PenTool,
   GraduationCap,
   Linkedin,
-  MessageCircle
+  MessageCircle,
+  Zap
 } from "lucide-react";
 
 const AppSidebar = () => {
@@ -110,7 +111,7 @@ const AppSidebar = () => {
           <div className="mb-12 mt-4 lg:mt-0">
             <div className="flex items-center space-x-3 mb-2">
               <div className="w-10 h-10 gradient-primary rounded-2xl flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">A</span>
+                <Zap className="text-primary-foreground w-5 h-5" />
               </div>
               <div className="min-w-0">
                 <h2 className="text-lg font-semibold text-sidebar-foreground truncate">Anna Machado</h2>

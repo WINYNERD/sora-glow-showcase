@@ -47,7 +47,7 @@ const ModernHero = () => {
               <Button
                 onClick={scrollToProjects}
                 size="lg"
-                className="gradient-primary hover-lift transition-bounce text-primary-foreground px-8 py-4 text-lg font-medium group"
+                className="gradient-primary hover-lift transition-bounce text-primary-foreground group"
               >
                 Ver meus projetos
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-smooth" />
@@ -56,7 +56,7 @@ const ModernHero = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="glass-card hover-glow transition-smooth px-8 py-4 text-lg font-medium group"
+                className="glass-card hover-glow transition-smooth group"
                 onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
               >
                 <MousePointer2 className="mr-2 h-5 w-5 group-hover:rotate-12 transition-smooth" />
