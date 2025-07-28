@@ -8,37 +8,38 @@ const ProjectDetail = () => {
   // Mock project data - in real app, this would come from an API or database
   const projects = {
     "fintech-dashboard": {
-      title: "Dashboard Analytics - FinTech",
-      subtitle: "Redesign completo de plataforma de análise financeira",
-      period: "6 meses",
-      team: "4 pessoas",
-      role: "Lead UX/UI Designer",
-      context: "A startup FinanceFlow precisava redesenhar sua plataforma de analytics para melhorar a experiência dos usuários B2B e reduzir o churn rate que estava em 40%.",
-      problem: "Os usuários relatavam dificuldade para encontrar insights importantes, interface confusa e falta de personalização nos dashboards. O produto estava perdendo clientes para concorrentes.",
+      title: "Página de Concurso Público – Qconcursos",
+      subtitle: "Redesign da principal página informativa da plataforma, voltada para tráfego e ativação de usuários",
+      role: ["UX end-to-end", "Arquitetura de Informação", "Design System"],
+      context: "A página de concursos públicos do Qconcursos é uma das principais portas de entrada da plataforma. Ela precisava ser redesenhada para aumentar a taxa de cadastro, melhorar o engajamento e transmitir autoridade sobre os concursos divulgados.",
+      problem: 'Concursos públicos não seguem um padrão fixo: variam em número de etapas, completude de dados e formato de edital. Alguns concursos têm sete fases detalhadas, outros oferecem poucas ou nenhuma informação. Era necessário criar uma arquitetura capaz de se adaptar a essas diferenças, mantendo a clareza e utilidade para o usuário.\n\nAlém disso, existiam diferentes níveis de navegação (usuário deslogado, logado, assinante, aluno de curso) e era essencial comunicar bem com todos eles, respeitando restrições e liberando conteúdos conforme o tipo de acesso.\n\nPor fim, também havia uma necessidade interna do time editorial: os stakeholders responsáveis pelo cadastro e atualização de concursos precisavam de uma estrutura que permitisse tanto automações quanto atualizações manuais em concursos estratégicos. A página precisava atender tanto o usuário final quanto o fluxo interno da empresa.',
       process: [
-        "Research qualitativo com 25 usuários atuais",
-        "Análise de dados de comportamento no produto",
-        "Benchmarking com concorrentes e melhores práticas",
-        "Criação de personas e jornadas do usuário",
-        "Wireframes e prototipagem iterativa",
-        "Testes de usabilidade com 50+ usuários",
-        "Design system e componentes reutilizáveis",
-        "Implementação em fases com feedback contínuo"
+        "Mergulho profundo no banco de dados e lógica de estrutura dos concursos",
+        "Mapeamento de comportamentos dos usuários com diferentes níveis de acesso",
+        "UX research qualitativa com usuários de topo e meio de funil",
+        "Benchmark com sites de prefeituras, bancas organizadoras e concorrentes",
+        "Redesenho da arquitetura de informação para suportar flexibilidade e clareza",
+        "Criação de componentes modulares com lógica condicional",
+        "Interface adaptada para priorizar informações na primeira dobra (com foco em 1366px de largura)",
+        "Validações com equipe editorial para garantir facilidade de uso interno",
+        "Testes com usuários e iterações baseadas em dados do Amplitude"
       ],
       results: [
-        "65% de aumento no engagement",
-        "40% de redução no churn rate",
-        "25% de melhoria no NPS",
-        "50% menos cliques para encontrar informações"
+        "📈 +5% de aumento em novos cadastros",
+        "🧭 +70% de engajamento médio com a nova página",
+        "📚 Mais usuários iniciando ações de estudo diretamente a partir da página",
+        "🔗 Aumento nas navegações para planos de estudo, videoaulas e simulados",
+        "⚙️ Página se tornou base confiável para atualizações manuais de concursos estratégicos",
+        "🌐 Melhora na performance de SEO e uso da página como canal de aquisição orgânica",
+        "🏛️ Fortalecimento da autoridade do Qconcursos como referência sobre concursos públicos"
       ],
       images: [
-        "/placeholder.svg",
-        "/placeholder.svg",
-        "/placeholder.svg",
-        "/placeholder.svg"
+        "/capa1.png",
+        "/galeria1.png",
+        "/galeria1-1.png"
       ],
       figmaUrl: "https://www.figma.com/proto/6ys2zLG6RES11a6Cipp2Bp/P%C3%A1gina-de-Concurso---Qconcursos?node-id=1-22684&p=f&t=Gqs5LvCatZOD6dX3-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&embed_host=share",
-      tags: ["UX Research", "Data Visualization", "B2B", "SaaS"]
+      tags: ["UX Research", "UI Strategy", "Banco de Dados", "Dados Complexos", "SEO", "Plataformas Educacionais"]
     },
     "ai-assistant": {
       title: "AI Assistant Interface",
@@ -153,17 +154,29 @@ const ProjectDetail = () => {
 
           {/* Project Meta */}
           <div className="flex flex-wrap gap-4 mb-6">
-            <div className="flex items-center text-sm text-muted-foreground bg-card/10 px-3 py-2 rounded-lg">
-              <Calendar className="w-4 h-4 mr-2" />
-              {project.period}
-            </div>
-            <div className="flex items-center text-sm text-muted-foreground bg-card/10 px-3 py-2 rounded-lg">
-              <Users className="w-4 h-4 mr-2" />
-              {project.team}
-            </div>
-            <div className="text-sm font-medium text-primary bg-primary/10 px-3 py-2 rounded-lg">
-              {project.role}
-            </div>
+            {"period" in project && project.period && (
+              <div className="flex items-center text-sm text-muted-foreground bg-card/10 px-3 py-2 rounded-lg">
+                <Calendar className="w-4 h-4 mr-2" />
+                {project.period}
+              </div>
+            )}
+            {"team" in project && project.team && (
+              <div className="flex items-center text-sm text-muted-foreground bg-card/10 px-3 py-2 rounded-lg">
+                <Users className="w-4 h-4 mr-2" />
+                {project.team}
+              </div>
+            )}
+            {Array.isArray(project.role)
+              ? project.role.map((roleTag, idx) => (
+                  <div key={idx} className="text-sm font-medium text-primary bg-primary/10 px-3 py-2 rounded-lg">
+                    {roleTag}
+                  </div>
+                ))
+              : (
+                  <div className="text-sm font-medium text-primary bg-primary/10 px-3 py-2 rounded-lg">
+                    {project.role}
+                  </div>
+                )}
           </div>
 
           {/* Tags */}
