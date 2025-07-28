@@ -103,9 +103,10 @@ const ModernProjects = () => {
         {/* Featured Projects Grid */}
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 mb-12">
           {projects.filter(p => p.featured).slice(0, visibleProjects).map((project, index) => (
-            <div
+            <Link
               key={project.id}
-              className="group glass-card overflow-hidden hover-float transition-slow"
+              to={`/projeto/${project.id}`}
+              className="group glass-card overflow-hidden hover-float transition-slow block"
               onMouseEnter={() => setHoveredProject(index)}
               onMouseLeave={() => setHoveredProject(null)}
             >
@@ -130,11 +131,9 @@ const ModernProjects = () => {
 
                 {/* Hover CTA */}
                 <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-smooth">
-                  <Link to={`/projeto/${project.id}`}>
-                    <Button size="sm" className="gradient-primary shadow-glow">
-                      <ArrowRight className="w-4 h-4" />
-                    </Button>
-                  </Link>
+                  <Button size="sm" className="gradient-primary shadow-glow">
+                    <ArrowRight className="w-4 h-4" />
+                  </Button>
                 </div>
               </div>
 
@@ -182,7 +181,7 @@ const ModernProjects = () => {
                   ))}
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
