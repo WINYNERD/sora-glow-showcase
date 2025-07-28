@@ -150,11 +150,11 @@ const ProjectDetail = () => {
 
           {/* Project Meta */}
           <div className="flex flex-wrap gap-4 mb-6">
-            <div className="flex items-center text-sm text-muted-foreground bg-card/50 px-3 py-2 rounded-lg">
+            <div className="flex items-center text-sm text-muted-foreground bg-card/10 px-3 py-2 rounded-lg">
               <Calendar className="w-4 h-4 mr-2" />
               {project.period}
             </div>
-            <div className="flex items-center text-sm text-muted-foreground bg-card/50 px-3 py-2 rounded-lg">
+            <div className="flex items-center text-sm text-muted-foreground bg-card/10 px-3 py-2 rounded-lg">
               <Users className="w-4 h-4 mr-2" />
               {project.team}
             </div>
