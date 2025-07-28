@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { 
   Home, 
@@ -17,6 +17,7 @@ import {
 
 const AppSidebar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("hero");
   const location = useLocation();
 
   const menuItems = [
@@ -42,18 +43,38 @@ const AppSidebar = () => {
     }
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (location.pathname !== "/") return;
+      
+      const sections = menuItems.map(item => item.id);
+      
+      if (window.scrollY < 100) {
+        setActiveSection("hero");
+        return;
+      }
+      
+      for (const sectionId of sections) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 150 && rect.bottom >= 150) {
+            setActiveSection(sectionId);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Check initial state
+    
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [location.pathname]);
+
   const isActive = (sectionId: string) => {
     if (location.pathname !== "/") return false;
-    
-    if (sectionId === "hero") {
-      return window.scrollY < 100;
-    }
-    
-    const element = document.getElementById(sectionId);
-    if (!element) return false;
-    
-    const rect = element.getBoundingClientRect();
-    return rect.top <= 100 && rect.bottom >= 100;
+    return activeSection === sectionId;
   };
 
   return (

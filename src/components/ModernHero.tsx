@@ -28,7 +28,7 @@ const ModernHero = () => {
 
             {/* Main heading */}
             <div className="mb-6 animate-slide-up" style={{animationDelay: '0.2s'}}>
-              <h1 className="text-fluid-5xl font-bold leading-tight mb-4">
+              <h1 className="font-bold leading-tight mb-4" style={{fontSize: 'var(--text-3xl)'}}>
                 Oi! Eu sou{" "}
                 <span className="text-gradient relative">
                   Anna Machado, Product Designer

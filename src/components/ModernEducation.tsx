@@ -127,9 +127,6 @@ const ModernEducation = () => {
                         {course.title}
                       </h4>
                       <p className="text-muted-foreground text-sm font-medium mb-2">{course.institution}</p>
-                      <p className="text-muted-foreground text-xs leading-relaxed">
-                        {course.description}
-                      </p>
                     </div>
                     
                     <div className="mt-2 sm:mt-0 sm:ml-4">

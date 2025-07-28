@@ -112,7 +112,7 @@ const ModernBlog = () => {
                       </span>
                     </div>
 
-                    <h4 className="text-sm font-bold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                    <h4 className="font-bold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2" style={{fontSize: '18px'}}>
                       {article.title}
                     </h4>
 
