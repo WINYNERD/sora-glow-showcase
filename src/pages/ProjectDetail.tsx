@@ -73,7 +73,10 @@ const ProjectDetail = () => {
         }
       ],
       results: [
-        "Resultados esperados"
+        "Aumento no engajamento com apostilas digitais.",
+        "Redução no abandono do estudo em apostilas.",
+        "Aumento no NPS dos alunos nas pesquisas pós-lançamento.",
+        "Jornada mais fluida, com integração natural entre leitura, exercícios e videoaulas."
       ],
       images: [
         "/capa1.png",
@@ -578,7 +581,7 @@ const ProjectDetail = () => {
               <div className="glass-card p-6 mb-6">
                 <h3 className="text-lg font-bold text-foreground mb-4 flex items-center">
                   <TrendingUp className="w-5 h-5 text-primary mr-2" />
-                  Resultados
+                  {project.title === "Ambiente de Estudo – Qconcursos" ? "Resultados Esperados:" : "Resultados"}
                 </h3>
                 <div className="space-y-3">
                   {project.results.map((result, index) => (
