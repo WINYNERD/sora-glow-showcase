@@ -29,17 +29,20 @@ const ModernHero = () => {
             {/* Main heading */}
             <div className="mb-6 animate-slide-up" style={{animationDelay: '0.2s'}}>
               <h1 className="font-bold leading-tight mb-4" style={{fontSize: 'var(--text-3xl)'}}>
-                Oi! Eu sou a Anna, PD movida por{" "}
+                👋 Oi, eu sou a Anna! Apaixonada por{" "}
                 <span className="text-gradient">
-                  UX, dados, pessoas e tecnologia.
-                </span>{" "}
-                Sou apaixonada por produtos digitais e resolver problemas
+                  produtos digitais {" "}
+                </span>
+                e em {" "}
+                <span className="text-gradient">
+                  resolver problemas reais.
+                </span>
               </h1>
             </div>
 
             {/* Description */}
             <p className="text-fluid-lg text-muted-foreground leading-relaxed mb-8 max-w-2xl animate-slide-up" style={{animationDelay: '0.4s'}}>
-              Com 8 anos de experiência, transformo ideias complexas em experiências digitais que fazem sentido para as pessoas — e geram resultados reais para o negócio.
+              Sou Product Designer estratégica que une UX, dados e visão de produto, focada em criar experiências incríveis e gerar resultados.
             </p>
 
             {/* CTA Buttons */}

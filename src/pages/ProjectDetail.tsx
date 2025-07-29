@@ -20,7 +20,18 @@ const ProjectDetail = () => {
         "Product Learning"
       ],
       context: "O Qconcursos precisava transformar o ambiente de consumo em um ambiente digital moderno e integrado, capaz de oferecer uma experiência de estudo contínua para alunos de concursos públicos.\n\nA experiência anterior era desmotivadora, com textos longos, pouco escaneáveis e separados de exercícios e videoaulas, o que prejudicava o engajamento e a retenção de alunos.",
-      problem: "Os alunos relatavam que:\nA leitura da apostila era cansativa e pouco interativa\nEra difícil conectar teoria, prática e videoaulas em um único fluxo\nA experiência não refletia a qualidade do conteúdo oferecido pelos professores\nFaltavam recursos de acessibilidade e personalização\nIsso gerava baixa motivação e altos índices de abandono na jornada de estudo.",
+      problem: [
+        {
+          title: "Os alunos relatavam que:",
+          topics: [
+            "A leitura da apostila era cansativa e pouco interativa",
+            "Era difícil conectar teoria, prática e videoaulas em um único fluxo",
+            "A experiência não refletia a qualidade do conteúdo oferecido pelos professores",
+            "Faltavam recursos de acessibilidade e personalização",
+            "Isso gerava baixa motivação e altos índices de abandono na jornada de estudo."
+          ]
+        }
+      ],
       process: [
         {
           title: "Investigação e Discovery",
@@ -49,7 +60,48 @@ const ProjectDetail = () => {
           ]
         }
       ],
-      solution: "A solução foi criar um novo ambiente de estudo unificado e interativo, que conectasse teoria, prática e videoaulas em um só fluxo:\nLeitura otimizada com markdown estruturado, tipografia hierárquica e até 13 palavras por linha para conforto visual.\n\nStudioDock: painel flutuante que permite navegação rápida, marcações, visualização de progresso e ajustes de acessibilidade.\n\nIntegração total de exercícios, textos e videoaulas, permitindo estudar sem trocar de contexto.\n\nAcessibilidade completa com modo escuro, ajuste de fonte, modo foco e suporte para leitor de tela.\n\nExperiência mobile-first adaptada para 1366px, principal resolução dos alunos.\n\nO resultado foi uma jornada de estudo fluida, motivadora e visualmente agradável, que valoriza o conteúdo produzido pelos professores.",
+      solution: [
+        {
+          topics: [
+            "A solução foi criar um novo ambiente de estudo unificado e interativo, que conectasse teoria, prática e videoaulas em um só fluxo."
+          ]
+        },
+        {
+          title: "Leitura Otimizada",
+          topics: [
+            "Leitura otimizada com markdown estruturado, tipografia hierárquica e até 13 palavras por linha para conforto visual."
+          ]
+        },
+        {
+          title: "StudioDock",
+          topics: [
+            "StudioDock: painel flutuante que permite navegação rápida, marcações, visualização de progresso e ajustes de acessibilidade."
+          ]
+        },
+        {
+          title: "Integração Total",
+          topics: [
+            "de exercícios, textos e videoaulas, permitindo estudar sem trocar de contexto."
+          ]
+        },
+        {
+          title: "Acessibilidade Completa",
+          topics: [
+            "com modo escuro, ajuste de fonte, modo foco e suporte para leitor de tela."
+          ]
+        },
+        {
+          title: "Experiência mobile-first",
+          topics: [
+            "adaptada para 1366px, principal resolução dos alunos."
+          ]
+        },
+        {
+          topics: [
+            "O resultado foi uma jornada de estudo fluida, motivadora e visualmente agradável, que valoriza o conteúdo produzido pelos professores."
+          ]
+        }
+      ],
       results: [
         "Aumento no engajamento com apostilas digitais.",
         "Redução no abandono do estudo em apostilas.",
@@ -57,11 +109,11 @@ const ProjectDetail = () => {
         "Jornada mais fluida, com integração natural entre leitura, exercícios e videoaulas."
       ],
       images: [
-        "/capa2.png",
-        "/galeria2-1.png",
-        "/galeria2-2.png",
-        "/galeria2-3.png",
-        "/galeria2-4.png"
+        "/capa1.png",
+        "/galeria1-1.png",
+        "/galeria1-2.png",
+        "/galeria1-3.png",
+        "/galeria1-4.png"
       ],
       figmaUrl: "https://embed.figma.com/proto/6ys2zLG6RES11a6Cipp2Bp/Anna-Projetos?node-id=104-37619&scaling=scale-down&content-scaling=fixed&page-id=94%3A9405&embed-host=share",
       // tags removido conforme solicitado
@@ -73,17 +125,21 @@ const ProjectDetail = () => {
       period: "6 meses",
       team: "Lead UX/UI Designer · EdTech · UX Research & AI Product Design",
       role: [
-        "Lead UX/UI Designer",
-        "EdTech",
-        "UX Research & AI Product Design"
+        "AI-Driven UX",
+        "Smart Search",
+        "Product Strategy"
       ],
       context: "O Qconcursos precisava transformar a antiga página inicial em um hub inteligente de busca e descoberta, capaz de unificar todo o conteúdo sobre concursos públicos em um só lugar.\nO objetivo era permitir que o usuário encontrasse notícias, concursos, questões, provas, cursos e videoaulas rapidamente, em qualquer etapa da jornada.\n\nA página anterior não refletia esse posicionamento e não aproveitava o potencial do site como principal destino de estudo e informação para concursos.",
       problem: [
-        "A antiga página inicial tinha uma função desconectada da jornada do aluno.",
-        "Usuários precisavam navegar por múltiplos menus para encontrar conteúdos relevantes.",
-        "Falta de visibilidade para a diversidade de conteúdos do Qconcursos.",
-        "Experiência de busca limitada, com resultados lentos e pouco inteligentes.",
-        "Página inicial com alto tráfego deslogado, mas baixa conversão para cadastros."
+        {
+          topics: [
+            "A antiga página inicial tinha uma função desconectada da jornada do aluno.",
+            "Usuários precisavam navegar por múltiplos menus para encontrar conteúdos relevantes.",
+            "Falta de visibilidade para a diversidade de conteúdos do Qconcursos.",
+            "Experiência de busca limitada, com resultados lentos e pouco inteligentes.",
+            "Página inicial com alto tráfego deslogado, mas baixa conversão para cadastros."
+          ]
+        }
       ],
       process: [
         {
@@ -139,16 +195,15 @@ const ProjectDetail = () => {
         "Dobro de buscas de usuários deslogados, aumentando a chance de conversão para cadastro.",
         "+35% de engajamento na primeira interação com a página.",
         "Maior visibilidade para conteúdos antes subutilizados no site.",
-        "Feedback positivo em pesquisas pós-lançamento sobre facilidade de encontrar tudo em um só lugar."
       ],
       images: [
-        "/placeholder.svg",
-        "/placeholder.svg",
-        "/placeholder.svg",
-        "/placeholder.svg",
-        "/placeholder.svg"
+        "/capa2.png",
+        "/galeria2-1.png",
+        "/galeria2-2.png",
+        "/galeria2-3.png",
+        "/galeria2-4.png",
       ],
-      figmaUrl: "",
+      figmaUrl: "https://embed.figma.com/proto/6ys2zLG6RES11a6Cipp2Bp/Anna-Projetos?node-id=209-66701&p=f&scaling=scale-down&content-scaling=fixed&page-id=209%3A59238&embed-host=share",
       tags: ["AI Search", "EdTech", "UX Research", "Product Design"]
     },
     {
@@ -206,14 +261,107 @@ const ProjectDetail = () => {
         "Melhora na performance de SEO e uso da página como canal de aquisição orgânica"
       ],
       images: [
-        "/capa1.png",
-        "/galeria1-1.png",
-        "/galeria1-2.png",
-        "/galeria1-3.png",
-        "/galeria1-4.png"
+        "/capa3.png",
+        "/galeria3-1.png",
+        "/galeria3-2.png",
+        "/galeria3-3.png",
+        "/galeria3-4.png"
       ],
       figmaUrl: "https://www.figma.com/proto/6ys2zLG6RES11a6Cipp2Bp/P%C3%A1gina-de-Concurso---Qconcursos?node-id=1-22684&p=f&t=Gqs5LvCatZOD6dX3-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&embed_host=share",
       tags: ["UX Research", "UI Strategy", "Banco de Dados", "Dados Complexos", "SEO", "Plataformas Educacionais"]
+    },
+    {
+      slug: "checkout-pix-vitat",
+      title: "Checkout & PIX – Vitat",
+      subtitle: "Redesign do checkout e validação de novo método de pagamento para aumento de conversão",
+      role: ["Payment Experience", "Stakeholder Management", "SaaS"],
+      context: "O Vitat, aplicativo com modelo freemium e premium, enfrentava alto abandono no checkout, que era longo, confuso e possuía muitas limitações técnicas.\nAlém disso, para implementar o PIX como método de pagamento, seria necessário refazer completamente o checkout, já que o fluxo antigo não suportava integrações modernas nem melhorias na experiência do usuário.\n\nO negócio dependia principalmente de receitas recorrentes via cartão de crédito, e havia resistência interna à adoção do PIX por medo de comprometer o modelo financeiro. O desafio era validar se a inclusão do PIX aumentaria a conversão sem prejudicar a receita e, ao mesmo tempo, aproveitar a oportunidade para modernizar e otimizar o checkout.",
+      problem: [
+        {
+          topics: [
+            "Checkout antigo com limitações técnicas e experiência longa e burocrática",
+            "Usuários sem clareza sobre o plano que estavam adquirindo",
+            "Demanda por PIX identificada em pesquisas, mas com forte resistência do stakeholder devido ao modelo de receita recorrente"
+          ]
+        }
+      ],
+      process: [
+        {
+          title: "Discovery e Pesquisa",
+          topics: [
+            "Entrevistas com usuários freemium e premium para entender motivações e barreiras de pagamento",
+            "Pesquisa de mercado sobre a adoção do PIX em SaaS e análise do PIX parcelado do Banco Central",
+            "Mapeamento do perfil e comportamento dos usuários via GA e Firebase",
+            "Coleta de insights com Hotjar e pesquisas in-app para entender abandono no checkout"
+          ]
+        },
+        {
+          title: "Análise e Estratégia",
+          topics: [
+            "Benchmarking de checkouts de mercado e métodos de pagamento digitais",
+            "Estudo de viabilidade técnica e impactos na receita recorrente",
+            "Estruturação de eventos de monitoramento para acompanhar conversão, drop-off e canibalização de cartão"
+          ]
+        },
+        {
+          title: "Exploração e Design",
+          topics: [
+            "Redesenho completo do checkout, reduzindo campos, otimizando fluxo e aumentando clareza sobre os planos",
+            "Wireframes e protótipos interativos validados com usuários em ciclos iterativos",
+            "Adaptação do design para suportar novos métodos de pagamento, incluindo PIX"
+          ]
+        },
+        {
+          title: "Gestão de Stakeholders",
+          topics: [
+            "Criação de apresentações estratégicas com dados de mercado, tendências e previsões financeiras",
+            "Apresentações para discutir riscos e benefícios do PIX",
+            "Construção de narrativa de convencimento, garantindo buy-in dos stakeholders para o rollout gradual"
+          ]
+        }
+      ],
+      solution: [
+        {
+          title: "Novo fluxo de checkout",
+          topics: [
+            "Mais curto, claro e informativo, eliminando limitações do antigo"
+          ]
+        },
+        {
+          title: "PIX como opção de pagamento",
+          topics: [
+            "Rollout gradual, evitando riscos à receita recorrente"
+          ]
+        },
+        {
+          title: "Otimização da experiência",
+          topics: [
+            "Clareza sobre planos, menos fricção e fluxo compatível com integrações modernas"
+          ]
+        },
+        {
+          title: "Monitoramento estruturado",
+          topics: [
+            "Avaliação de impacto em receita, drop-off e possíveis canibalizações de cartão de crédito"
+          ]
+        }
+      ],
+      results: [
+        "+45% conversão",
+        "Checkout mais rápido e menos abandono",
+        "Adoção do PIX sem queda de receita recorrente",
+        "Stakeholders convencidos e rollout bem-sucedido"
+      ],
+      images: [
+        "/capa4.png",
+        "/galeria4-1.png",
+        "/galeria4-2.png",
+        "/galeria4-3.png",
+        "/galeria4-4.png"
+      ],
+      figmaUrl: "",
+      tags: ["Payment Experience", "Stakeholder Management", "SaaS"],
+      curiosity: "Passei mais tempo negociando e criando insumos para convencer os stakeholders do que desenhando telas. Preparei apresentações sobre tendências de mercado, dados do Banco Central, perspectivas econômicas e sociais, mostrando que o PIX não comprometeria a receita recorrente do Vitat. Foi um verdadeiro projeto de venda interna antes de qualquer implementação."
     }
   ];
 
@@ -313,34 +461,29 @@ const ProjectDetail = () => {
               <h2 className="text-fluid-2xl font-bold text-foreground mb-4">
                 Problema
               </h2>
-              {project.title === "Ambiente de Estudo – Qconcursos" ? (
-                <div className="text-muted-foreground leading-relaxed">
-                  <div>Os alunos relatavam que:</div>
-                  <ul className="list-disc pl-6 mt-2 mb-2 space-y-2">
-                    <li>A leitura da apostila era cansativa e pouco interativa.</li>
-                    <li>Era difícil conectar teoria, prática e videoaulas em um único fluxo.</li>
-                    <li>A experiência não refletia a qualidade do conteúdo oferecido pelos professores.</li>
-                    <li>Faltavam recursos de acessibilidade e personalização.</li>
-                  </ul>
-                  <div>Isso gerava baixa motivação e altos índices de abandono na jornada de estudo.</div>
-                </div>
-              ) : project.title === "Busca por IA – Qconcursos" && Array.isArray(project.problem) ? (
-                <div className="text-muted-foreground leading-relaxed">
-                  <ul className="list-disc pl-6 mt-2 mb-2 space-y-2">
-                    {project.problem.map((item, idx) => (
-                      <li key={idx}>{item}</li>
-                    ))}
-                  </ul>
-                </div>
-              ) : (
+              {/* Renderização flexível para string ou array de objetos (tópicos) */}
+              {typeof project.problem === 'string' ? (
                 <div className="text-muted-foreground leading-relaxed whitespace-pre-line">
-                  {typeof project.problem === 'string'
-                    ? project.problem.split('\n').map((line, idx) =>
-                        line.trim() === '' ? <br key={idx} /> : <span key={idx}>{line}<br /></span>
-                      )
-                    : null}
+                  {project.problem.split('\n').map((line, idx) =>
+                    line.trim() === '' ? <br key={idx} /> : <span key={idx}>{line}<br /></span>
+                  )}
                 </div>
-              )}
+              ) : Array.isArray(project.problem) ? (
+                <div className="text-muted-foreground leading-relaxed space-y-6">
+                  {project.problem.map((group, idx) => (
+                    <div key={idx}>
+                      {"title" in group && (group as any).title && (
+                        <h3 className="text-lg font-semibold text-foreground mb-2">{(group as any).title}</h3>
+                      )}
+                      <ul className="list-disc pl-10 space-y-2">
+                        {group.topics.map((topic, tIdx) => (
+                          <li key={tIdx} className="text-muted-foreground leading-relaxed">{topic}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              ) : null}
             </section>
 
             {/* Process */}
@@ -372,28 +515,20 @@ const ProjectDetail = () => {
               <h2 className="text-fluid-2xl font-bold text-foreground mb-4">
                 Solução
               </h2>
-              {project.title === "Ambiente de Estudo – Qconcursos" ? (
+              {/* Renderização flexível para string ou array de objetos */}
+              {typeof project.solution === 'string' ? (
                 <div className="text-muted-foreground leading-relaxed">
-                  <div>A solução foi criar um novo ambiente de estudo unificado e interativo, que conectasse teoria, prática e videoaulas em um só fluxo:</div>
-                  <ul className="list-disc pl-6 mt-2 mb-2 space-y-2">
-                    <li>Leitura otimizada com markdown estruturado, tipografia hierárquica e até 13 palavras por linha para conforto visual.</li>
-                    <li>StudioDock: painel flutuante que permite navegação rápida, marcações, visualização de progresso e ajustes de acessibilidade.</li>
-                    <li>Integração total de exercícios, textos e videoaulas, permitindo estudar sem trocar de contexto.</li>
-                    <li>Acessibilidade completa com modo escuro, ajuste de fonte, modo foco e suporte para leitor de tela.</li>
-                    <li>Experiência mobile-first adaptada para 1366px, principal resolução dos alunos.</li>
-                  </ul>
-                  <div>O resultado foi uma jornada de estudo fluida, motivadora e visualmente agradável, que valoriza o conteúdo produzido pelos professores.</div>
+                  {project.solution.split('\n').map((line, idx) =>
+                    line.trim() === '' ? <br key={idx} /> : <span key={idx}>{line}<br /></span>
+                  )}
                 </div>
-              ) : Array.isArray(project.solution) && project.title === "Busca por IA – Qconcursos" ? (
+              ) : Array.isArray(project.solution) ? (
                 <div className="text-muted-foreground leading-relaxed space-y-6">
                   {project.solution.map((group, idx) => (
                     <div key={idx}>
-                      <div className="flex items-center mb-2">
-                        <div className="w-6 h-6 gradient-primary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                          <span className="text-primary-foreground text-xs font-bold">{idx + 1}</span>
-                        </div>
-                        <h3 className="text-lg font-semibold text-foreground">{group.title}</h3>
-                      </div>
+                      {group.title && (
+                        <h3 className="text-lg font-semibold text-foreground mb-2">{group.title}</h3>
+                      )}
                       <ul className="list-disc pl-10 space-y-2">
                         {group.topics.map((topic, tIdx) => (
                           <li key={tIdx} className="text-muted-foreground leading-relaxed">{topic}</li>
@@ -402,15 +537,7 @@ const ProjectDetail = () => {
                     </div>
                   ))}
                 </div>
-              ) : (
-                <div className="text-muted-foreground leading-relaxed">
-                  {typeof project.solution === 'string'
-                    ? project.solution.split('\n').map((line, idx) =>
-                        line.trim() === '' ? <br key={idx} /> : <span key={idx}>{line}<br /></span>
-                      )
-                    : null}
-                </div>
-              )}
+              ) : null}
             </section>
 
             {/* Figma Preview */}
@@ -431,8 +558,8 @@ const ProjectDetail = () => {
               </section>
             )}
 
-            {/* Curiosity Box - For Qconcursos projects */}
-            {(project.title === "Página de Concurso Público – Qconcursos" || project.title === "Ambiente de Estudo – Qconcursos" || project.title === "Busca por IA – Qconcursos") && (
+            {/* Curiosity Box - For Qconcursos projects and Vitat */}
+            {(project.title === "Página de Concurso Público – Qconcursos" || project.title === "Ambiente de Estudo – Qconcursos" || project.title === "Busca por IA – Qconcursos" || project.title === "Checkout & PIX – Vitat") && (
               <section className="mb-10">
                 <div className="bg-purple-500/10 border border-purple-500/20 rounded-xl p-6">
                   <div className="flex items-start gap-4">
@@ -457,11 +584,15 @@ const ProjectDetail = () => {
                         <p className="text-muted-foreground leading-relaxed mb-4">
                           Nesse projeto, consegui montar todo o código da página usando Tailwind e React através do Figma Make. O Widget flutuante Painel de Estudo, o Modo Escuro e o Modo Noturno ficaram totalmente funcionais, e o dev do time utilizou essa base para desenvolver o restante da página.
                         </p>
-                      ) : (
+                      ) : project.title === "Busca por IA – Qconcursos" ? (
                         <p className="text-muted-foreground leading-relaxed mb-4">
                           Esse foi meu primeiro projeto de AI no Qconcursos 💜
                         </p>
-                      )}
+                      ) : project.title === "Checkout & PIX – Vitat" ? (
+                        <p className="text-muted-foreground leading-relaxed mb-4">
+                          Passei mais tempo negociando e criando insumos para convencer os stakeholders do que desenhando telas. Preparei apresentações sobre tendências de mercado, dados do Banco Central, perspectivas econômicas e sociais, mostrando que o PIX não comprometeria a receita recorrente do Vitat. Foi um verdadeiro projeto de venda interna antes de qualquer implementação.
+                        </p>
+                      ) : null}
                     </div>
                   </div>
                 </div>

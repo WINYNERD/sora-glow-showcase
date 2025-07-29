@@ -1,7 +1,7 @@
-import { 
-  Palette, 
-  Code, 
-  Users, 
+import {
+  Palette,
+  Code,
+  Users,
   Brain,
   Lightbulb,
   MessageCircle,
@@ -20,8 +20,10 @@ const ModernSkillsBadges = () => {
       icon: <Brain className="h-5 w-5" />,
       description: "Competências técnicas especializadas",
       skills: [
-        "UX Research", "Interface Design", "Design Systems", "Prototipagem", 
-        "Data Analysis", "Product Strategy", "Information Architecture", "Usability Testing"
+        "Interface Design","Product Strategy","Design Systems",
+        "Prototipagem","Information Architecture",
+        "Data Analysis","Product Analytics","A/B Testing",
+        "UX Writing","Usability","Testing AI-Driven","Design UX Research"
       ]
     },
     {
@@ -29,8 +31,8 @@ const ModernSkillsBadges = () => {
       icon: <Code className="h-5 w-5" />,
       description: "Stack tecnológico e softwares",
       skills: [
-        "Figma", "Adobe Creative Suite", "Sketch", "Miro", 
-        "Notion", "Hotjar", "Google Analytics", "Mixpanel"
+        "Figma","Hotjar","Amplitude","Google Analytics",
+        "LaunchDarkly", "Stitch AI","Lovable","Confluence","Jira","Miro","XD","Notion",
       ]
     },
     {
@@ -38,15 +40,15 @@ const ModernSkillsBadges = () => {
       icon: <Users className="h-5 w-5" />,
       description: "Habilidades comportamentais",
       skills: [
-        "Liderança", "Comunicação", "Pensamento Crítico", "Colaboração", 
-        "Mentoria", "Adaptabilidade", "Gestão de Stakeholders", "Problem Solving"
+        "Liderança", "Comunicação", "Pensamento Estratégico", "Colaboração",
+        "Multidisciplinar", "Adaptabilidade", "Gestão de Stakeholders", "Problem Solving","Data-Driven",
       ]
     }
   ];
 
   const specialties = [
     "Design Systems Architecture",
-    "AI/ML Product Design", 
+    "AI/ML Product Design",
     "Data-Driven Design",
     "Design Leadership",
     "User Research & Testing",
@@ -86,7 +88,7 @@ const ModernSkillsBadges = () => {
               {/* Skills as badges */}
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill, skillIndex) => (
-                  <span 
+                  <span
                     key={skillIndex}
                     className="px-3 py-1.5 bg-primary/10 text-primary rounded-lg text-sm font-medium hover-glow transition-smooth cursor-default"
                   >
