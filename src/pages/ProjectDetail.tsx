@@ -224,8 +224,7 @@ const ProjectDetail = () => {
         }
       ],
       results: [
-        "+5% em novos cadastros",
-        "70% de engajamento na página",
+        "Aumento de novos cadastros",
         "Maior fluxo de usuários iniciando estudos a partir desta página",
         "Melhora na performance de SEO e uso da página como canal de aquisição orgânica"
       ],
