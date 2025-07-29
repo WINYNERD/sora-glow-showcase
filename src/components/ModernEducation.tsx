@@ -3,51 +3,59 @@ import { GraduationCap, Calendar, Award } from "lucide-react";
 const ModernEducation = () => {
   const academicEducation = [
     {
-      degree: "MBA em Product Management",
-      institution: "FIAP",
-      period: "2023 - 2024",
+      degree: "Desenvolvimento de tecnologias digitais",
+      institution: "Estácio",
+      period: "2024 - 2025",
       type: "Pós-graduação",
-      description: "Estratégia de produto, growth, analytics e liderança técnica",
-      highlights: ["Product Leadership", "Data Analytics", "Growth Strategy"]
+      description: "",
+      highlights: []
     },
     {
-      degree: "Design Gráfico",
-      institution: "Universidade Mackenzie", 
-      period: "2017 - 2020",
+      degree: "Marketing",
+      institution: "IBMR",
+      period: "2020 - 2022",
       type: "Graduação",
-      description: "Fundamentos em design, tipografia, teoria das cores e comunicação visual",
-      highlights: ["Design Fundamentals", "Visual Identity", "Typography"]
+      description: "",
+      highlights: []
+    },
+    {
+      degree: "Publicidade e propaganda",
+      institution: "Estácio",
+      period: "2014 - 2017",
+      type: "Graduação",
+      description: "",
+      highlights: []
     }
   ];
 
   const courses = [
     {
-      title: "UX Design Professional Certificate",
-      institution: "Google",
-      period: "2021",
-      description: "Design centrado no usuário, pesquisa e prototipagem",
-      highlights: ["User Research", "Prototyping", "Design Thinking"]
-    },
-    {
-      title: "Design Systems Masterclass",
-      institution: "Design+Code",
-      period: "2022", 
-      description: "Criação e manutenção de design systems escaláveis",
-      highlights: ["Component Libraries", "Design Tokens", "Atomic Design"]
-    },
-    {
       title: "AI for Designers",
-      institution: "MIT OpenCourseWare",
-      period: "2023",
-      description: "Aplicação de IA em processos de design e tomada de decisão",
-      highlights: ["AI Tools", "Machine Learning", "Design Automation"]
+      institution: "Interaction Design Foundation",
+      period: "2025",
+      description: "",
+      highlights: ["AI-First","Design Prototyping","IA UX Automation"]
     },
     {
-      title: "Data-Driven Design",
-      institution: "Nielsen Norman Group",
+      title: "Digital Product Leadership",
+      institution: "Tera",
+      period: "2024",
+      description: "",
+      highlights: ["Product Strategy UX","Research Roadmap","Prioritization"]
+    },
+    {
+      title: "Product Growth",
+      institution: "PM3",
       period: "2023",
-      description: "Analytics, métricas e otimização baseada em dados",
-      highlights: ["Analytics", "A/B Testing", "Conversion Optimization"]
+      description: "",
+      highlights: [" Growth Strategy A/B","Testing Funnel","Optimization"]
+    },
+    {
+      title: "Product Analytics",
+      institution: "Tera",
+      period: "2022",
+      description: "",
+      highlights: ["Amplitude Cohort","Analysis Data-Driven","Decisions"]
     }
   ];
 
@@ -71,7 +79,7 @@ const ModernEducation = () => {
               <GraduationCap className="h-6 w-6 text-primary mr-3" />
               Formação Acadêmica
             </h3>
-            
+
             <div className="space-y-6">
               {academicEducation.map((edu, index) => (
                 <div key={index} className="glass-card p-6 hover-glow transition-smooth">
@@ -90,7 +98,7 @@ const ModernEducation = () => {
                         {edu.description}
                       </p>
                     </div>
-                    
+
                     <div className="mt-3 sm:mt-0 sm:ml-6">
                       <div className="flex items-center text-xs text-muted-foreground">
                         <Calendar className="h-3 w-3 mr-2" />
@@ -117,7 +125,7 @@ const ModernEducation = () => {
               <Award className="h-6 w-6 text-primary mr-3" />
               Cursos & Certificações
             </h3>
-            
+
             <div className="space-y-4">
               {courses.map((course, index) => (
                 <div key={index} className="glass-card p-5 hover-glow transition-smooth">
@@ -128,7 +136,7 @@ const ModernEducation = () => {
                       </h4>
                       <p className="text-muted-foreground text-sm font-medium mb-2">{course.institution}</p>
                     </div>
-                    
+
                     <div className="mt-2 sm:mt-0 sm:ml-4">
                       <span className="text-xs text-muted-foreground">
                         {course.period}
