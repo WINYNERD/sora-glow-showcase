@@ -264,6 +264,35 @@ const ProjectDetail = () => {
               </section>
             )}
 
+            {/* Curiosity Box - Only for Qconcursos project */}
+            {project.title === "Página de Concurso Público – Qconcursos" && (
+              <section className="mb-10">
+                <div className="bg-purple-500/10 border border-purple-500/20 rounded-xl p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <ExternalLink className="w-5 h-5 text-purple-400" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-foreground mb-3">
+                        💡 Curiosidade
+                      </h3>
+                      <p className="text-muted-foreground leading-relaxed mb-4">
+                        Em vez de parar no rascunho, eu criei um wireframe funcional. Combinei minha base em tech com IA para codar a estrutura direto no CodePen.{" "}
+                        <a 
+                          href="https://codepen.io/dezdosete/full/WNqjQBL" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-purple-400 hover:text-purple-300 underline transition-colors"
+                        >
+                          Ver aqui
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            )}
+
             {/* Gallery */}
             <section className="mb-10">
               <h2 className="text-fluid-2xl font-bold text-foreground mb-6">
