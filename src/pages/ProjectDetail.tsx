@@ -397,8 +397,8 @@ const ProjectDetail = () => {
           {/* Main Content */}
           <div className="lg:col-span-2">
             {/* Context */}
-            <section className="mb-10">
-              <h2 className="text-fluid-2xl font-bold text-foreground mb-4 flex items-center">
+            <section className="mb-8">
+              <h2 className="text-fluid-2xl font-bold text-foreground mb-8 flex items-center">
                 <Target className="w-5 h-5 text-primary mr-3" />
                 Contexto
               </h2>
@@ -410,8 +410,8 @@ const ProjectDetail = () => {
             </section>
 
             {/* Problem */}
-            <section className="mb-10">
-              <h2 className="text-fluid-2xl font-bold text-foreground mb-4">
+            <section className="mb-8">
+              <h2 className="text-fluid-2xl font-bold text-foreground mb-8">
                 Problema
               </h2>
               {/* Renderização flexível para string ou array de objetos (tópicos) */}
@@ -422,13 +422,13 @@ const ProjectDetail = () => {
                   )}
                 </div>
               ) : Array.isArray(project.problem) ? (
-                <div className="text-muted-foreground leading-relaxed space-y-6">
+                <div className="text-muted-foreground leading-relaxed space-y-8">
                   {project.problem.map((group, idx) => (
                     <div key={idx}>
                       {"title" in group && (group as any).title && (
-                        <h3 className="text-lg font-semibold text-foreground mb-2">{(group as any).title}</h3>
+                        <h3 className="text-lg font-semibold text-foreground mb-8">{(group as any).title}</h3>
                       )}
-                      <ul className="list-disc pl-10 space-y-2">
+                      <ul className="list-disc pl-10 space-y-8">
                         {group.topics.map((topic, tIdx) => (
                           <li key={tIdx} className="text-muted-foreground leading-relaxed">{topic}</li>
                         ))}
@@ -440,20 +440,20 @@ const ProjectDetail = () => {
             </section>
 
             {/* Process */}
-            <section className="mb-10">
-              <h2 className="text-fluid-2xl font-bold text-foreground mb-6">
+            <section className="mb-8">
+              <h2 className="text-fluid-2xl font-bold text-foreground mb-8">
                 Processo
               </h2>
-              <div className="space-y-6">
+              <div className="space-y-8">
                 {Array.isArray(project.process) ? project.process.map((group, idx) => (
                   <div key={idx}>
-                    <div className="flex items-center mb-2">
+                    <div className="flex items-center mb-8">
                       <div className="w-6 h-6 gradient-primary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                         <span className="text-primary-foreground text-xs font-bold">{idx + 1}</span>
                       </div>
                       <h3 className="text-lg font-semibold text-foreground">{group.title}</h3>
                     </div>
-                    <ul className="list-disc pl-10 space-y-2">
+                    <ul className="list-disc pl-10 space-y-8">
                       {group.topics.map((topic, tIdx) => (
                         <li key={tIdx} className="text-muted-foreground leading-relaxed">{topic}</li>
                       ))}
@@ -464,19 +464,19 @@ const ProjectDetail = () => {
             </section>
 
             {/* Solution */}
-            <section className="mb-10">
-              <h2 className="text-fluid-2xl font-bold text-foreground mb-4">
+            <section className="mb-8">
+              <h2 className="text-fluid-2xl font-bold text-foreground mb-8">
                 Solução
               </h2>
               {/* Renderização flexível para string ou array de objetos */}
               {project.solution && Array.isArray(project.solution) && (
-                <div className="text-muted-foreground leading-relaxed space-y-6">
+                <div className="text-muted-foreground leading-relaxed space-y-8">
                   {project.solution.map((group, idx) => (
                     <div key={idx}>
                       {group.title && (
-                        <h3 className="text-lg font-semibold text-foreground mb-2">{group.title}</h3>
+                        <h3 className="text-lg font-semibold text-foreground mb-8">{group.title}</h3>
                       )}
-                      <ul className="list-disc pl-10 space-y-2">
+                      <ul className="list-disc pl-10 space-y-8">
                         {group.topics.map((topic, tIdx) => (
                           <li key={tIdx} className="text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: topic.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }}></li>
                         ))}
@@ -489,8 +489,8 @@ const ProjectDetail = () => {
 
             {/* Figma Preview */}
             {project.figmaUrl && (
-              <section className="mb-10">
-                <h2 className="text-fluid-2xl font-bold text-foreground mb-6">
+              <section className="mb-8">
+                <h2 className="text-fluid-2xl font-bold text-foreground mb-8">
                   Preview do Figma
                 </h2>
                 <div className="w-full h-96 rounded-xl overflow-hidden shadow-elegant">
@@ -507,16 +507,16 @@ const ProjectDetail = () => {
 
             {/* Curiosity Box - For Qconcursos projects and Vitat */}
             {(project.title === "Página de Concurso – Qconcursos" || project.title === "Ambiente de Estudo – Qconcursos" || project.title === "Busca por IA – Qconcursos" || project.title === "Checkout & PIX – Vitat") && (
-              <section className="mb-10">
+              <section className="mb-8">
                 <div className="bg-purple-500/10 border border-purple-500/20 rounded-xl p-6">
                   <div className="flex items-start gap-4">
                     {/* Ícone removido */}
                     <div>
-                      <h3 className="text-lg font-semibold text-foreground mb-3">
+                      <h3 className="text-lg font-semibold text-foreground mb-8">
                         💡 Curiosidade
                       </h3>
                       {project.title === "Página de Concurso – Qconcursos" ? (
-                        <p className="text-muted-foreground leading-relaxed mb-4">
+                        <p className="text-muted-foreground leading-relaxed mb-8">
                           Em vez de parar no rascunho, eu criei um wireframe funcional. Combinei minha base em tech com IA para codar a estrutura direto no CodePen.{" "}
                           <a 
                             href="https://codepen.io/dezdosete/full/WNqjQBL" 
@@ -528,15 +528,15 @@ const ProjectDetail = () => {
                           </a>
                         </p>
                       ) : project.title === "Ambiente de Estudo – Qconcursos" ? (
-                        <p className="text-muted-foreground leading-relaxed mb-4">
+                        <p className="text-muted-foreground leading-relaxed mb-8">
                           Nesse projeto, consegui montar todo o código da página usando Tailwind e React através do Figma Make. O Widget flutuante Painel de Estudo, o Modo Escuro e o Modo Noturno ficaram totalmente funcionais, e o dev do time utilizou essa base para desenvolver o restante da página.
                         </p>
                       ) : project.title === "Busca por IA – Qconcursos" ? (
-                        <p className="text-muted-foreground leading-relaxed mb-4">
+                        <p className="text-muted-foreground leading-relaxed mb-8">
                           Esse foi meu primeiro projeto de AI no Qconcursos 💜
                         </p>
                       ) : project.title === "Checkout & PIX – Vitat" ? (
-                        <p className="text-muted-foreground leading-relaxed mb-4">
+                        <p className="text-muted-foreground leading-relaxed mb-8">
                           Passei mais tempo negociando e criando insumos para convencer os stakeholders do que desenhando telas. Preparei apresentações sobre tendências de mercado, dados do Banco Central, perspectivas econômicas e sociais, mostrando que o PIX não comprometeria a receita recorrente do Vitat. Foi um verdadeiro projeto de venda interna antes de qualquer implementação.
                         </p>
                       ) : null}
@@ -547,8 +547,8 @@ const ProjectDetail = () => {
             )}
 
             {/* Gallery */}
-            <section className="mb-10">
-              <h2 className="text-fluid-2xl font-bold text-foreground mb-6">
+            <section className="mb-8">
+              <h2 className="text-fluid-2xl font-bold text-foreground mb-8">
                 Galeria do Projeto
               </h2>
               <div className="grid sm:grid-cols-2 gap-4">
@@ -578,12 +578,12 @@ const ProjectDetail = () => {
           <div className="lg:col-span-1">
             <div className="sticky top-6">
               {/* Results */}
-              <div className="glass-card p-6 mb-6">
-                <h3 className="text-lg font-bold text-foreground mb-4 flex items-center">
+              <div className="glass-card p-6 mb-8">
+                <h3 className="text-lg font-bold text-foreground mb-8 flex items-center">
                   <TrendingUp className="w-5 h-5 text-primary mr-2" />
                   {project.title === "Ambiente de Estudo – Qconcursos" ? "Resultados Esperados:" : "Resultados"}
                 </h3>
-                <div className="space-y-3">
+                <div className="space-y-8">
                   {project.results.map((result, index) => (
                     <div key={index} className="flex items-start">
                       <div className="w-2 h-2 gradient-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
@@ -595,10 +595,10 @@ const ProjectDetail = () => {
 
               {/* CTA */}
               <div className="glass-card p-6">
-                <h3 className="text-lg font-bold text-foreground mb-4">
+                <h3 className="text-lg font-bold text-foreground mb-8">
                   Gostou do projeto?
                 </h3>
-                <p className="text-muted-foreground text-sm mb-4">
+                <p className="text-muted-foreground text-sm mb-8">
                   Vamos conversar sobre como posso ajudar o seu produto.
                 </p>
                 <a
