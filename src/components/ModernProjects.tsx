@@ -12,9 +12,9 @@ const ModernProjects = () => {
       id: "Página de Concurso Público – Qconcursos",
       title: "Página de Concurso Público – Qconcursos",
       description: "Redesign da principal página informativa da plataforma, voltada para tráfego e ativação de usuários.",
-      image: "/capa1.png",
+      image: "/projetocapa1.png",
       category: "Educacional • Web",
-      duration: "Projeto contínuo",
+      // duration: "Projeto contínuo",
       impact: "+5% novos cadastros, +70% engajamento",
       users: "Milhões de acessos anuais",
       tags: ["UX Research", "UI Strategy", "Banco de Dados", "Dados Complexos", "SEO", "Plataformas Educacionais"],
@@ -26,7 +26,7 @@ const ModernProjects = () => {
       description: "Design de interface conversacional para assistente de IA focado em suporte ao cliente, priorizando naturalidade e eficiência nas interações.",
       image: "/placeholder.svg",
       category: "AI/ML • Support",
-      duration: "4 meses",
+      // duration: "4 meses",
       impact: "70% redução tickets",
       users: "500+ usuários/dia",
       tags: ["Conversational Design", "AI/ML", "Customer Support"],
@@ -38,7 +38,7 @@ const ModernProjects = () => {
       description: "Aplicativo completo para banco digital, desde onboarding até transações complexas, com foco em segurança e simplicidade de uso.",
       image: "/placeholder.svg",
       category: "FinTech • Mobile",
-      duration: "8 meses",
+      // duration: "8 meses",
       impact: "90% adoção",
       users: "50k+ downloads",
       tags: ["Mobile Design", "Banking", "Security", "User Journey"],
@@ -50,7 +50,7 @@ const ModernProjects = () => {
       description: "Plataforma completa de e-commerce com foco em conversão e experiência do usuário, incluindo checkout otimizado e personalização.",
       image: "/placeholder.svg",
       category: "E-commerce • Web",
-      duration: "5 meses",
+      // duration: "5 meses",
       impact: "+45% conversão",
       users: "10k+ usuários",
       tags: ["E-commerce", "Conversion", "Personalization"],
@@ -62,7 +62,7 @@ const ModernProjects = () => {
       description: "App de saúde para agendamento de consultas e acompanhamento médico, priorizando acessibilidade e facilidade de uso.",
       image: "/placeholder.svg",
       category: "Healthcare • Mobile",
-      duration: "7 meses",
+      // duration: "7 meses",
       impact: "85% satisfação",
       users: "5k+ downloads",
       tags: ["Healthcare", "Accessibility", "Mobile"],
@@ -74,7 +74,7 @@ const ModernProjects = () => {
       description: "Plataforma de reservas de viagem com sistema de busca avançado e interface intuitiva para planejamento de viagens.",
       image: "/placeholder.svg",
       category: "Travel • Web",
-      duration: "6 meses",
+      // duration: "6 meses",
       impact: "+30% bookings",
       users: "8k+ usuários",
       tags: ["Travel", "Search", "Booking"],
@@ -138,12 +138,6 @@ const ModernProjects = () => {
               <div className="p-8">
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-sm text-primary font-medium">{project.category}</span>
-                  <div className="flex items-center space-x-4 text-xs text-muted-foreground">
-                    <div className="flex items-center space-x-1">
-                      <Clock className="w-3 h-3" />
-                      <span>{project.duration}</span>
-                    </div>
-                  </div>
                 </div>
 
                 <h3 className="text-fluid-xl font-bold text-foreground mb-3 group-hover:text-primary transition-smooth">

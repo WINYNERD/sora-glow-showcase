@@ -38,8 +38,10 @@ const ProjectDetail = () => {
       ],
       images: [
         "/capa1.png",
-        "/galeria1.png",
-        "/galeria1-1.png"
+        "/galeria1-1.png",
+        "/galeria1-2.png",
+        "/galeria1-3.png",
+        "/galeria1-4.png"
       ],
       figmaUrl: "https://www.figma.com/proto/6ys2zLG6RES11a6Cipp2Bp/P%C3%A1gina-de-Concurso---Qconcursos?node-id=1-22684&p=f&t=Gqs5LvCatZOD6dX3-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&embed_host=share",
       tags: ["UX Research", "UI Strategy", "Banco de Dados", "Dados Complexos", "SEO", "Plataformas Educacionais"]
@@ -348,10 +350,19 @@ const ProjectDetail = () => {
                 <p className="text-muted-foreground text-sm mb-4">
                   Vamos conversar sobre como posso ajudar o seu produto.
                 </p>
-                <Button className="w-full hover-glow">
-                  <ExternalLink className="w-4 h-4 mr-2" />
-                  Entre em contato
-                </Button>
+                <a
+                  href="https://wa.me/552197356953"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full block"
+                >
+                  <Button className="w-full hover-glow" asChild>
+                    <span className="flex items-center justify-center">
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      Entre em contato
+                    </span>
+                  </Button>
+                </a>
               </div>
             </div>
           </div>

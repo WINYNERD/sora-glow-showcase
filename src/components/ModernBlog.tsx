@@ -82,15 +82,9 @@ const ModernBlog = () => {
                   </h3>
                   {/* Mostra só as 3 primeiras linhas do resumo, se houver */}
                   <p className="text-muted-foreground leading-relaxed mb-4 text-sm line-clamp-3" dangerouslySetInnerHTML={{ __html: removeFirstImg(mediumPosts[0].description) }} />
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center text-sm text-muted-foreground">
-                      <Calendar className="h-4 w-4 mr-2" />
-                      {new Date(mediumPosts[0].pubDate).toLocaleDateString('pt-BR')}
-                    </div>
-                    <div className="flex items-center text-primary group-hover:translate-x-2 transition-transform">
-                      <span className="text-sm font-medium mr-2">Ler mais</span>
-                      <ArrowRight className="h-4 w-4" />
-                    </div>
+                  <div className="flex items-center justify-end">
+                    <span className="text-sm font-medium mr-2">Ler mais</span>
+                    <ArrowRight className="h-4 w-4 text-primary group-hover:translate-x-2 transition-transform" />
                   </div>
                 </div>
               </a>
@@ -132,12 +126,8 @@ const ModernBlog = () => {
                         <h4 className="font-bold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2" style={{ fontSize: '18px' }}>
                           {post.title}
                         </h4>
-                        {/* Mostra só as 3 primeiras linhas do resumo, se houver */}
-                        <p className="text-muted-foreground leading-relaxed mb-2 text-sm line-clamp-3" dangerouslySetInnerHTML={{ __html: removeFirstImg(post.description) }} />
-                        <div className="flex items-center text-sm text-muted-foreground">
-                          <Calendar className="h-4 w-4 mr-2" />
-                          {new Date(post.pubDate).toLocaleDateString('pt-BR')}
-                        </div>
+                        {/* Descrição removida, apenas título */}
+                        {/* Data removida */}
                         <div className="flex items-center justify-end">
                           <ArrowRight className="h-4 w-4 text-primary group-hover:translate-x-1 transition-transform" />
                         </div>
