@@ -9,7 +9,8 @@ const ModernProjects = () => {
 
   const projects = [
     {
-      id: "Ambiente de Estudo – Qconcursos",
+      id: "ambiente-de-estudo-qconcursos",
+      slug: "ambiente-de-estudo-qconcursos",
       title: "Ambiente de Estudo – Qconcursos",
       description: "Nova experiência no ambiente de estudo integrado com teoria, exercícios e videoaulas",
       image: "/capa2.png",
@@ -21,7 +22,8 @@ const ModernProjects = () => {
       featured: true
     },
     {
-      id: "Busca por IA – Qconcursos",
+      id: "busca-por-ia-qconcursos",
+      slug: "busca-por-ia-qconcursos",
       title: "Busca por IA – Qconcursos",
       description: "Nova página inicial e busca global inteligente",
       image: "/placeholder.svg",
@@ -37,7 +39,8 @@ const ModernProjects = () => {
       featured: true
     },
     {
-      id: "Página de Concurso Público – Qconcursos",
+      id: "pagina-de-concurso-publico-qconcursos",
+      slug: "pagina-de-concurso-publico-qconcursos",
       title: "Página de Concurso Público – Qconcursos",
       description: "Redesign da principal página informativa da plataforma, voltada para tráfego e ativação de usuários",
       image: "/projetocapa1.png",
@@ -109,7 +112,7 @@ const ModernProjects = () => {
           {projects.filter(p => p.featured).slice(0, visibleProjects).map((project, index) => (
             <Link
               key={project.id}
-              to={`/projeto/${project.id}`}
+              to={`/projeto/${project.slug}`}
               className="group glass-card overflow-hidden hover-float transition-slow block"
               onMouseEnter={() => setHoveredProject(index)}
               onMouseLeave={() => setHoveredProject(null)}
