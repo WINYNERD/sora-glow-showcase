@@ -10,32 +10,167 @@ const ProjectDetail = () => {
 
   // Mock project data - in real app, this would come from an API or database
   const projects = {
+    "Ambiente de Estudo – Qconcursos": {
+      title: "Ambiente de Estudo – Qconcursos",
+      subtitle: "Nova experiência no ambiente de estudo integrado com teoria, exercícios e videoaulas",
+      role: [
+        "Learning Experience",
+        "Edtech",
+        "Product Learning"
+      ],
+      context: "O Qconcursos precisava transformar o ambiente de consumo em um ambiente digital moderno e integrado, capaz de oferecer uma experiência de estudo contínua para alunos de concursos públicos.\n\nA experiência anterior era desmotivadora, com textos longos, pouco escaneáveis e separados de exercícios e videoaulas, o que prejudicava o engajamento e a retenção de alunos.",
+      problem: "Os alunos relatavam que:\nA leitura da apostila era cansativa e pouco interativa\nEra difícil conectar teoria, prática e videoaulas em um único fluxo\nA experiência não refletia a qualidade do conteúdo oferecido pelos professores\nFaltavam recursos de acessibilidade e personalização\nIsso gerava baixa motivação e altos índices de abandono na jornada de estudo.",
+      process: [
+        {
+          title: "Investigação e Discovery",
+          topics: [
+            "Entrevistas com alunos e pesquisas qualitativas para mapear hábitos de estudo, dores e expectativas.",
+            "Pesquisa com o time acadêmico para entender fluxos internos de criação de conteúdo.",
+            "Mapeamento completo de eventos no Amplitude e análise de comportamento com Hotjar, identificando pontos de abandono e padrões de uso.",
+            "Benchmarking intenso de ambientes de estudo e plataformas educacionais para boas práticas e inspiração.",
+            "Investigação interna para entender a jornada de conteúdo do backoffice até o aluno.",
+            "Trocas constantes com o time de tech para mapear limitações do sistema e viabilizar soluções escaláveis."
+          ]
+        },
+        {
+          title: "Análise e Definição do Problema",
+          topics: [
+            "Desenvolvimento de fluxogramas As-Is e To-Be, mostrando o fluxo atual e o fluxo ideal da experiência de estudo.",
+            "Identificação de gargalos na navegação, na integração de conteúdos e na performance do sistema."
+          ]
+        },
+        {
+          title: "Testes e Implementação",
+          topics: [
+            "Testes de usabilidade com mais de 50 alunos em diferentes cenários de estudo.",
+            "Ajustes contínuos com base em feedback real de usuários e professores.",
+            "Implementação em fases, monitorando métricas de engajamento e retenção via Amplitude."
+          ]
+        }
+      ],
+      solution: "A solução foi criar um novo ambiente de estudo unificado e interativo, que conectasse teoria, prática e videoaulas em um só fluxo:\nLeitura otimizada com markdown estruturado, tipografia hierárquica e até 13 palavras por linha para conforto visual.\n\nStudioDock: painel flutuante que permite navegação rápida, marcações, visualização de progresso e ajustes de acessibilidade.\n\nIntegração total de exercícios, textos e videoaulas, permitindo estudar sem trocar de contexto.\n\nAcessibilidade completa com modo escuro, ajuste de fonte, modo foco e suporte para leitor de tela.\n\nExperiência mobile-first adaptada para 1366px, principal resolução dos alunos.\n\nO resultado foi uma jornada de estudo fluida, motivadora e visualmente agradável, que valoriza o conteúdo produzido pelos professores.",
+      results: [
+        "Aumento no engajamento com apostilas digitais.",
+        "Redução no abandono do estudo em apostilas.",
+        "Aumento no NPS dos alunos nas pesquisas pós-lançamento.",
+        "Jornada mais fluida, com integração natural entre leitura, exercícios e videoaulas."
+      ],
+      images: [
+        "/capa2.png",
+        "/galeria2-1.png",
+        "/galeria2-2.png",
+        "/galeria2-3.png",
+        "/galeria2-4.png"
+      ],
+      figmaUrl: "https://embed.figma.com/proto/6ys2zLG6RES11a6Cipp2Bp/Anna-Projetos?node-id=104-37619&scaling=scale-down&content-scaling=fixed&page-id=94%3A9405&embed-host=share",
+      // tags removido conforme solicitado
+    },
+    "Busca por IA – Qconcursos": {
+      title: "Busca por IA – Qconcursos",
+      subtitle: "Nova página inicial e busca global inteligente",
+      period: "6 meses",
+      team: "Lead UX/UI Designer · EdTech · UX Research & AI Product Design",
+      role: [
+        "Lead UX/UI Designer",
+        "EdTech",
+        "UX Research & AI Product Design"
+      ],
+      context: "O Qconcursos precisava transformar a antiga página inicial em um hub inteligente de busca e descoberta, capaz de unificar todo o conteúdo sobre concursos públicos em um só lugar.\nO objetivo era permitir que o usuário encontrasse notícias, concursos, questões, provas, cursos e videoaulas rapidamente, em qualquer etapa da jornada.\n\nA página anterior não refletia esse posicionamento e não aproveitava o potencial do site como principal destino de estudo e informação para concursos.",
+      problem: [
+        "A antiga página inicial tinha uma função desconectada da jornada do aluno.",
+        "Usuários precisavam navegar por múltiplos menus para encontrar conteúdos relevantes.",
+        "Falta de visibilidade para a diversidade de conteúdos do Qconcursos.",
+        "Experiência de busca limitada, com resultados lentos e pouco inteligentes.",
+        "Página inicial com alto tráfego deslogado, mas baixa conversão para cadastros."
+      ],
+      process: [
+        {
+          title: "Discovery e Pesquisa",
+          topics: [
+            "Benchmarking de sites de busca e portais educacionais.",
+            "Heatmaps e cliques com Hotjar para entender padrões da página antiga.",
+            "Análise de comportamento e eventos via Amplitude para identificar fluxos de busca e abandono.",
+            "Entrevistas ao vivo e surveys com alunos para mapear expectativas da página inicial."
+          ]
+        },
+        {
+          title: "Definição da Experiência e Fluxos",
+          topics: [
+            "Identificação dos conteúdos mais buscados (notícias, concursos, aulas ao vivo).",
+            "Mobile-first para atender ao perfil de tráfego majoritariamente deslogado via celular."
+          ]
+        },
+        {
+          title: "Parceria com Tech e AI",
+          topics: [
+            "Desenvolvimento de API de busca com IA, estruturando dados em título, subtítulo, tags e categorias.",
+            "Implementação de resultados em tempo real com match semântico inteligente.",
+            "Colaboração próxima com devs para otimizar performance e indexação de conteúdos."
+          ]
+        }
+      ],
+      solution: [
+        {
+          title: "Busca por IA em tempo real",
+          topics: [
+            "Resultados dinâmicos e relevantes à medida que o usuário digita.",
+            "Integração de todo o conteúdo do Qconcursos (notícias, provas, questões, cursos, aulas ao vivo)."
+          ]
+        },
+        {
+          title: "Vitrine de conteúdos mais buscados",
+          topics: [
+            "Destaque para Notícias, Concursos Abertos e Aulas ao Vivo, baseado no comportamento do usuário.",
+            "Seção de acesso rápido para preservar a familiaridade da página anterior."
+          ]
+        },
+        {
+          title: "Experiência fluida e responsiva",
+          topics: [
+            "Mobile-first, já que 70% do tráfego da página vem de usuários deslogados via celular.",
+            "Otimização da velocidade e da escaneabilidade da informação."
+          ]
+        }
+      ],
+      results: [
+        "Aumento significativo no tráfego interno, conectando usuários a páginas de cursos, questões e notícias.",
+        "Dobro de buscas de usuários deslogados, aumentando a chance de conversão para cadastro.",
+        "+35% de engajamento na primeira interação com a página.",
+        "Maior visibilidade para conteúdos antes subutilizados no site.",
+        "Feedback positivo em pesquisas pós-lançamento sobre facilidade de encontrar tudo em um só lugar."
+      ],
+      images: [
+        "/placeholder.svg",
+        "/placeholder.svg",
+        "/placeholder.svg",
+        "/placeholder.svg",
+        "/placeholder.svg"
+      ],
+      figmaUrl: "",
+      tags: ["AI Search", "EdTech", "UX Research", "Product Design"]
+    },
     "Página de Concurso Público – Qconcursos": {
       title: "Página de Concurso Público – Qconcursos",
       subtitle: "Redesign da principal página informativa da plataforma, voltada para tráfego e ativação de usuários",
-      role: ["UX end-to-end", "Arquitetura de Informação", "Design System"],
-      context: "A página de concursos públicos do Qconcursos é uma das principais portas de entrada da plataforma. Ela precisava ser redesenhada para aumentar a taxa de cadastro, melhorar o engajamento e transmitir autoridade sobre os concursos divulgados.",
-      problem: 'Concursos públicos não seguem um padrão fixo: variam em número de etapas, completude de dados e formato de edital. Alguns concursos têm sete fases detalhadas, outros oferecem poucas ou nenhuma informação. Era necessário criar uma arquitetura capaz de se adaptar a essas diferenças, mantendo a clareza e utilidade para o usuário.\n\nAlém disso, existiam diferentes níveis de navegação (usuário deslogado, logado, assinante, aluno de curso) e era essencial comunicar bem com todos eles, respeitando restrições e liberando conteúdos conforme o tipo de acesso.\n\nPor fim, também havia uma necessidade interna do time editorial: os stakeholders responsáveis pelo cadastro e atualização de concursos precisavam de uma estrutura que permitisse tanto automações quanto atualizações manuais em concursos estratégicos. A página precisava atender tanto o usuário final quanto o fluxo interno da empresa.',
-      solution: 'Desenvolvi uma arquitetura modular e flexível que se adapta automaticamente ao tipo e quantidade de informações disponíveis para cada concurso. A solução incluiu componentes condicionais que mostram ou ocultam seções baseadas nos dados disponíveis, garantindo que a página sempre pareça completa e útil.\n\nPara os diferentes níveis de usuário, criei um sistema de progressive disclosure que revela informações gradualmente conforme o nível de acesso, sempre deixando claro quais benefícios estão disponíveis para assinantes. Isso criou um funil natural de conversão.\n\nPara a equipe editorial, implementei uma interface administrativa intuitiva que permite tanto atualizações automáticas via API quanto edições manuais pontuais. Cada campo tem validações inteligentes e preview em tempo real, facilitando o trabalho da equipe e garantindo qualidade na publicação.',
+      role: ["UX end-to-end", "SEO", "Product Growth"],
+      context: "O Qconcursos precisava redesenhar sua página de concursos públicos para informar usuários e gerar tráfego orgânico, além de apoiar alunos já ativos na plataforma. O maior desafio era lidar com um banco de dados complexo e com concursos que não seguem um padrão: alguns têm várias etapas, outros têm poucas, e nem sempre todas as informações estão disponíveis.",
+      problem: "Os usuários tinham dificuldade em entender o status dos concursos e em acessar informações confiáveis e organizadas. Internamente, os stakeholders também precisavam de flexibilidade para atualizar concursos específicos de forma manual e ágil.",
       process: [
         "Mergulho profundo no banco de dados e lógica de estrutura dos concursos",
-        "Mapeamento de comportamentos dos usuários com diferentes níveis de acesso",
+        "Mapeamento de comportamentos de usuários em diferentes níveis de acesso",
         "UX research qualitativa com usuários de topo e meio de funil",
-        "Benchmark com sites de prefeituras, bancas organizadoras e concorrentes",
-        "Redesenho da arquitetura de informação para suportar flexibilidade e clareza",
+        "Benchmark com concorrentes e sites de bancas organizadoras",
+        "Redesenho da arquitetura da informação para suportar flexibilidade e clareza",
         "Criação de componentes modulares com lógica condicional",
-        "Interface adaptada para priorizar informações na primeira dobra (com foco em 1366px de largura)",
-        "Validações com equipe editorial para garantir facilidade de uso interno",
-        "Testes com usuários e iterações baseadas em dados do Amplitude"
+        "Interface adaptada priorizando informações na primeira dobra (foco em desktop 1366px)",
+        "Testes com usuários e validações internas com a equipe editorial"
       ],
+      solution: "A nova página organiza os concursos de forma clara e confiável, adaptando o conteúdo de acordo com as informações disponíveis para cada caso.\n\nCriamos uma interface modular, que permite exibir status, detalhes e conteúdos de apoio, além de oferecer particularidades na exibição para atualizações manuais quando necessário.\n\nO design guia o usuário desde a descoberta do concurso até o engajamento com estudos na plataforma, reforçando a autoridade e completude do Qconcursos.",
       results: [
-        "📈 +5% de aumento em novos cadastros",
-        "🧭 +70% de engajamento médio com a nova página",
-        "📚 Mais usuários iniciando ações de estudo diretamente a partir da página",
-        "🔗 Aumento nas navegações para planos de estudo, videoaulas e simulados",
-        "⚙️ Página se tornou base confiável para atualizações manuais de concursos estratégicos",
-        "🌐 Melhora na performance de SEO e uso da página como canal de aquisição orgânica",
-        "🏛️ Fortalecimento da autoridade do Qconcursos como referência sobre concursos públicos"
+        "+5% em novos cadastros",
+        "70% de engajamento na página",
+        "Maior fluxo de usuários iniciando estudos a partir desta página",
+        "Melhora na performance de SEO e uso da página como canal de aquisição orgânica"
       ],
       images: [
         "/capa1.png",
@@ -46,73 +181,6 @@ const ProjectDetail = () => {
       ],
       figmaUrl: "https://www.figma.com/proto/6ys2zLG6RES11a6Cipp2Bp/P%C3%A1gina-de-Concurso---Qconcursos?node-id=1-22684&p=f&t=Gqs5LvCatZOD6dX3-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&embed_host=share",
       tags: ["UX Research", "UI Strategy", "Banco de Dados", "Dados Complexos", "SEO", "Plataformas Educacionais"]
-    },
-    "ai-assistant": {
-      title: "AI Assistant Interface",
-      subtitle: "Design de chatbot inteligente para suporte ao cliente",
-      period: "4 meses",
-      team: "3 pessoas",
-      role: "Product Designer",
-      context: "Empresa de e-commerce queria implementar um assistente de IA para melhorar o atendimento ao cliente e reduzir custos operacionais.",
-      problem: "Alto volume de tickets de suporte, demora no atendimento e baixa satisfação do cliente. Necessidade de uma solução automatizada mas humanizada.",
-      solution: "Criei um assistente conversacional que combina automação inteligente com transição suave para atendimento humano. O design focou em linguagem natural e tom amigável, com fluxos que antecipam as principais dúvidas dos usuários. A interface permite escalonamento inteligente - quando o bot não consegue resolver, conecta automaticamente com um atendente humano, passando todo o contexto da conversa.",
-      process: [
-        "Análise dos principais tipos de dúvidas dos clientes",
-        "Research sobre conversational design",
-        "Criação de persona e tom de voz do assistant",
-        "Design de fluxos conversacionais",
-        "Prototipagem de interações complexas",
-        "Testes A/B com diferentes abordagens",
-        "Integração com sistema de fallback humano"
-      ],
-      results: [
-        "70% de redução em tickets de suporte",
-        "85% de satisfação nas interações",
-        "3x mais rápido que atendimento humano",
-        "30% de aumento nas vendas assistidas"
-      ],
-      images: [
-        "/placeholder.svg",
-        "/placeholder.svg",
-        "/placeholder.svg"
-      ],
-      figmaUrl: "https://www.figma.com/proto/6ys2zLG6RES11a6Cipp2Bp/P%C3%A1gina-de-Concurso---Qconcursos?node-id=1-22684&p=f&t=Gqs5LvCatZOD6dX3-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&embed_host=share",
-      tags: ["Conversational Design", "AI/ML", "Customer Support", "E-commerce"]
-    },
-    "mobile-banking": {
-      title: "App de Banking Mobile",
-      subtitle: "Aplicativo completo para banco digital",
-      period: "8 meses",
-      team: "6 pessoas",
-      role: "Senior UX Designer",
-      context: "Banco tradicional precisava lançar sua versão digital para competir com fintechs emergentes e atender a demanda por serviços mobile-first.",
-      problem: "Clientes jovens migrando para bancos digitais, processos burocráticos e interface desatualizada do app atual.",
-      solution: "Desenvolvi uma experiência mobile-first completamente repensada, priorizando velocidade e simplicidade. Criei fluxos otimizados que reduzem o número de telas e taps necessários para operações comuns. A interface usa micro-interações e feedback visual para deixar cada ação mais satisfatória e confiável. Implementei também onboarding progressivo e contextual para reduzir a curva de aprendizado.",
-      process: [
-        "Research com usuários de bancos digitais",
-        "Mapeamento de jornada atual vs. ideal",
-        "Benchmark com principais players do mercado",
-        "Arquitetura de informação e card sorting",
-        "Design system mobile-first",
-        "Prototipagem de alta fidelidade",
-        "Testes de usabilidade em dispositivos reais",
-        "Compliance com regulamentações bancárias"
-      ],
-      results: [
-        "90% de adoção entre clientes jovens",
-        "4.8 estrelas na App Store",
-        "60% de redução em ligações para SAC",
-        "15% de aumento na abertura de contas"
-      ],
-      images: [
-        "/placeholder.svg",
-        "/placeholder.svg",
-        "/placeholder.svg",
-        "/placeholder.svg",
-        "/placeholder.svg"
-      ],
-      figmaUrl: "https://www.figma.com/proto/6ys2zLG6RES11a6Cipp2Bp/P%C3%A1gina-de-Concurso---Qconcursos?node-id=1-22684&p=f&t=Gqs5LvCatZOD6dX3-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&embed_host=share",
-      tags: ["Mobile Design", "Banking", "Security", "User Journey"]
     }
   };
 
@@ -164,18 +232,6 @@ const ProjectDetail = () => {
 
           {/* Project Meta */}
           <div className="flex flex-wrap gap-4 mb-6">
-            {"period" in project && project.period && (
-              <div className="flex items-center text-sm text-muted-foreground bg-card/10 px-3 py-2 rounded-lg">
-                <Calendar className="w-4 h-4 mr-2" />
-                {project.period}
-              </div>
-            )}
-            {"team" in project && project.team && (
-              <div className="flex items-center text-sm text-muted-foreground bg-card/10 px-3 py-2 rounded-lg">
-                <Users className="w-4 h-4 mr-2" />
-                {project.team}
-              </div>
-            )}
             {Array.isArray(project.role)
               ? project.role.map((roleTag, idx) => (
                   <div key={idx} className="text-sm font-medium text-primary bg-primary/10 px-3 py-2 rounded-lg">
@@ -189,14 +245,7 @@ const ProjectDetail = () => {
                 )}
           </div>
 
-          {/* Tags */}
-          <div className="flex flex-wrap gap-2">
-            {project.tags.map((tag, index) => (
-              <span key={index} className="text-xs bg-card/30 text-muted-foreground px-2 py-1 rounded-lg">
-                {tag}
-              </span>
-            ))}
-          </div>
+          {/* Tags removido conforme solicitado */}
         </div>
       </header>
 
@@ -219,9 +268,11 @@ const ProjectDetail = () => {
                 <Target className="w-5 h-5 text-primary mr-3" />
                 Contexto
               </h2>
-              <p className="text-muted-foreground leading-relaxed">
-                {project.context}
-              </p>
+              <div className="text-muted-foreground leading-relaxed whitespace-pre-line">
+                {project.context.split('\n').map((line, idx) =>
+                  line.trim() === '' ? <br key={idx} /> : <span key={idx}>{line}<br /></span>
+                )}
+              </div>
             </section>
 
             {/* Problem */}
@@ -229,9 +280,34 @@ const ProjectDetail = () => {
               <h2 className="text-fluid-2xl font-bold text-foreground mb-4">
                 Problema
               </h2>
-              <p className="text-muted-foreground leading-relaxed">
-                {project.problem}
-              </p>
+              {project.title === "Ambiente de Estudo – Qconcursos" ? (
+                <div className="text-muted-foreground leading-relaxed">
+                  <div>Os alunos relatavam que:</div>
+                  <ul className="list-disc pl-6 mt-2 mb-2 space-y-2">
+                    <li>A leitura da apostila era cansativa e pouco interativa.</li>
+                    <li>Era difícil conectar teoria, prática e videoaulas em um único fluxo.</li>
+                    <li>A experiência não refletia a qualidade do conteúdo oferecido pelos professores.</li>
+                    <li>Faltavam recursos de acessibilidade e personalização.</li>
+                  </ul>
+                  <div>Isso gerava baixa motivação e altos índices de abandono na jornada de estudo.</div>
+                </div>
+              ) : project.title === "Busca por IA – Qconcursos" && Array.isArray(project.problem) ? (
+                <div className="text-muted-foreground leading-relaxed">
+                  <ul className="list-disc pl-6 mt-2 mb-2 space-y-2">
+                    {project.problem.map((item, idx) => (
+                      <li key={idx}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ) : (
+                <div className="text-muted-foreground leading-relaxed whitespace-pre-line">
+                  {typeof project.problem === 'string'
+                    ? project.problem.split('\n').map((line, idx) =>
+                        line.trim() === '' ? <br key={idx} /> : <span key={idx}>{line}<br /></span>
+                      )
+                    : null}
+                </div>
+              )}
             </section>
 
             {/* Process */}
@@ -239,15 +315,22 @@ const ProjectDetail = () => {
               <h2 className="text-fluid-2xl font-bold text-foreground mb-6">
                 Processo
               </h2>
-              <div className="space-y-3">
-                {project.process.map((step, index) => (
-                  <div key={index} className="flex items-start">
-                    <div className="w-6 h-6 gradient-primary rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-                      <span className="text-primary-foreground text-xs font-bold">{index + 1}</span>
+              <div className="space-y-6">
+                {Array.isArray(project.process) ? project.process.map((group, idx) => (
+                  <div key={idx}>
+                    <div className="flex items-center mb-2">
+                      <div className="w-6 h-6 gradient-primary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                        <span className="text-primary-foreground text-xs font-bold">{idx + 1}</span>
+                      </div>
+                      <h3 className="text-lg font-semibold text-foreground">{group.title}</h3>
                     </div>
-                    <p className="text-muted-foreground leading-relaxed">{step}</p>
+                    <ul className="list-disc pl-10 space-y-2">
+                      {group.topics.map((topic, tIdx) => (
+                        <li key={tIdx} className="text-muted-foreground leading-relaxed">{topic}</li>
+                      ))}
+                    </ul>
                   </div>
-                ))}
+                )) : null}
               </div>
             </section>
 
@@ -256,9 +339,45 @@ const ProjectDetail = () => {
               <h2 className="text-fluid-2xl font-bold text-foreground mb-4">
                 Solução
               </h2>
-              <p className="text-muted-foreground leading-relaxed">
-                {project.solution}
-              </p>
+              {project.title === "Ambiente de Estudo – Qconcursos" ? (
+                <div className="text-muted-foreground leading-relaxed">
+                  <div>A solução foi criar um novo ambiente de estudo unificado e interativo, que conectasse teoria, prática e videoaulas em um só fluxo:</div>
+                  <ul className="list-disc pl-6 mt-2 mb-2 space-y-2">
+                    <li>Leitura otimizada com markdown estruturado, tipografia hierárquica e até 13 palavras por linha para conforto visual.</li>
+                    <li>StudioDock: painel flutuante que permite navegação rápida, marcações, visualização de progresso e ajustes de acessibilidade.</li>
+                    <li>Integração total de exercícios, textos e videoaulas, permitindo estudar sem trocar de contexto.</li>
+                    <li>Acessibilidade completa com modo escuro, ajuste de fonte, modo foco e suporte para leitor de tela.</li>
+                    <li>Experiência mobile-first adaptada para 1366px, principal resolução dos alunos.</li>
+                  </ul>
+                  <div>O resultado foi uma jornada de estudo fluida, motivadora e visualmente agradável, que valoriza o conteúdo produzido pelos professores.</div>
+                </div>
+              ) : Array.isArray(project.solution) && project.title === "Busca por IA – Qconcursos" ? (
+                <div className="text-muted-foreground leading-relaxed space-y-6">
+                  {project.solution.map((group, idx) => (
+                    <div key={idx}>
+                      <div className="flex items-center mb-2">
+                        <div className="w-6 h-6 gradient-primary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                          <span className="text-primary-foreground text-xs font-bold">{idx + 1}</span>
+                        </div>
+                        <h3 className="text-lg font-semibold text-foreground">{group.title}</h3>
+                      </div>
+                      <ul className="list-disc pl-10 space-y-2">
+                        {group.topics.map((topic, tIdx) => (
+                          <li key={tIdx} className="text-muted-foreground leading-relaxed">{topic}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="text-muted-foreground leading-relaxed">
+                  {typeof project.solution === 'string'
+                    ? project.solution.split('\n').map((line, idx) =>
+                        line.trim() === '' ? <br key={idx} /> : <span key={idx}>{line}<br /></span>
+                      )
+                    : null}
+                </div>
+              )}
             </section>
 
             {/* Figma Preview */}
@@ -279,29 +398,37 @@ const ProjectDetail = () => {
               </section>
             )}
 
-            {/* Curiosity Box - Only for Qconcursos project */}
-            {project.title === "Página de Concurso Público – Qconcursos" && (
+            {/* Curiosity Box - For Qconcursos projects */}
+            {(project.title === "Página de Concurso Público – Qconcursos" || project.title === "Ambiente de Estudo – Qconcursos" || project.title === "Busca por IA – Qconcursos") && (
               <section className="mb-10">
                 <div className="bg-purple-500/10 border border-purple-500/20 rounded-xl p-6">
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <ExternalLink className="w-5 h-5 text-purple-400" />
-                    </div>
+                    {/* Ícone removido */}
                     <div>
                       <h3 className="text-lg font-semibold text-foreground mb-3">
                         💡 Curiosidade
                       </h3>
-                      <p className="text-muted-foreground leading-relaxed mb-4">
-                        Em vez de parar no rascunho, eu criei um wireframe funcional. Combinei minha base em tech com IA para codar a estrutura direto no CodePen.{" "}
-                        <a 
-                          href="https://codepen.io/dezdosete/full/WNqjQBL" 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="text-purple-400 hover:text-purple-300 underline transition-colors"
-                        >
-                          Ver aqui
-                        </a>
-                      </p>
+                      {project.title === "Página de Concurso Público – Qconcursos" ? (
+                        <p className="text-muted-foreground leading-relaxed mb-4">
+                          Em vez de parar no rascunho, eu criei um wireframe funcional. Combinei minha base em tech com IA para codar a estrutura direto no CodePen.{" "}
+                          <a 
+                            href="https://codepen.io/dezdosete/full/WNqjQBL" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-purple-400 hover:text-purple-300 underline transition-colors"
+                          >
+                            Ver aqui
+                          </a>
+                        </p>
+                      ) : project.title === "Ambiente de Estudo – Qconcursos" ? (
+                        <p className="text-muted-foreground leading-relaxed mb-4">
+                          Nesse projeto, consegui montar todo o código da página usando Tailwind e React através do Figma Make. O Widget flutuante Painel de Estudo, o Modo Escuro e o Modo Noturno ficaram totalmente funcionais, e o dev do time utilizou essa base para desenvolver o restante da página.
+                        </p>
+                      ) : (
+                        <p className="text-muted-foreground leading-relaxed mb-4">
+                          Esse foi meu primeiro projeto de AI no Qconcursos 💜
+                        </p>
+                      )}
                     </div>
                   </div>
                 </div>

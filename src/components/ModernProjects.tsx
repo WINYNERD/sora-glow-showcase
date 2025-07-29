@@ -9,39 +9,43 @@ const ModernProjects = () => {
 
   const projects = [
     {
+      id: "Ambiente de Estudo – Qconcursos",
+      title: "Ambiente de Estudo – Qconcursos",
+      description: "Nova experiência no ambiente de estudo integrado com teoria, exercícios e videoaulas",
+      image: "/capa2.png",
+      category: "Educacional • Web",
+      // duration: "4 meses",
+      impact: "Aumento no engajamento e NPS dos alunos",
+      users: "Milhares de alunos",
+      tags: ["Learning Experience", "Edtech", "Product Learning"],
+      featured: true
+    },
+    {
+      id: "Busca por IA – Qconcursos",
+      title: "Busca por IA – Qconcursos",
+      description: "Nova página inicial e busca global inteligente",
+      image: "/placeholder.svg",
+      category: "EdTech • Web",
+      // duration: "6 meses",
+      impact: "+35% de engajamento na primeira interação",
+      users: "Milhões de buscas mensais",
+      tags: [
+        "Lead UX/UI Designer",
+        "EdTech",
+        "UX Research & AI Product Design"
+      ],
+      featured: true
+    },
+    {
       id: "Página de Concurso Público – Qconcursos",
       title: "Página de Concurso Público – Qconcursos",
-      description: "Redesign da principal página informativa da plataforma, voltada para tráfego e ativação de usuários.",
+      description: "Redesign da principal página informativa da plataforma, voltada para tráfego e ativação de usuários",
       image: "/projetocapa1.png",
       category: "Educacional • Web",
       // duration: "Projeto contínuo",
       impact: "+5% novos cadastros, +70% engajamento",
       users: "Milhões de acessos anuais",
-      tags: ["UX Research", "UI Strategy", "Banco de Dados", "Dados Complexos", "SEO", "Plataformas Educacionais"],
-      featured: true
-    },
-    {
-      id: "ai-assistant",
-      title: "AI Assistant Interface",
-      description: "Design de interface conversacional para assistente de IA focado em suporte ao cliente, priorizando naturalidade e eficiência nas interações.",
-      image: "/placeholder.svg",
-      category: "AI/ML • Support",
-      // duration: "4 meses",
-      impact: "70% redução tickets",
-      users: "500+ usuários/dia",
-      tags: ["Conversational Design", "AI/ML", "Customer Support"],
-      featured: true
-    },
-    {
-      id: "mobile-banking",
-      title: "App de Banking Mobile",
-      description: "Aplicativo completo para banco digital, desde onboarding até transações complexas, com foco em segurança e simplicidade de uso.",
-      image: "/placeholder.svg",
-      category: "FinTech • Mobile",
-      // duration: "8 meses",
-      impact: "90% adoção",
-      users: "50k+ downloads",
-      tags: ["Mobile Design", "Banking", "Security", "User Journey"],
+      tags: ["UX end-to-end", "SEO", "Product Growth"],
       featured: true
     },
     {
@@ -95,7 +99,7 @@ const ModernProjects = () => {
           <h2 className="text-fluid-4xl font-bold text-gradient mb-3">
             Projetos em Destaque
           </h2>
-          <p className="text-fluid-lg text-muted-foreground max-w-2xl">
+          <p className="text-fluid-lg text-muted-foreground max-w-2xl whitespace-nowrap">
             Casos de sucesso que demonstram minha abordagem estratégica
           </p>
         </div>
