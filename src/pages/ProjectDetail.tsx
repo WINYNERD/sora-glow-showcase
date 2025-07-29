@@ -9,8 +9,9 @@ const ProjectDetail = () => {
   // ...existing code...
 
   // Mock project data - in real app, this would come from an API or database
-  const projects = {
-    "Ambiente de Estudo – Qconcursos": {
+  const projects = [
+    {
+      slug: "ambiente-de-estudo-qconcursos",
       title: "Ambiente de Estudo – Qconcursos",
       subtitle: "Nova experiência no ambiente de estudo integrado com teoria, exercícios e videoaulas",
       role: [
@@ -65,7 +66,8 @@ const ProjectDetail = () => {
       figmaUrl: "https://embed.figma.com/proto/6ys2zLG6RES11a6Cipp2Bp/Anna-Projetos?node-id=104-37619&scaling=scale-down&content-scaling=fixed&page-id=94%3A9405&embed-host=share",
       // tags removido conforme solicitado
     },
-    "Busca por IA – Qconcursos": {
+    {
+      slug: "busca-por-ia-qconcursos",
       title: "Busca por IA – Qconcursos",
       subtitle: "Nova página inicial e busca global inteligente",
       period: "6 meses",
@@ -149,23 +151,54 @@ const ProjectDetail = () => {
       figmaUrl: "",
       tags: ["AI Search", "EdTech", "UX Research", "Product Design"]
     },
-    "Página de Concurso Público – Qconcursos": {
+    {
+      slug: "pagina-de-concurso-publico-qconcursos",
       title: "Página de Concurso Público – Qconcursos",
       subtitle: "Redesign da principal página informativa da plataforma, voltada para tráfego e ativação de usuários",
       role: ["UX end-to-end", "SEO", "Product Growth"],
       context: "O Qconcursos precisava redesenhar sua página de concursos públicos para informar usuários e gerar tráfego orgânico, além de apoiar alunos já ativos na plataforma. O maior desafio era lidar com um banco de dados complexo e com concursos que não seguem um padrão: alguns têm várias etapas, outros têm poucas, e nem sempre todas as informações estão disponíveis.",
       problem: "Os usuários tinham dificuldade em entender o status dos concursos e em acessar informações confiáveis e organizadas. Internamente, os stakeholders também precisavam de flexibilidade para atualizar concursos específicos de forma manual e ágil.",
       process: [
-        "Mergulho profundo no banco de dados e lógica de estrutura dos concursos",
-        "Mapeamento de comportamentos de usuários em diferentes níveis de acesso",
-        "UX research qualitativa com usuários de topo e meio de funil",
-        "Benchmark com concorrentes e sites de bancas organizadoras",
-        "Redesenho da arquitetura da informação para suportar flexibilidade e clareza",
-        "Criação de componentes modulares com lógica condicional",
-        "Interface adaptada priorizando informações na primeira dobra (foco em desktop 1366px)",
-        "Testes com usuários e validações internas com a equipe editorial"
+        {
+          title: "Pesquisa e Diagnóstico",
+          topics: [
+            "Mergulho profundo no banco de dados e lógica de estrutura dos concursos",
+            "Mapeamento de comportamentos de usuários em diferentes níveis de acesso",
+            "UX research qualitativa com usuários de topo e meio de funil",
+            "Benchmark com concorrentes e sites de bancas organizadoras"
+          ]
+        },
+        {
+          title: "Estratégia e Design",
+          topics: [
+            "Redesenho da arquitetura da informação para suportar flexibilidade e clareza",
+            "Criação de componentes modulares com lógica condicional",
+            "Interface adaptada priorizando informações na primeira dobra (foco em desktop 1366px)"
+          ]
+        },
+        {
+          title: "Validação e Iteração",
+          topics: [
+            "Testes com usuários e validações internas com a equipe editorial"
+          ]
+        }
       ],
-      solution: "A nova página organiza os concursos de forma clara e confiável, adaptando o conteúdo de acordo com as informações disponíveis para cada caso.\n\nCriamos uma interface modular, que permite exibir status, detalhes e conteúdos de apoio, além de oferecer particularidades na exibição para atualizações manuais quando necessário.\n\nO design guia o usuário desde a descoberta do concurso até o engajamento com estudos na plataforma, reforçando a autoridade e completude do Qconcursos.",
+      solution: [
+        {
+          title: "Organização Modular e Flexível",
+          topics: [
+            "Nova página organiza os concursos de forma clara e confiável, adaptando o conteúdo de acordo com as informações disponíveis para cada caso.",
+            "Interface modular permite exibir status, detalhes e conteúdos de apoio, além de particularidades para atualizações manuais."
+          ]
+        },
+        {
+          title: "Jornada Guiada e Engajadora",
+          topics: [
+            "Design guia o usuário desde a descoberta do concurso até o engajamento com estudos na plataforma.",
+            "Reforço da autoridade e completude do Qconcursos."
+          ]
+        }
+      ],
       results: [
         "+5% em novos cadastros",
         "70% de engajamento na página",
@@ -182,11 +215,11 @@ const ProjectDetail = () => {
       figmaUrl: "https://www.figma.com/proto/6ys2zLG6RES11a6Cipp2Bp/P%C3%A1gina-de-Concurso---Qconcursos?node-id=1-22684&p=f&t=Gqs5LvCatZOD6dX3-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&embed_host=share",
       tags: ["UX Research", "UI Strategy", "Banco de Dados", "Dados Complexos", "SEO", "Plataformas Educacionais"]
     }
-  };
+  ];
 
   // ...existing code...
-  // Lookup project after projects declaration
-  const project = projects[decodeURIComponent(id ?? "") as keyof typeof projects];
+  // Lookup project by slug
+  const project = projects.find(p => p.slug === id);
 
   if (!project) {
     return (
