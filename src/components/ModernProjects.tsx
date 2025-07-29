@@ -9,15 +9,15 @@ const ModernProjects = () => {
 
   const projects = [
     {
-      id: "fintech-dashboard",
-      title: "Dashboard Analytics - FinTech",
-      description: "Redesign completo de uma plataforma de análise financeira, focando em melhor visualização de dados e redução de complexidade para usuários B2B.",
-      image: "/placeholder.svg",
-      category: "SaaS • B2B",
-      duration: "6 meses",
-      impact: "+65% engagement",
-      users: "2k+ usuários",
-      tags: ["UX Research", "Data Visualization", "B2B"],
+      id: "Página de Concurso Público – Qconcursos",
+      title: "Página de Concurso Público – Qconcursos",
+      description: "Redesign da principal página informativa da plataforma, voltada para tráfego e ativação de usuários.",
+      image: "/capa1.png",
+      category: "Educacional • Web",
+      duration: "Projeto contínuo",
+      impact: "+5% novos cadastros, +70% engajamento",
+      users: "Milhões de acessos anuais",
+      tags: ["UX Research", "UI Strategy", "Banco de Dados", "Dados Complexos", "SEO", "Plataformas Educacionais"],
       featured: true
     },
     {
@@ -117,10 +117,8 @@ const ModernProjects = () => {
                   alt={project.title}
                   className="w-full h-64 lg:h-72 object-cover transition-slow group-hover:scale-105"
                 />
-                
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-smooth"></div>
-                
                 {/* Featured badge */}
                 <div className="absolute top-4 left-4">
                   <span className="inline-flex items-center space-x-1 bg-primary/20 backdrop-blur-sm text-primary px-3 py-1 rounded-full text-sm font-medium">
@@ -128,7 +126,6 @@ const ModernProjects = () => {
                     <span>Destaque</span>
                   </span>
                 </div>
-
                 {/* Hover CTA */}
                 <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-smooth">
                   <Button size="sm" className="gradient-primary shadow-glow">
