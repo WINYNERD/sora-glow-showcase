@@ -155,7 +155,7 @@ const ProjectDetail = () => {
         {
           title: "Experiência fluida e responsiva",
           topics: [
-            "Mobile-first, já que 70% do tráfego da página vem de usuários deslogados via celular.",
+            "Mobile-first, já que a maioria do tráfego da página vem de usuários deslogados via celular.",
             "Otimização da velocidade e da escaneabilidade da informação."
           ]
         }
@@ -299,7 +299,6 @@ const ProjectDetail = () => {
         }
       ],
       results: [
-        "+45% conversão",
         "Checkout mais rápido e menos abandono",
         "Adoção do PIX sem queda de receita recorrente",
         "Stakeholders convencidos e rollout bem-sucedido"
