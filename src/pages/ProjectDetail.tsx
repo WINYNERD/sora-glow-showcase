@@ -16,6 +16,7 @@ const ProjectDetail = () => {
       role: ["UX end-to-end", "Arquitetura de Informação", "Design System"],
       context: "A página de concursos públicos do Qconcursos é uma das principais portas de entrada da plataforma. Ela precisava ser redesenhada para aumentar a taxa de cadastro, melhorar o engajamento e transmitir autoridade sobre os concursos divulgados.",
       problem: 'Concursos públicos não seguem um padrão fixo: variam em número de etapas, completude de dados e formato de edital. Alguns concursos têm sete fases detalhadas, outros oferecem poucas ou nenhuma informação. Era necessário criar uma arquitetura capaz de se adaptar a essas diferenças, mantendo a clareza e utilidade para o usuário.\n\nAlém disso, existiam diferentes níveis de navegação (usuário deslogado, logado, assinante, aluno de curso) e era essencial comunicar bem com todos eles, respeitando restrições e liberando conteúdos conforme o tipo de acesso.\n\nPor fim, também havia uma necessidade interna do time editorial: os stakeholders responsáveis pelo cadastro e atualização de concursos precisavam de uma estrutura que permitisse tanto automações quanto atualizações manuais em concursos estratégicos. A página precisava atender tanto o usuário final quanto o fluxo interno da empresa.',
+      solution: 'Desenvolvi uma arquitetura modular e flexível que se adapta automaticamente ao tipo e quantidade de informações disponíveis para cada concurso. A solução incluiu componentes condicionais que mostram ou ocultam seções baseadas nos dados disponíveis, garantindo que a página sempre pareça completa e útil.\n\nPara os diferentes níveis de usuário, criei um sistema de progressive disclosure que revela informações gradualmente conforme o nível de acesso, sempre deixando claro quais benefícios estão disponíveis para assinantes. Isso criou um funil natural de conversão.\n\nPara a equipe editorial, implementei uma interface administrativa intuitiva que permite tanto atualizações automáticas via API quanto edições manuais pontuais. Cada campo tem validações inteligentes e preview em tempo real, facilitando o trabalho da equipe e garantindo qualidade na publicação.',
       process: [
         "Mergulho profundo no banco de dados e lógica de estrutura dos concursos",
         "Mapeamento de comportamentos dos usuários com diferentes níveis de acesso",
@@ -54,6 +55,7 @@ const ProjectDetail = () => {
       role: "Product Designer",
       context: "Empresa de e-commerce queria implementar um assistente de IA para melhorar o atendimento ao cliente e reduzir custos operacionais.",
       problem: "Alto volume de tickets de suporte, demora no atendimento e baixa satisfação do cliente. Necessidade de uma solução automatizada mas humanizada.",
+      solution: "Criei um assistente conversacional que combina automação inteligente com transição suave para atendimento humano. O design focou em linguagem natural e tom amigável, com fluxos que antecipam as principais dúvidas dos usuários. A interface permite escalonamento inteligente - quando o bot não consegue resolver, conecta automaticamente com um atendente humano, passando todo o contexto da conversa.",
       process: [
         "Análise dos principais tipos de dúvidas dos clientes",
         "Research sobre conversational design",
@@ -85,6 +87,7 @@ const ProjectDetail = () => {
       role: "Senior UX Designer",
       context: "Banco tradicional precisava lançar sua versão digital para competir com fintechs emergentes e atender a demanda por serviços mobile-first.",
       problem: "Clientes jovens migrando para bancos digitais, processos burocráticos e interface desatualizada do app atual.",
+      solution: "Desenvolvi uma experiência mobile-first completamente repensada, priorizando velocidade e simplicidade. Criei fluxos otimizados que reduzem o número de telas e taps necessários para operações comuns. A interface usa micro-interações e feedback visual para deixar cada ação mais satisfatória e confiável. Implementei também onboarding progressivo e contextual para reduzir a curva de aprendizado.",
       process: [
         "Research com usuários de bancos digitais",
         "Mapeamento de jornada atual vs. ideal",
@@ -246,6 +249,16 @@ const ProjectDetail = () => {
                   </div>
                 ))}
               </div>
+            </section>
+
+            {/* Solution */}
+            <section className="mb-10">
+              <h2 className="text-fluid-2xl font-bold text-foreground mb-4">
+                Solução
+              </h2>
+              <p className="text-muted-foreground leading-relaxed">
+                {project.solution}
+              </p>
             </section>
 
             {/* Figma Preview */}
