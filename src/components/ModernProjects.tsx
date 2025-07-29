@@ -21,15 +21,19 @@ const ModernProjects = () => {
       featured: true
     },
     {
-      id: "mobile-banking",
-      title: "App de Banking Mobile",
-      description: "Aplicativo completo para banco digital, desde onboarding até transações complexas, com foco em segurança e simplicidade de uso.",
+      id: "Busca por IA – Qconcursos",
+      title: "Busca por IA – Qconcursos",
+      description: "Nova página inicial e busca global inteligente",
       image: "/placeholder.svg",
-      category: "FinTech • Mobile",
-      // duration: "8 meses",
-      impact: "90% adoção",
-      users: "50k+ downloads",
-      tags: ["Mobile Design", "Banking", "Security", "User Journey"],
+      category: "EdTech • Web",
+      // duration: "6 meses",
+      impact: "+35% de engajamento na primeira interação",
+      users: "Milhões de buscas mensais",
+      tags: [
+        "Lead UX/UI Designer",
+        "EdTech",
+        "UX Research & AI Product Design"
+      ],
       featured: true
     },
     {
