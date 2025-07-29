@@ -63,50 +63,17 @@ const ProjectDetail = () => {
       solution: [
         {
           topics: [
-            "A solução foi criar um novo ambiente de estudo unificado e interativo, que conectasse teoria, prática e videoaulas em um só fluxo."
-          ]
-        },
-        {
-          title: "Leitura Otimizada",
-          topics: [
-            "Leitura otimizada com markdown estruturado, tipografia hierárquica e até 13 palavras por linha para conforto visual."
-          ]
-        },
-        {
-          title: "StudioDock",
-          topics: [
-            "StudioDock: painel flutuante que permite navegação rápida, marcações, visualização de progresso e ajustes de acessibilidade."
-          ]
-        },
-        {
-          title: "Integração Total",
-          topics: [
-            "de exercícios, textos e videoaulas, permitindo estudar sem trocar de contexto."
-          ]
-        },
-        {
-          title: "Acessibilidade Completa",
-          topics: [
-            "com modo escuro, ajuste de fonte, modo foco e suporte para leitor de tela."
-          ]
-        },
-        {
-          title: "Experiência mobile-first",
-          topics: [
-            "adaptada para 1366px, principal resolução dos alunos."
-          ]
-        },
-        {
-          topics: [
-            "O resultado foi uma jornada de estudo fluida, motivadora e visualmente agradável, que valoriza o conteúdo produzido pelos professores."
+            "A solução foi criar um novo ambiente de estudo unificado e interativo, que conectasse teoria, prática e videoaulas em um só fluxo:",
+            "**Leitura otimizada** com markdown estruturado, tipografia hierárquica e até 13 palavras por linha para conforto visual.",
+            "**StudyDock:** painel flutuante que permite navegação rápida, marcações, visualização de progresso e ajustes de acessibilidade.",
+            "**Integração total** de exercícios, textos e videoaulas, permitindo estudar sem trocar de contexto.",
+            "**Acessibilidade completa** com modo escuro, ajuste de fonte, modo foco e suporte para leitor de tela.",
+            "**Experiência adaptada** para 1366px, principal resolução dos alunos."
           ]
         }
       ],
       results: [
-        "Aumento no engajamento com apostilas digitais.",
-        "Redução no abandono do estudo em apostilas.",
-        "Aumento no NPS dos alunos nas pesquisas pós-lançamento.",
-        "Jornada mais fluida, com integração natural entre leitura, exercícios e videoaulas."
+        "Resultados esperados"
       ],
       images: [
         "/capa1.png",
@@ -193,7 +160,6 @@ const ProjectDetail = () => {
       results: [
         "Aumento significativo no tráfego interno, conectando usuários a páginas de cursos, questões e notícias.",
         "Dobro de buscas de usuários deslogados, aumentando a chance de conversão para cadastro.",
-        "+35% de engajamento na primeira interação com a página.",
         "Maior visibilidade para conteúdos antes subutilizados no site.",
       ],
       images: [
@@ -208,7 +174,7 @@ const ProjectDetail = () => {
     },
     {
       slug: "pagina-de-concurso-publico-qconcursos",
-      title: "Página de Concurso Público – Qconcursos",
+      title: "Página de Concurso – Qconcursos",
       subtitle: "Redesign da principal página informativa da plataforma, voltada para tráfego e ativação de usuários",
       role: ["UX end-to-end", "SEO", "Product Growth"],
       context: "O Qconcursos precisava redesenhar sua página de concursos públicos para informar usuários e gerar tráfego orgânico, além de apoiar alunos já ativos na plataforma. O maior desafio era lidar com um banco de dados complexo e com concursos que não seguem um padrão: alguns têm várias etapas, outros têm poucas, e nem sempre todas as informações estão disponíveis.",
@@ -322,27 +288,11 @@ const ProjectDetail = () => {
       ],
       solution: [
         {
-          title: "Novo fluxo de checkout",
           topics: [
-            "Mais curto, claro e informativo, eliminando limitações do antigo"
-          ]
-        },
-        {
-          title: "PIX como opção de pagamento",
-          topics: [
-            "Rollout gradual, evitando riscos à receita recorrente"
-          ]
-        },
-        {
-          title: "Otimização da experiência",
-          topics: [
-            "Clareza sobre planos, menos fricção e fluxo compatível com integrações modernas"
-          ]
-        },
-        {
-          title: "Monitoramento estruturado",
-          topics: [
-            "Avaliação de impacto em receita, drop-off e possíveis canibalizações de cartão de crédito"
+            "**Novo fluxo de checkout:** mais curto, claro e informativo, eliminando limitações do antigo",
+            "**PIX como opção de pagamento** com rollout gradual, evitando riscos à receita recorrente",
+            "**Otimização da experiência:** clareza sobre planos, menos fricção e fluxo compatível com integrações modernas",
+            "**Monitoramento estruturado** para avaliar impacto em receita, drop-off e possíveis canibalizações de cartão de crédito"
           ]
         }
       ],
@@ -516,13 +466,7 @@ const ProjectDetail = () => {
                 Solução
               </h2>
               {/* Renderização flexível para string ou array de objetos */}
-              {typeof project.solution === 'string' ? (
-                <div className="text-muted-foreground leading-relaxed">
-                  {project.solution.split('\n').map((line, idx) =>
-                    line.trim() === '' ? <br key={idx} /> : <span key={idx}>{line}<br /></span>
-                  )}
-                </div>
-              ) : Array.isArray(project.solution) ? (
+              {project.solution && Array.isArray(project.solution) && (
                 <div className="text-muted-foreground leading-relaxed space-y-6">
                   {project.solution.map((group, idx) => (
                     <div key={idx}>
@@ -531,13 +475,13 @@ const ProjectDetail = () => {
                       )}
                       <ul className="list-disc pl-10 space-y-2">
                         {group.topics.map((topic, tIdx) => (
-                          <li key={tIdx} className="text-muted-foreground leading-relaxed">{topic}</li>
+                          <li key={tIdx} className="text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: topic.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }}></li>
                         ))}
                       </ul>
                     </div>
                   ))}
                 </div>
-              ) : null}
+              )}
             </section>
 
             {/* Figma Preview */}
@@ -559,7 +503,7 @@ const ProjectDetail = () => {
             )}
 
             {/* Curiosity Box - For Qconcursos projects and Vitat */}
-            {(project.title === "Página de Concurso Público – Qconcursos" || project.title === "Ambiente de Estudo – Qconcursos" || project.title === "Busca por IA – Qconcursos" || project.title === "Checkout & PIX – Vitat") && (
+            {(project.title === "Página de Concurso – Qconcursos" || project.title === "Ambiente de Estudo – Qconcursos" || project.title === "Busca por IA – Qconcursos" || project.title === "Checkout & PIX – Vitat") && (
               <section className="mb-10">
                 <div className="bg-purple-500/10 border border-purple-500/20 rounded-xl p-6">
                   <div className="flex items-start gap-4">
@@ -568,7 +512,7 @@ const ProjectDetail = () => {
                       <h3 className="text-lg font-semibold text-foreground mb-3">
                         💡 Curiosidade
                       </h3>
-                      {project.title === "Página de Concurso Público – Qconcursos" ? (
+                      {project.title === "Página de Concurso – Qconcursos" ? (
                         <p className="text-muted-foreground leading-relaxed mb-4">
                           Em vez de parar no rascunho, eu criei um wireframe funcional. Combinei minha base em tech com IA para codar a estrutura direto no CodePen.{" "}
                           <a 
