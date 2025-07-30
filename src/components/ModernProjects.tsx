@@ -134,8 +134,8 @@ const ModernProjects = () => {
                     <span>Destaque</span>
                   </span>
                 </div>
-                {/* Hover CTA */}
-                <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-smooth">
+                {/* CTA */}
+                <div className="absolute bottom-4 right-4">
                   <Button size="sm" className="gradient-primary shadow-glow">
                     <ArrowRight className="w-4 h-4" />
                   </Button>
