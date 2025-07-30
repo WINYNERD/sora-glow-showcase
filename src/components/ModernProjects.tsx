@@ -103,7 +103,7 @@ const ModernProjects = () => {
           <h2 className="text-fluid-4xl font-bold text-gradient mb-3">
             Projetos em Destaque
           </h2>
-          <p className="text-fluid-lg text-muted-foreground max-w-2xl whitespace-nowrap">
+          <p className="text-fluid-lg text-muted-foreground max-w-2xl md:whitespace-nowrap">
             Casos de sucesso que demonstram minha abordagem estratégica
           </p>
         </div>
@@ -114,7 +114,7 @@ const ModernProjects = () => {
             <Link
               key={project.id}
               to={`/projeto/${project.slug}`}
-              className="group glass-card overflow-hidden hover-float transition-slow block"
+              className="group glass-card overflow-hidden md:hover-float transition-slow block"
               onMouseEnter={() => setHoveredProject(index)}
               onMouseLeave={() => setHoveredProject(null)}
             >
@@ -123,10 +123,10 @@ const ModernProjects = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-64 lg:h-72 object-cover transition-slow group-hover:scale-105"
+                  className="w-full h-64 lg:h-72 object-cover transition-slow md:group-hover:scale-105"
                 />
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-smooth"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 md:group-hover:opacity-100 transition-smooth"></div>
                 {/* Featured badge */}
                 <div className="absolute top-4 left-4">
                   <span className="inline-flex items-center space-x-1 bg-primary/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-medium">
@@ -134,8 +134,8 @@ const ModernProjects = () => {
                     <span>Destaque</span>
                   </span>
                 </div>
-                {/* Hover CTA */}
-                <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-smooth">
+                {/* CTA */}
+                <div className="absolute bottom-4 right-4">
                   <Button size="sm" className="gradient-primary shadow-glow">
                     <ArrowRight className="w-4 h-4" />
                   </Button>
@@ -148,7 +148,7 @@ const ModernProjects = () => {
                   <span className="text-sm text-primary font-medium">{project.category}</span>
                 </div>
 
-                <h3 className="text-fluid-xl font-bold text-foreground mb-3 group-hover:text-primary transition-smooth">
+                <h3 className="text-fluid-xl font-bold text-foreground mb-3 md:group-hover:text-primary transition-smooth">
                   {project.title}
                 </h3>
 
@@ -157,7 +157,7 @@ const ModernProjects = () => {
                   {project.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
-                      className="px-3 py-1 text-xs font-medium bg-muted/30 text-muted-foreground rounded-lg group-hover:bg-primary/10 group-hover:text-primary transition-smooth"
+                      className="px-3 py-1 text-xs font-medium bg-muted/30 text-muted-foreground rounded-lg md:group-hover:bg-primary/10 md:group-hover:text-primary transition-smooth"
                     >
                       {tag}
                     </span>
